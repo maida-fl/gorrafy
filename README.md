@@ -1,5 +1,10 @@
 # ProyectoIntegradorG9
 
+Reseña Sitio Web:
+El sitio web tendrá como fin poner en vidriera y oferta nuestra cartera de productos siendo nuestro principal exponente las Gorras con Visera con opción de personalización. A su vez ofreceremos accesorios secundarios para cuello y cabeza tales como vinchas, anteojos y viseras simples entre otros. 
+Nuestra variedad de productos en sus diferentes presentaciones, colores y posibilidad de personalizado seducirá tanto a jóvenes deportistas, amantes de la moda, como así también a empresas corporativas. 
+
+
 Descripción del Grupo:
 El equipo consta de 4 integrantes de formación heterogénea pero con un mismo objetivo: Aprender de forma eficiente cómo elaborar un sitio WEB funcional y desarrollarlo; en este caso un emprendimiento de Gorras.
 
@@ -9,5 +14,25 @@ En detalle cada integrante:
 - Matías A. Maldonado: de Tucumán, Argentina. 22 años. Estudie 1 año Producción Músical, 4 años Medicina y ahora estoy entrando en el mundo de la Programación. Tiendo a ser perfeccionista, por lo menos eso intento.
  
 - Andres Santiago de Elorduy: de Avellaneda, 42 años, Tecnico en Seguridad e Higiene. Actualmente trabajo en una ART buscando nuevos desafios y con muchas ganas de aprender nuevas tecnologias en general.
+
+
+
+
+
+Paginas destacadas e inspiración: 
+
+https://www.goorinbros.com.ar/    Venta de productos del mismo rubro que el elegido. Página de HOME simple y concreta, en PRODUCTO interesante el efecto lupa en imágenes.
+https://aliceandwhittles.com/     Si bien lo observamos en varias páginas, barra de Header dinámica, acompaña el desplazamiento de la pantalla.
+https://www.dkps.com.mx/          Venta de productos del mismo rubro. Destacamos el modo de mostrar los colores en PRODUCTO mediante fotos.
+https://subtleasiantreats.com/    Nos surgió interés la forma de mostrar en el HOME la vista previa de productos (pasar el cursor y que cambie de perspectiva de la imagen). Carrito de compras simple.
+https://www.chubbiesshorts.com/   Ubicación del menú principal mediante Menú Hamburguesa en el header.
+https://www.allbirds.com/         Sobriedad de la estética, colores y disposición de los elementos.
+https://www.tophats-shop.com/es/   Página también afín al rubro. Implementación del Wishlist. Similar al caso de subtleasianttreats.com, cambio de perspectiva de la imagen mediante paso del cursor.
+
+Observamos en la mayoría de las paginas una morfología similar bien delimitada.
+Header/Sección 1 con Banner en modo carrusel ó estático/ Sección 2 con subproductos destacados con proporción de 1/4 o 1/3 del ancho de la página (desktop)/Footer
+
+A su vez, también tiene en común que la mayoría de estas páginas tienen como público general a generaciones jóvenes con oferta de productos casual/deportivas, publico cual nuestro emprendimiento hará principal foco, si bien es inclusivo para todas edades y géneros.
+
 
 

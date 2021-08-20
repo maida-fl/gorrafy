@@ -22,11 +22,17 @@ En detalle cada integrante:
 Paginas destacadas e inspiración: 
 
 https://www.goorinbros.com.ar/    Venta de productos del mismo rubro que el elegido. Página de HOME simple y concreta, en PRODUCTO interesante el efecto lupa en imágenes.
+
 https://aliceandwhittles.com/     Si bien lo observamos en varias páginas, barra de Header dinámica, acompaña el desplazamiento de la pantalla.
+
 https://www.dkps.com.mx/          Venta de productos del mismo rubro. Destacamos el modo de mostrar los colores en PRODUCTO mediante fotos.
+
 https://subtleasiantreats.com/    Nos surgió interés la forma de mostrar en el HOME la vista previa de productos (pasar el cursor y que cambie de perspectiva de la imagen). Carrito de compras simple.
+
 https://www.chubbiesshorts.com/   Ubicación del menú principal mediante Menú Hamburguesa en el header.
+
 https://www.allbirds.com/         Sobriedad de la estética, colores y disposición de los elementos.
+
 https://www.tophats-shop.com/es/   Página también afín al rubro. Implementación del Wishlist. Similar al caso de subtleasianttreats.com, cambio de perspectiva de la imagen mediante paso del cursor.
 
 Observamos en la mayoría de las paginas una morfología similar bien delimitada.

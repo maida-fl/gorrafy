@@ -15,7 +15,7 @@ En detalle cada integrante:
  
 - Andres Santiago de Elorduy: de Avellaneda, 42 años, Tecnico en Seguridad e Higiene. Actualmente trabajo en una ART buscando nuevos desafios y con muchas ganas de aprender nuevas tecnologias en general.
 
-- Maida Guzman: de Vte. Lopez, estudié Producción Musical y Post Producción de Sonido para Medios Audiovisuales. Actualmente estoy comenzando a aprender a programar, con mucho entusiasmo por este nuevo camino y sus posibilidades. Me gusta generar soluciones creativas y disruto del trabajo detallista.
+- Maida Guzman: de Vte. Lopez, estudié Producción Musical y Post Producción de Sonido para Medios Audiovisuales. Actualmente estoy comenzando a aprender a programar, con mucho entusiasmo por este nuevo camino y sus posibilidades. Me gusta generar soluciones creativas y disfruto del trabajo detallista.
 
 
 

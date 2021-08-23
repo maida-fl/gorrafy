@@ -42,3 +42,29 @@ A su vez, también tiene en común que la mayoría de estas páginas tienen como
 
 
 
+
+Wireframes
+Ingresar a los siguientes LINKS para observar nuestro modelo de website:
+
+- Home(desktop version): https://www.figma.com/proto/zGPMbMhlvOLItjlBK3m3Hi/Untitled?node-id=1%3A2 
+- Home(mobile version): https://www.figma.com/proto/zGPMbMhlvOLItjlBK3m3Hi/Untitled?node-id=15%3A76 
+- Catálogo: https://www.figma.com/file/iMqRrkcTFuucfFKdzITrFS/Gorrify-detalle-de-producto?node-id=0%3A1
+- Carrito de Compras: https://www.figma.com/file/TC32mJKqGvxavnTLXIKJ5y/Mi-primer-dise%C3%B1o?node-id=0%3A1
+- Register: https://www.figma.com/file/d4xIRZxsHL1cVEyPWxVIFO/Untitled?node-id=0%3A1
+- Login: https://www.figma.com/file/jwwshSuDN411gSiDlZBe9K/Untitled?node-id=0%3A1
+
+
+Info adicional:
+- Colores: 
+    - #212A2F
+    - #FFFFFF
+    - #AEABAB
+
+- Tipografías:
+    - Poppins:
+        - Light
+        - Regular
+        - Bold
+        - ExtraBold
+
+

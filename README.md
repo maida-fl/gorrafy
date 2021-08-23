@@ -61,6 +61,9 @@ Info adicional:
     - #212A2F
     - #FFFFFF
     - #AEABAB
+    - 669BBC
+    - 06D6A0
+    - FEEA00
 
 - Tipografías:
     - Poppins:
@@ -68,5 +71,10 @@ Info adicional:
         - Regular
         - Bold
         - ExtraBold
+    - Montserrat:
+        - Regular
+        - SemiBold
+    - Roboto:
+        - Regular
 
 

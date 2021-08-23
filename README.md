@@ -1,4 +1,4 @@
-# ProyectoIntegradorG9
+# ProyectoIntegradorG9(GORRAS)
 
 Reseña Sitio Web:
 El sitio web tendrá como fin poner en vidriera y oferta nuestra cartera de productos siendo nuestro principal exponente las Gorras con Visera con opción de personalización. A su vez ofreceremos accesorios secundarios para cuello y cabeza tales como vinchas, anteojos y viseras simples entre otros. 
@@ -43,7 +43,9 @@ A su vez, también tiene en común que la mayoría de estas páginas tienen como
 
 
 
+
 Wireframes
+
 Ingresar a los siguientes LINKS para observar nuestro modelo de website:
 
 - Home(desktop version): https://www.figma.com/proto/zGPMbMhlvOLItjlBK3m3Hi/Untitled?node-id=1%3A2 

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* Detalles generales */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+i{
+    color: #212A2F;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    /* text-align: left;
+    padding-left: 0; */
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+
+/* Para ocultar cosas */
+.hidden{
+    display: none;
+}
+
+
+
+/* NavBar */
+
+.menu{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.logo{
+    color: #212A2F
+}
+
+/* Main */
+
+.main{
+    height: 100vh;
+    background-color: aqua;
+}
+
+/* Footer */
+
+footer{
+    background-color: #212A2F;
+    height: 130vh;
+    text-align: center;
+    color: white;
+}
+
+.footer--title{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.footer--text{
+    font-size: 12px;
+}
+
+.footer--text ul li{
+    margin-top: 5px;
+}
+
+.footer--text ul li i{
+    color: white;
+    font-size: 1.8rem;
+    margin: 15px 4px
+}
+
+.copyright{
+    font-size: 10px;
+    font-weight: 200;
+    margin-top: 50px;
+
+}

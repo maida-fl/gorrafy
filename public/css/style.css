@@ -27,7 +27,7 @@ body{
 
 
 /* Para ocultar cosas */
-.hidden{
+.hidden1, .hidden2{
     display: none;
 }
 
@@ -42,6 +42,18 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 0.5rem;
+}
+
+.iconos{
+    display: flex;
+/*  flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+/* separar cada uno de los iconos Carrito, ?, Login*/
+.iconos i{
+    border: white solid 3px;
 }
 
 .logo{
@@ -59,7 +71,7 @@ body{
 
 footer{
     background-color: #212A2F;
-    height: 130vh;
+ /* height: 130vh;*/
     text-align: center;
     color: white;
 }
@@ -85,9 +97,37 @@ footer{
     margin: 15px 4px
 }
 
+.footer--last{
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
 .copyright{
     font-size: 10px;
     font-weight: 200;
     margin-top: 50px;
+
+}
+
+@media (min-width: 760px) {
+    .footer--list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .hidden1, .hidden2{
+        display: contents ;
+        font-weight: bold;
+        color:#050529;
+
+    }
+
+
+    
 
 }

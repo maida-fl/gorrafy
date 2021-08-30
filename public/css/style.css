@@ -27,11 +27,13 @@ body{
 
 
 /* Para ocultar cosas */
-.hidden1, .hidden2{
+.hidden{
     display: none;
 }
 
-
+.hide--icon{
+    display: none;
+}
 
 /* NavBar */
 
@@ -44,11 +46,14 @@ body{
     margin-top: 0.5rem;
 }
 
-.iconos{
-    display: flex;
-/*  flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
+.text--navbar{
+    font-size: 14px;
+}
+
+
+
+.icon--navbar{
+    margin: auto 5px;
 }
 
 /* separar cada uno de los iconos Carrito, ?, Login*/
@@ -63,8 +68,9 @@ body{
 /* Main */
 
 .main{
-    height: 100vh;
-    background-color: aqua;
+    /* height: 150vh; */
+    background-color: white;
+    text-align: center;
 }
 
 /* Footer */
@@ -120,14 +126,25 @@ footer{
         display: none;
     }
 
-    .hidden1, .hidden2{
+    .hidden{
         display: contents ;
         font-weight: bold;
-        color:#050529;
+        color:#212A2F;
 
     }
 
+    .hidden li a{
+        color: #212A2F;
+    }
 
-    
+    .iconos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hide--icon{
+        display: flex;
+    }
 
 }

@@ -1,0 +1,73 @@
+/* #212A2F
+#FFFFFF
+#AEABAB
+Celeste: 669BBC
+Verde: 06D6A0
+Amarillo: FEEA00 */
+
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #AEABAB;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #669BBC;
+}
+
+
+/* Main */
+
+.product--title{
+    margin: 30px 0px;
+}
+
+.product--img img{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* .product--small--img{
+    display: flex;
+    justify-content: center;
+} */
+
+.product--small--img img{
+    width: 20%;
+
+}
+
+.product--tp{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product--price{
+    font-size: 1.5rem;
+    color: #669BBC;
+}

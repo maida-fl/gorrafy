@@ -9,7 +9,10 @@ app.use(express.static(publicPath));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/index.html"))
 });
+app.get("/productos", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/producto.html"))
+});
 
 app.listen(3000, () => {
-    console.log("Serving on port http://localhost:3000/");
+    console.log("Serving on port 3000!");
 });

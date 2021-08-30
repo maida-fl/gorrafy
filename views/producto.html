@@ -19,23 +19,23 @@ rel="stylesheet" />
            </div>
 
             <ul class="hidden">
-              <li><a href="#">Gorras</a></li>
-              <li><a href="#">Sombreros</a></li>
-              <li><a href="#">Novedades</a></li>
+              <li><a class="text--navbar" href="#">Gorras</a></li>
+              <li><a class="text--navbar" href="#">Sombreros</a></li>
+              <li><a class="text--navbar" href="#">Novedades</a></li>
             </ul>
 
             <h2 class="logo">Gorrafy</h2>
 
             <ul class="hidden">
-              <li><a href="#">¿Quienes Somos?</a></li>
-              <li><a href="#">Tiendas</a></li>
+              <li><a class="text--navbar" href="#">¿Quienes Somos?</a></li>
+              <li><a class="text--navbar" href="#">Tiendas</a></li>
             </ul>
 
-            <ul>
-              <li><a href="#"><i class="far fa-user hidden"></i></a></li>
-              <li><a href="#"><i class="far fa-question-circle hidden"></i></a></li>
-              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
+            <ul class="iconos">
+                <li><a href="#"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
+                <li><a href="#"><i class="icon--navbar far fa-question-circle hide--icon"></i></a></li>
+                <li><a href="#"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
+              </ul>
 
         </nav>
     </header>
@@ -47,23 +47,57 @@ rel="stylesheet" />
             <li><a href="#">Productos</a></li>
             <li><a href="#">Headwear</a></li>
             <li>Dad Hat Lyon</li>
-          </ul>
-        
-        <div class="product--tp">
-            <h2 class="product--title">Gorra | Dad Hat Lyon</h2>
-            <h2 class="product--price">$2890</h2>
-        </div>
-    
+        </ul>
+    <div class="full--size">
 
-        <div class="product--img">
-            <img src="/img/gorra-1.jpg" alt="">
+        <div class="img--col">
+        <!-- 1/3 de Izquierda -->
+            <div class="full--size--left">
+                <div class="product--small--img">
+                    <img src="/img/gorra-1.jpg" alt="">
+                    <img src="/img/gorra-1.jpg" alt="">
+                    <img src="/img/gorra-1.jpg" alt="">
+                    <img src="/img/gorra-1.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- 1/3 del Medio  -->
+            <div class="full--size--middle">
+                <div class="product--img">
+                    <img src="/img/gorra-1.jpg" alt="">
+                </div>
+            </div>
         </div>
-        <div class="product--small--img">
-            <img src="/img/gorra-1.jpg" alt="">
-            <img src="/img/gorra-1.jpg" alt="">
-            <img src="/img/gorra-1.jpg" alt="">
-            <img src="/img/gorra-1.jpg" alt="">
+
+        <!-- 1/3 derecho -->
+        <div class="full--size--right">
+            
+            <div class="product--tp">
+                <h2 class="product--title">Gorra | Dad Hat Lyon</h2>
+                <h2 class="product--price">$2890</h2>
+            </div>
+
+
+        <div class="product--buttons">
+            <button class="button--1"> - <span> 1 </span> + </button>
+            <button class="button--2"> Agregar al carrito </button>
         </div>
+
+        <div class="product--description">
+            <ul>
+                <li>•  Gorra sin estructura de visera semi curva, color lavado con bordado en el frente</li>
+                <li>•  Hecha con <b>algodón orgánico</b></li>
+                <li>•  Talle único ajustable</li>
+            </ul>
+        </div>
+
+
+        </div>
+
+
+        
+
+    </div>
 
 
     </section>
@@ -72,6 +106,7 @@ rel="stylesheet" />
 
     <footer>
         <div class="footer--list">
+          <section class="footer--section">
             <p class="footer--title">Help</p>
                 <div class="footer--text">
                     <ul>
@@ -82,6 +117,9 @@ rel="stylesheet" />
                         <li>FAQ/Contact Us</li>
                     </ul>
                 </div>
+          </section>
+
+          <div class="footer--section">
                 <p class="footer--title">Shop</p>
                 <div class="footer--text">
                     <ul>
@@ -94,6 +132,8 @@ rel="stylesheet" />
                         <li>Download the Gorrafy App</li>
                     </ul>
                 </div>
+          </div>
+          <section class="footer--section">
                 <p class="footer--title">Compania</p>
                 <div class="footer--text">
                     <ul>
@@ -107,15 +147,20 @@ rel="stylesheet" />
                         <li>Prensa</li>
                     </ul>
                 </div>
+          </section>
+
+          <section class="footer--section">
                 <p class="footer--title">Follow Gorrafy</p>
                     <div class="footer--text">
+                        <p class="footer--last">Ofertas exclusivas, ultimas <br> novedades y las mejores formas <br> de gorrearse. #gorreate</p>
                         <ul>
-                            <li>Ofertas exclusivas, ultimas novedades y las mejores formas de gorrearse. #gorreate</li>
                             <li> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest"></i> </li>
                         </ul>
                     </div>
+          </section>
+        </div>
                 <p class="copyright">© 2021 Gorrafy, Inc. All Rights Reserved. Terms, Privacy & Accessibility</p>
-            </div>
-    </footer>
+            
+        </footer>
 </body>
 </html>

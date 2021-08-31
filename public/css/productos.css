@@ -129,9 +129,9 @@ ul.breadcrumb li a:hover {
 }
 
 @media (min-width: 760px){
-  *{
+  /* *{
     border: 1px solid red;
-  }
+  } */
 
   .img--col{
     display:contents;
@@ -158,7 +158,7 @@ ul.breadcrumb li a:hover {
 
 
   .product--small--img img{
-    width: 35%;
+    width: 20%;
     margin: 10px 0px;
 }
 

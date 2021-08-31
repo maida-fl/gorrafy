@@ -147,11 +147,7 @@ ul.breadcrumb li a:hover {
   }
 
   .full--size--left{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 50vw;
-    margin-left: 20%;
+    display: none;
   }
 
   .full--size--right{
@@ -195,4 +191,14 @@ ul.breadcrumb li a:hover {
     margin-left: 10px;
   }
 
+}
+
+@media (min-width: 1000px){
+  .full--size--left{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50vw;
+    margin-left: 20%;
+  }
 }

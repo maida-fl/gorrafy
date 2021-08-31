@@ -36,13 +36,21 @@ body{
 
 /* NavBar */
 
+header{
+    margin-top: 35px; /* Add a top margin to avoid content overlay */
+  }
+
 .menu{
-    margin: 10px;
+    /* margin: 10px auto; */
     display: flex;
     flex-direction: row;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem 1rem;
+    padding: 5px 10px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 
 .text--navbar{

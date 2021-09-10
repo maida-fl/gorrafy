@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Detalles generales */
+
 *{
     margin: 0px;
     padding: 0px;
@@ -51,21 +52,33 @@ header{
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    z-index: 10;
 }
 
 .text--navbar{
     font-size: 14px;
+    transition: 0.35s all;
 }
 
-
+.text--navbar:hover{
+    color: #AEABAB;
+}
 
 .icon--navbar{
     margin: auto 5px;
 }
 
+.burger-menu{
+    margin: 0px 5px;
+}
+
 /* separar cada uno de los iconos Carrito, ?, Login*/
 .iconos i{
     border: white solid 3px;
+}
+
+.iconos .text--navbar{
+    margin-right: 5px;
 }
 
 .logo{
@@ -80,6 +93,335 @@ header{
     text-align: center;
     padding-bottom: 2rem;
 }
+
+.banner{
+    width: 100%;
+    height: 91.42053445850914vh;
+    background-image: url('/img/palmera-home.jpg');
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 31px;
+    color: white;
+    /* position: absolute;
+    top: 40%; */
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.squares{
+    position: relative;
+    /* top: 80%; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    /* align-content: flex-end; */
+}
+
+.square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 6.2vh;
+    width: 26vw;
+    border-radius: 0px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #212A2F;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.square:hover{
+    background-color:#212A2F;
+    color: white;
+}
+
+/* FRAME 2 */
+
+/* .setOfCards{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0px 5rem;
+
+} */
+
+.frame2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 99.57805907172995vh;
+}
+
+.title--2{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #212A2F;
+    margin-top: 2rem;
+}
+
+.select{
+    display: flex;
+    justify-content: space-around;
+}
+
+.favs{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color:#AEABAB;
+    margin:2rem 5px 0px 5px
+}
+
+.favs .active{
+    color: #212A2F !important;
+}
+
+.favs--line{
+    background-color: #AEABAB;
+    width: 100%;
+    height: 3px;
+    border: none;
+    margin-top: 1rem;
+}
+
+.card{
+    margin-top: 2rem;
+    width: 299px;
+    height: 468px;
+    /* background-color: #AEABAB; */
+    background: #FFFCFC;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card.hidden{
+    display: none !important;
+}
+
+.card img{
+    width: 300px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.card--title{
+    align-self: flex-start;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-align: start;
+    color: #212A2F;
+    margin: 5% 0% 2% 5%;
+}
+
+.card--line{
+    height: 1.5px;
+    color: #212A2F;
+    width: 90%;
+    text-align: center;
+}
+
+.card--description{
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #212A2F;
+    margin: 0.6rem;
+
+}
+
+.card--btn{
+    width: 210px;
+    height: 35px;
+    background-color: #212A2F;
+    color: #FFFCFC;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.card--btn:hover{
+    background-color:white;
+    color: #212A2F;
+}
+
+/* FRAME 3 */
+
+.frame3{
+    margin-top: 2rem;
+    /* height: 52.03938115330521vh; */
+    width: 100%;
+}
+
+.frame3 img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* FRAME 4 */
+
+.frame4{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle{
+    margin-top: 2rem;
+    font-size:14px ;
+}
+
+.squares--black{
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        flex-direction: row;
+        align-content: flex-end;
+}
+
+.square--black{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212A2F;
+    height: 6.2vh;
+    width: 40vw;
+    border-radius: 0px;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    margin: 40px 20px;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.square--black:hover{
+    background-color:white;
+    color: #212A2F;
+}
+
+/* FRAME 5 */
+
+.frame5{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.title--3{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #212A2F;
+    margin-top: 2rem;
+}
+
+/* FRAME6 */
+
+.frame6{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.novedades{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2.5rem;
+}
+
+#mail{
+    border: none;
+    border-bottom: solid 1px #212A2F;
+    padding: 2px;
+    width: 60vw;
+
+}
+
+#mail::placeholder{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.novedades button{
+    border-radius: 0px;
+    background-color:#212A2F;
+    border: none;
+    color: #FFFCFC;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 10px 15px;
+    align-self: flex-start;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.novedades button:hover{
+    background-color:white;
+    color: #212A2F;
+}
+
 
 /* Footer */
 
@@ -102,14 +444,27 @@ footer{
     font-size: 12px;
 }
 
+
 .footer--text ul li{
     margin-top: 5px;
+    cursor: pointer;
+    transition: 0.35s all;
+}
+
+.footer--text ul li:hover{
+    color: #669BBC;
 }
 
 .footer--text ul li i{
     color: white;
     font-size: 1.8rem;
-    margin: 15px 4px
+    margin: 15px 4px;
+    transition: 0.35s all;
+    cursor: pointer;
+}
+
+.footer--text ul li i:hover{
+    color: #669BBC;
 }
 
 .footer--last{
@@ -124,7 +479,11 @@ footer{
 
 }
 
+
 @media (min-width: 760px) {
+    .menu{
+        justify-content: space-around;
+    }
     .footer--list{
         display: flex;
         flex-wrap: wrap;
@@ -154,6 +513,32 @@ footer{
 
     .hide--icon{
         display: flex;
+    }
+
+    .card.hidden{
+        display: flex !important;
+    }
+
+    .setOfCards{
+        flex-direction: row;
+        align-self: normal;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Square más corto */
+
+    .square{
+        width: 20vw;
+    }
+    .square--black{
+        width: 20vw;
+    }
+
+    /* IMG HV */
+
+    .frame3 img{
+        height: 80vh;
     }
 
 }

@@ -14,6 +14,7 @@ rel="stylesheet" />
     <header>
         <!-- NAVBAR -->
         <nav class="menu">
+            
             <div class="burger-menu">
                 <i class="fas fa-bars hambu"></i>
            </div>
@@ -21,9 +22,12 @@ rel="stylesheet" />
             <ul class="hidden">
               <li><a class="text--navbar" href="/productos">Productos</a></li>
               <li><a class="text--navbar" href="#">Novedades</a></li>
+              <li><a class="text--navbar" href="#"></a></li>
             </ul>
 
-            <h2 class="logo">Gorrafy</h2>
+            <a href="/">
+                <h2 class="logo">Gorrafy</h2>
+            </a>
 
             <ul class="hidden">
               <li><a class="text--navbar" href="#">¿Quienes Somos?</a></li>
@@ -34,13 +38,111 @@ rel="stylesheet" />
                 <li><a href="#"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
                 <li><a href="#"><i class="icon--navbar far fa-question-circle hide--icon"></i></a></li>
                 <li><a href="#"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
-              </ul>
+            </ul>
 
         </nav>
     </header>
 
     <!-- Main -->
     <section class="main">
+        <div class="banner">
+            <div class="ghost"></div>
+            <p class="title">SI TE VAS A GORREAR.
+                GORREATE BIEN.</p>
+            <div class="squares">
+                <div class="square">SHOP 1</div>
+                <div class="square">SHOP 2</div>
+            </div>
+        </div>
+
+        <div class="frame2">
+            <p class="title--2">Nuestros Favoritos</p>
+            <div class="select">
+                <p class="favs active">GORRAS</p>
+                <p class="favs">SOMBREROS</p>
+                <p class="favs">OTROS</p>
+            </div>
+
+            <hr class="favs--line">
+
+            <div class="setOfCards">
+                <div class="card">
+                    <img src="/img/gorra-1.jpg" alt="">
+                    <p class="card--title">Tree Hat</p>
+                    <hr class="card--line">
+                    <p class="card--description">Classic light-green beach hat</p>
+                    <div class="card--btn">AGREGAR AL CARRITO</div>
+                </div>
+                <div class="card hidden">
+                    <img src="/img/palmera-home.jpg" alt="">
+                    <p class="card--title">Tree Hat</p>
+                    <hr class="card--line">
+                    <p class="card--description">Classic light-green beach hat</p>
+                    <div class="card--btn">AGREGAR AL CARRITO</div>
+                </div>
+                <div class="card hidden">
+                    <img src="/img/palmera-home.jpg" alt="">
+                    <p class="card--title">Tree Hat</p>
+                    <hr class="card--line">
+                    <p class="card--description">Classic light-green beach hat</p>
+                    <div class="card--btn">AGREGAR AL CARRITO</div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="frame3">
+            <img src="/img/gorra-home.jpg" alt="">
+        </div>
+
+        <div class="frame4">
+            <p class="title--2">Gorras personalizadas. Parches personalizados.</p>
+            <p class="subtitle">Diseña tu gorra, sombrero o piluso con el diseño que vos quieras. 100% personalizado y único.</p>
+            <div class="squares--black">
+                <div class="square--black">SHOP 1</div>
+                <div class="square--black">SHOP 2</div>
+            </div>
+        </div>
+
+        <div class="frame5">
+            <p class="title--3">Stories</p>
+            <div class="setOfCards">
+                <div class="card">
+                    <img src="/img/skater-home.jpg" alt="">
+                    <p class="card--title">Kyle:</p>
+                    <hr class="card--line">
+                    <p class="card--description">Su vida gira sobre ruedas pero sin Gorrafy no sería posible.</p>
+                    <div class="card--btn">CONOCE MÁS</div>
+                </div>
+                <div class="card hidden">
+                    <img src="/img/skater-home.jpg" alt="">
+                    <p class="card--title">Kyle:</p>
+                    <hr class="card--line">
+                    <p class="card--description">Su vida gira sobre ruedas pero sin Gorrafy no sería posible.</p>
+                    <div class="card--btn">CONOCE MÁS</div>
+                </div>
+                <div class="card hidden">
+                    <img src="/img/skater-home.jpg" alt="">
+                    <p class="card--title">Kyle:</p>
+                    <hr class="card--line">
+                    <p class="card--description">Su vida gira sobre ruedas pero sin Gorrafy no sería posible.</p>
+                    <div class="card--btn">CONOCE MÁS</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame6">
+            <p class="title--2">¿Quieres recibir novedades?</p>
+            <p class="subtitle">Unete a nuestra lista de email y se el primero en enterarte de los productos de edición limitada, las nuevas incorporaciones y otras actualizaciones.</p>
+            <form action="/" class="novedades">
+                <label for="mail"></label>
+                <input type="email" name="mail" id="mail" placeholder="Ingresa Tu Dirección de Email">
+                <button>INGRESA</button>
+            </form>
+            <p class="copyright">Note: You can opt-out at any time. See our Privacy Policy and Terms.</p>
+        </div>
+
     </section>
 
     <!-- Footer -->
@@ -103,5 +205,6 @@ rel="stylesheet" />
                 <p class="copyright">© 2021 Gorrafy, Inc. All Rights Reserved. Terms, Privacy & Accessibility</p>
             
         </footer>
+        
     </body>
 </html>

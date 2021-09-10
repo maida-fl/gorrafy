@@ -84,30 +84,39 @@ ul.breadcrumb li a:hover {
 }
 
 .button--1{
-  border: 1px solid #212A2F;
+  /* border: 1px solid #212A2F; */
   font-family: 'Poppins', sans-serif;
   height: 43px;
   width: 117px;
-  border-radius: 25px;
+  border: none ;
   padding: 8px, 20px, 8px, 20px;
   background: none;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
+
 .button--2{
   font-family: 'Poppins', sans-serif;
   height: 43px;
   width: 202px;
-  border-radius: 40px;
+  border: none;
   padding: 8px, 20px, 8px, 20px;
   background-color: #212A2F;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
+.button--2:hover{
+  background-color: white;
+  color: #212A2F;
 }
 
 .product--description{

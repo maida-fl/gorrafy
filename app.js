@@ -13,6 +13,18 @@ app.get("/productos", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/producto.html"))
 });
 
+app.get("/compra", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/compra.html"))
+});
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/login.html"))
+});
+
+app.get("/register", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/register.html"))
+});
+
 app.listen(3000, () => {
     console.log("Serving on port 3000!");
 });

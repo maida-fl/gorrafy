@@ -56,9 +56,10 @@ body{
     border: white solid 3px;
 }
 
-.logo{
-    color: #212A2F
+.logo {
+    color:black;
 }
+
 
 header a {
     color: black;
@@ -211,8 +212,35 @@ footer{
         display: contents ;
         font-weight: bold;
         color:#050529;
-
     }
+    /*alineamos secciones navbar*/
+
+.product-navbar{
+    position: relative;
+    left:50px;
+}
+
+.news-navbar{
+    position:relative;
+    left: 75px;
+}
+
+.logo{
+    color: #212A2F;
+    position: relative;
+    left:90px;
+}
+
+.aboutUs-navbar{
+    position: relative;
+    left:65px;
+}
+
+.shops-navbar{
+    position:relative;
+    left:40px;
+}
+
 
     /*Main*/
 

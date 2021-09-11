@@ -35,9 +35,9 @@ rel="stylesheet" />
             </ul>
 
             <ul class="iconos">
-                <li><a href="#"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
+                <li><a href="/login"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
                 <li><a href="#"><i class="icon--navbar far fa-question-circle hide--icon"></i></a></li>
-                <li><a href="#"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
+                <li><a href="/compra"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
             </ul>
 
         </nav>
@@ -90,7 +90,21 @@ rel="stylesheet" />
             <ul>
                 <li>•  Gorra sin estructura de visera semi curva, color lavado con bordado en el frente</li>
                 <li>•  Hecha con <b>algodón orgánico</b></li>
-                <li>•  Talle único ajustable</li>
+                <form action="">
+                <label for="sizes">Selecciona tu talle:</label>
+                    <select id="sizes" name="sizes">
+                      <option value="0">S</option>
+                      <option value="1">M</option>
+                      <option value="2">L</option>
+                    </select> <br>
+                    <label for="cap-color">Selecciona tu color:</label>
+                    <select id="cap-color" name="cap-color">
+                      <option value="Negro">Negro</option>
+                      <option value="Rojo">Rojo</option>
+                      <option value="Azul">Azul</option>
+                    </select>
+                    
+                </form>
             </ul>
         </div>
 

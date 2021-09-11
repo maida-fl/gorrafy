@@ -26,5 +26,5 @@ app.get("/register", (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Serving on port 3000!");
+    console.log("Serving on port 3000!   http://localhost:3000/");
 });

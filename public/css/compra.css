@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* Detalles generales */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+i{
+    color: #212A2F;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    /* text-align: left;
+    padding-left: 0; */
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+
+/* Para ocultar cosas */
+.hidden1, .hidden2{
+    display: none;
+}
+
+
+
+/* NavBar */
+
+.menu{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.iconos{
+    display: flex;
+/*  flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+/* separar cada uno de los iconos Carrito, ?, Login*/
+.iconos i{
+    border: white solid 3px;
+}
+
+.logo{
+    color: #212A2F
+}
+
+header a {
+    color: black;
+}
+
+
+
+
+/* Main */
+
+main{
+    background-image: url('../img/gorraFondo.jpg');
+    background-size: cover;
+}
+
+.general--title {
+    font-size: 2rem ;
+    font-weight: bold;
+    color: white;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.big--box {
+
+    width: 80vw;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+}
+
+.model, .quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside--box{
+    margin: 3px;
+}
+
+.photo{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.button{
+    text-align: center;
+}
+
+button {
+    background: #a6772a;
+    border-radius: 10px;
+    width: 30vw;
+    height: 20px;
+    border-color: black;
+    font-weight: bolder;
+}
+
+.promotional-code {
+    text-align: center;
+    font-weight: bolder;
+    color:rgb(238, 247, 199)
+}
+
+.total-price {
+    display: inline-block;
+    width: 150px;
+    background-color: rgb(238, 247, 199);
+}
+
+
+.final--space{
+    height: 15vh;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    background-color: #212A2F;
+ /* height: 130vh;*/
+    text-align: center;
+    color: white;
+}
+
+.footer--title{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.footer--text{
+    font-size: 12px;
+}
+
+.footer--text ul li{
+    margin-top: 5px;
+}
+
+.footer--text ul li i{
+    color: white;
+    font-size: 1.8rem;
+    margin: 15px 4px
+}
+
+.footer--last{
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.copyright{
+    font-size: 10px;
+    font-weight: 200;
+    margin-top: 50px;
+
+}
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+
+@media (min-width: 760px) {
+    /* Footer y Header*/
+    .footer--list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .hidden1, .hidden2{
+        display: contents ;
+        font-weight: bold;
+        color:#050529;
+
+    }
+
+    /*Main*/
+
+    .big--box {
+        padding: 5px;
+        width: 80vw;
+        margin: auto;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #precio, #total, #cantidad {
+        position: relative;
+        bottom: 82px;
+    }
+
+    .button{
+        text-align: center;
+    }
+    
+    button {
+        width: 15vw;
+
+    }
+    
+    .promotional-code {
+        text-align: end;
+        padding-right: 5vw;
+        color:black;
+    }
+    
+
+    
+
+}

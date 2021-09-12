@@ -78,3 +78,5 @@ Info adicional:
         - Regular
 
 
+
+-Trello Sprint2: https://trello.com/b/Q0lO7KrS/sprint-2

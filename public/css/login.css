@@ -2,6 +2,7 @@
     background-image: url('https://https://unsplash.com/photos/NHjq_GPefeU');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Poppins !important;
   }
   
   .logo{
@@ -17,7 +18,7 @@
   .form {
     position: relative;
     z-index: 1;
-    background: #696b6b;
+    background: #212A2F;
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
@@ -25,8 +26,19 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     
   }
+
+  .form h2{
+    text-align: start;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  .fa-eye{
+    color: white;
+  }
+
   .form input {
-    font-family: FontAwesome, "Roboto", sans-serif;
+    font-family: Poppins, sans-serif;
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -39,12 +51,12 @@
     
   }
   .form button {
-    font-family: "Titillium Web", sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: .1em;
     outline: 0;
-    background: #5566ca;
+    background: #a6772a;
     width: 100%;
     border: 0;
   border-radius:30px;
@@ -59,7 +71,7 @@
   
   }
   .form button:hover,.form button:focus {
-    background: #a9abbe;
+    background: #669BBC;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
   }
@@ -87,6 +99,21 @@
   }
   .form .register-form {
     display: none;
+  }
+
+  .form a{
+    color:white;
+  }
+
+  .remember{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .remember label{
+    font-size: 12px;
+    color: white;
   }
   .container {
     position: relative;
@@ -121,18 +148,8 @@
   .container .info span .fa {
     color: #EF3B3A;
   }
-  body {
-    background: #76b852; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-    background: -moz-linear-gradient(right, #76b852, #8DC26F);
-    background: -o-linear-gradient(right, #76b852, #8DC26F);
-    background: linear-gradient(to left, #76b852, #8DC26F);
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
-  }
 
 .main{
-    background-image: url('../img/gorraFondoLogin.jpg');
+    /* background-image: url('../img/gorraFondoLogin.jpg'); */
     background-size: cover;
 }

@@ -455,6 +455,17 @@ footer{
     color: #669BBC;
 }
 
+.footer--text ul a{
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.35s all;
+}
+
+.footer--text ul a:hover{
+    color: #669BBC;
+}
 .footer--text ul li i{
     color: white;
     font-size: 1.8rem;

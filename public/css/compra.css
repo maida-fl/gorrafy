@@ -79,7 +79,7 @@ main{
     font-size: 2rem ;
     font-weight: bold;
     color: white;
-    height: 25vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -115,13 +115,23 @@ main{
 }
 
 button {
-    background: #a6772a;
-    border-radius: 10px;
-    width: 30vw;
-    height: 20px;
-    border-color: black;
-    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    height: 43px;
+    width: 202px;
+    border: none;
+    padding: 8px, 20px, 8px, 20px;
+    background-color: white;
+    color: #212A2F;
+    font-size: 1rem; 
+    transition: all 0.35s;
+    cursor: pointer;
+    margin-top: 1.5rem;
 }
+
+button:hover{
+    background-color: #a6772a;
+    color: white;
+  }
 
 .promotional-code {
     text-align: center;
@@ -197,6 +207,12 @@ footer{
 /*RESPONSIVE*/
 
 @media (min-width: 760px) {
+
+    /* Title */
+    .general--title{
+        height: 25vh;
+    }
+
     /* Footer y Header*/
     .footer--list{
         display: flex;

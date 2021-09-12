@@ -8,137 +8,140 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/productos.css">
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body> 
-    <header>
-      
-        <!-- NAVBAR -->
-        <nav class="menu">
-            <div class="burger-menu">
-                <i class="fas fa-bars hambu"></i>
-           </div>
+  <header>
+    <!-- NAVBAR -->
+    <nav class="menu">
+        
+        <div class="burger-menu">
+            <i class="fas fa-bars hambu"></i>
+       </div>
 
-            <ul class="hidden">
-              <li><a class="text--navbar" href="/productos">Productos</a></li>
-              <li><a class="text--navbar" href="#">Novedades</a></li>
-            </ul>
+        <ul class="hidden">
+          <li><a class="text--navbar" href="/productos">Productos</a></li>
+          <li><a class="text--navbar" href="#">Novedades</a></li>
+          <li><a class="text--navbar" href="#"></a></li>
+          <li><a class="text--navbar" href="#"></a></li>
+        </ul>
 
-            <h2 class="logo"><a href="/" class="logo">Gorrafy</a></h2>
+        <a href="/">
+            <h2 class="logo">Gorrafy</h2>
+        </a>
 
-            <ul class="hidden">
-              <li><a class="text--navbar" href="#">¿Quienes Somos?</a></li>
-              <li><a class="text--navbar" href="#">Tiendas</a></li>
-            </ul>
+        <ul class="hidden">
+          <li><a class="text--navbar" href="#">¿Quienes Somos?</a></li>
+          <li><a class="text--navbar" href="#">Tiendas</a></li>
+        </ul>
 
-            <ul class="iconos">
-                <li><a href="/login"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
-                <li><a href="#"><i class="icon--navbar far fa-question-circle hide--icon"></i></a></li>
-                <li><a href="/compra"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
-              </ul>
+        <ul class="iconos">
+            <li><a href="/login"><i class="icon--navbar far fa-user hide--icon"></i></a></li>
+            <li><a href="#"><i class="icon--navbar far fa-question-circle hide--icon"></i></a></li>
+            <li><a href="/compra"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
+        </ul>
 
-        </nav>
-        <section class="main">
-          <!-- Main -->
-        <div class="login-page">
-            <div class="form">
-          
-              <form>
-                <input type="text" placeholder="&#xf007;  usuario"/>
-                <input type="password" id="password" placeholder="&#xf023;  contraseña"/>
-                <i class="fas fa-eye" onclick="show()"></i> 
-                <br>
-                <br>
-                <button>LOGIN</button>
-                <p class="message"></p>
-              </form>
-          
-              <form class="login-form">
-                <button type="button" onclick="window.location.href='/register'">SIGN UP</button>
-              </form>
-            </div>
+    </nav>
+</header>
+
+
+    <!-- Main -->
+    <section class="main">
+      <div class="login-page">
+        <div class="form">
+            <h2>INICIAR SESIÓN</h2>
+        
+            <form>
+              <input type="text" placeholder="&#xf007;  usuario"/>
+              <input type="password" id="password" placeholder="&#xf023;  contraseña"/>
+              <div class="remember">
+                <label for="rememberMe">Recuerdame</label>
+                <input type="checkbox" value="lsRememberMe" id="rememberMe"> 
+              </div>
+              <i class="fas fa-eye" onclick="show()"></i> 
+              <br>
+              <br>
+              <button>INGRESÁ</button>
+              <p class="message"></p>
+            </form>
+        
+            <form class="login-form">
+              <button type="button" onclick="window.location.href='/register'">CREA UNA CUENTA</button>
+            </form>
+            <a href="#">¿Olvidaste tu Constraseña</a>
           </div>
-          
-            <script>
-              function show(){
-                var password = document.getElementById("password");
-                var icon = document.querySelector(".fas")
-          
-                // ========== Checking type of password ===========
-                if(password.type === "password"){
-                  password.type = "text";
-                }
-                else {
-                  password.type = "password";
-                }
-              };
-            </script>
-    </header>
-
- 
-    
+      </div>
+        
     </section>
+    
 
     <!-- Footer -->
 
     <footer>
-        <div class="footer--list">
-          <section class="footer--section">
-            <p class="footer--title">Help</p>
-                <div class="footer--text">
-                    <ul>
-                        <li>1-888-963-8944</li>
-                        <li>1-814-251-9966 (Text)</li>
-                        <li>help@allbirds.com</li>
-                        <li>Returns/Exchanges</li>
-                        <li>FAQ/Contact Us</li>
-                    </ul>
-                </div>
-          </section>
+      <div class="footer--list">
+        <section class="footer--section">
+          <p class="footer--title">Help</p>
+              <div class="footer--text">
+                  <ul>
+                      <li>1-888-963-8944</li>
+                      <li>1-814-251-9966 (Text)</li>
+                      <li>help@allbirds.com</li>
+                      <li>Returns/Exchanges</li>
+                      <li>FAQ/Contact Us</li>
+                  </ul>
+              </div>
+        </section>
 
-          <div class="footer--section">
-                <p class="footer--title">Shop</p>
-                <div class="footer--text">
-                    <ul>
-                        <li>Men's Shoes</li>
-                        <li>Women's Shoes</li>
-                        <li>Men's Apparel</li>
-                        <li>Women's Apparel</li>
-                        <li>Socks</li>
-                        <li>Gift Cards</li>
-                        <li>Download the Gorrafy App</li>
-                    </ul>
-                </div>
-          </div>
-          <section class="footer--section">
-                <p class="footer--title">Compania</p>
-                <div class="footer--text">
-                    <ul>
-                        <li>Nuestras Tiendas</li>
-                        <li>Nuestra Historia</li>
-                        <li>Nuestros Materiales</li>
-                        <li>Sustentabilidad</li>
-                        <li>Socios y Afiliados</li>
-                        <li>Prueba de Producto</li>
-                        <li>Ventas por Mayor</li>
-                        <li>Prensa</li>
-                    </ul>
-                </div>
+        <section class="footer--section">
+              <p class="footer--title">Shop</p>
+              <div class="footer--text">
+                  <ul>
+                      <a href="/productos">
+                          <li>Productos</li>
+                      </a>
+                      <a href="/compra">
+                          <li>Carrito</li>
+                      </a>
+                      <a href="/register">
+                          <li>Crea un usuario</li>
+                      </a>
+                      <a href="/login">
+                          <li>Inicia Sesión</li>
+                      </a>
+                  </ul>
+              </div>
           </section>
+        <section class="footer--section">
+              <p class="footer--title">Compania</p>
+              <div class="footer--text">
+                  <ul>
+                      <li>Nuestras Tiendas</li>
+                      <li>Nuestra Historia</li>
+                      <li>Nuestros Materiales</li>
+                      <li>Sustentabilidad</li>
+                      <li>Socios y Afiliados</li>
+                      <li>Prueba de Producto</li>
+                      <li>Ventas por Mayor</li>
+                      <li>Prensa</li>
+                  </ul>
+              </div>
+        </section>
 
-          <section class="footer--section">
-                <p class="footer--title">Follow Gorrafy</p>
-                    <div class="footer--text">
-                        <p class="footer--last">Ofertas exclusivas, ultimas <br> novedades y las mejores formas <br> de gorrearse. #gorreate</p>
-                        <ul>
-                            <li> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest"></i> </li>
-                        </ul>
-                    </div>
-          </section>
-        </div>
-                <p class="copyright">© 2021 Gorrafy, Inc. All Rights Reserved. Terms, Privacy & Accessibility</p>
-            
-        </footer>
+        <section class="footer--section">
+              <p class="footer--title">Follow Gorrafy</p>
+                  <div class="footer--text">
+                      <p class="footer--last">Ofertas exclusivas, ultimas <br> novedades y las mejores formas <br> de gorrearse. #gorreate</p>
+                      <ul>
+                          <li> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest"></i> </li>
+                      </ul>
+                  </div>
+        </section>
+      </div>
+              <p class="copyright">© 2021 Gorrafy, Inc. All Rights Reserved. Terms, Privacy & Accessibility</p>
+          
+      </footer>
+
+        <script src="/js/show.js"></script>
+        <script src="/js/remember.js"></script>
     </body>
 </html>

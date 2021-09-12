@@ -137,6 +137,29 @@ ul.breadcrumb li a:hover {
   flex-direction: column-reverse;
 }
 
+.product--selection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+#sizes{
+  padding: 3px;
+  background-color: #212A2F;
+  color: white;
+  font-family: Poppins;
+  border: none;
+}
+
+#cap-color{
+  padding: 3px;
+  background-color: #212A2F;
+  color: white;
+  font-family: Poppins;
+  border: none;
+}
+
 @media (min-width: 760px){
   /* *{
     border: 1px solid red;
@@ -144,6 +167,10 @@ ul.breadcrumb li a:hover {
 
   .img--col{
     display:contents;
+  }
+  
+  .product--selection{
+    flex-direction: column;
   }
 
   .full--size{

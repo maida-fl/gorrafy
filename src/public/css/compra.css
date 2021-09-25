@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
 
-/* Detalles generales */
 *{
     margin: 0px;
     padding: 0px;
@@ -27,28 +26,49 @@ body{
 
 
 /* Para ocultar cosas */
-.hidden1, .hidden2{
+.hidden{
     display: none;
 }
 
-
+.hide--icon{
+    display: none;
+}
 
 /* NavBar */
 
+header{
+    margin-top: 35px; /* Add a top margin to avoid content overlay */
+  }
+
 .menu{
-    margin: 10px;
+    /* margin: 10px auto; */
     display: flex;
     flex-direction: row;
+    background-color: white;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5rem;
+    padding: 5px 10px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 10;
 }
 
-.iconos{
-    display: flex;
-/*  flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
+.text--navbar{
+    font-size: 14px;
+    transition: 0.35s all;
+}
+
+.text--navbar:hover{
+    color: #AEABAB;
+}
+
+.icon--navbar{
+    margin: auto 5px;
+}
+
+.burger-menu{
+    margin: 0px 5px;
 }
 
 /* separar cada uno de los iconos Carrito, ?, Login*/
@@ -56,17 +76,13 @@ body{
     border: white solid 3px;
 }
 
-.logo {
-    color:black;
+.iconos .text--navbar{
+    margin-right: 5px;
 }
 
-
-header a {
-    color: black;
+.logo{
+    color: #212A2F
 }
-
-
-
 
 /* Main */
 
@@ -212,8 +228,9 @@ footer{
     .general--title{
         height: 25vh;
     }
-
-    /* Footer y Header*/
+    .menu{
+        justify-content: space-around;
+    }
     .footer--list{
         display: flex;
         flex-wrap: wrap;
@@ -224,39 +241,52 @@ footer{
         display: none;
     }
 
-    .hidden1, .hidden2{
+    .hidden{
         display: contents ;
         font-weight: bold;
-        color:#050529;
+        color:#212A2F;
+
     }
-    /*alineamos secciones navbar*/
 
-.product-navbar{
-    position: relative;
-    left:50px;
-}
+    .hidden li a{
+        color: #212A2F;
+    }
 
-.news-navbar{
-    position:relative;
-    left: 75px;
-}
+    .iconos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.logo{
-    color: #212A2F;
-    position: relative;
-    left:90px;
-}
+    .hide--icon{
+        display: flex;
+    }
 
-.aboutUs-navbar{
-    position: relative;
-    left:65px;
-}
+    .card.hidden{
+        display: flex !important;
+    }
 
-.shops-navbar{
-    position:relative;
-    left:40px;
-}
+    .setOfCards{
+        flex-direction: row;
+        align-self: normal;
+        display: flex;
+        justify-content: space-around;
+    }
 
+    /* Square más corto */
+
+    .square{
+        width: 20vw;
+    }
+    .square--black{
+        width: 20vw;
+    }
+
+    /* IMG HV */
+
+    .frame3 img{
+        height: 80vh;
+    }
 
     /*Main*/
 

@@ -7,6 +7,9 @@ const app = express();
 
 // ************ Route System require and use() - (don't touch) ************
 const mainRouter = require('./routes/main'); // Rutas main
+const compraRouter = require('./routes/compra'); // Rutas compra
+const productoRouter = require('./routes/producto'); // Rutas producto
+const agregarEditarRouter = require('./routes/agregarEditar'); // Rutas edicion productos
 
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
@@ -19,12 +22,11 @@ app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS
 
 
 app.use('/', mainRouter);
-app.use('/producto', mainRouter);
-app.use('/register', mainRouter);
-app.use('/login', mainRouter);
-app.use('/compra', mainRouter);
-app.use('/agregar', mainRouter);
-app.use('/editar', mainRouter);
+app.use('/', mainRouter);
+app.use('/', mainRouter);
+app.use('/producto', productoRouter);
+app.use('/compra', compraRouter);
+app.use('/agregar', agregarEditarRouter);
 
 
 

@@ -3,13 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 // ************ Controller Require ************
-const mainController = require('../controllers/mainController');
+const agregarEditarController = require('../controllers/agregarEditarController');
 
 // ************ Routes ************
-router.get('/', mainController.index)
-router.get('/register', mainController.register)
-router.get('/login', mainController.login)
 
+router.get('/editar', agregarEditarController.editar)
+router.get('/', agregarEditarController.agregar)
 
 
 

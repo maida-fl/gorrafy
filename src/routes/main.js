@@ -11,6 +11,8 @@ router.get('/producto', mainController.producto)
 router.get('/register', mainController.register)
 router.get('/login', mainController.login)
 router.get('/compra', mainController.compra)
+router.get('/agregar', mainController.agregar)
+router.get('/editar', mainController.editar)
 
 
 

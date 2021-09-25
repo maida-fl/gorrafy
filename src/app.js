@@ -23,6 +23,8 @@ app.use('/producto', mainRouter);
 app.use('/register', mainRouter);
 app.use('/login', mainRouter);
 app.use('/compra', mainRouter);
+app.use('/agregar', mainRouter);
+app.use('/editar', mainRouter);
 
 
 

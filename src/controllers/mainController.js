@@ -13,6 +13,12 @@ const mainController = {
     },
     compra: (req, res) => {
         res.render('compra');
+    },
+    agregar: (req, res) => {
+        res.render('adminAgregar');
+    },
+    editar: (req, res) => {
+        res.render('adminEditar');
     }
 };
 

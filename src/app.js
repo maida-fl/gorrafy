@@ -22,11 +22,9 @@ app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS
 
 
 app.use('/', mainRouter);
-app.use('/', mainRouter);
-app.use('/', mainRouter);
 app.use('/producto', productoRouter);
 app.use('/compra', compraRouter);
-app.use('/agregar', agregarEditarRouter);
+app.use('/admin', agregarEditarRouter);
 
 
 

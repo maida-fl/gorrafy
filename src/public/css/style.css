@@ -37,22 +37,9 @@ body{
 
 /* NavBar */
 
-header{
-    margin-top: 35px; /* Add a top margin to avoid content overlay */
-  }
-
-.menu{
-    /* margin: 10px auto; */
+.iconos{
     display: flex;
-    flex-direction: row;
-    background-color: white;
     justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 10;
 }
 
 .text--navbar{
@@ -68,21 +55,16 @@ header{
     margin: auto 5px;
 }
 
-.burger-menu{
-    margin: 0px 5px;
-}
+
 
 /* separar cada uno de los iconos Carrito, ?, Login*/
 .iconos i{
-    border: white solid 3px;
+    font-size: 18px;
+    color:#212A2F;
 }
 
 .iconos .text--navbar{
     margin-right: 5px;
-}
-
-.logo{
-    color: #212A2F
 }
 
 /* Main */
@@ -526,11 +508,11 @@ footer{
         color: #212A2F;
     }
 
-    .iconos{
+    /* .iconos{
         display: flex;
         justify-content: space-around;
         align-items: center;
-    }
+    } */
 
     .hide--icon{
         display: flex;

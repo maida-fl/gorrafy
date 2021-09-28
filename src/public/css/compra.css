@@ -34,56 +34,6 @@ body{
     display: none;
 }
 
-/* NavBar */
-
-header{
-    margin-top: 35px; /* Add a top margin to avoid content overlay */
-  }
-
-.menu{
-    /* margin: 10px auto; */
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 10;
-}
-
-.text--navbar{
-    font-size: 14px;
-    transition: 0.35s all;
-}
-
-.text--navbar:hover{
-    color: #AEABAB;
-}
-
-.icon--navbar{
-    margin: auto 5px;
-}
-
-.burger-menu{
-    margin: 0px 5px;
-}
-
-/* separar cada uno de los iconos Carrito, ?, Login*/
-.iconos i{
-    border: white solid 3px;
-}
-
-.iconos .text--navbar{
-    margin-right: 5px;
-}
-
-.logo{
-    color: #212A2F
-}
-
 /* Main */
 
 main{

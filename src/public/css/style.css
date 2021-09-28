@@ -216,7 +216,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items:center;
 }
 
 .card.hidden{
@@ -491,6 +491,18 @@ footer{
 }
 
 
+
+/*Este ID sirve para la lista de Productos en la vista menor a 760px*/
+#setOfCards{
+    flex-direction: row;
+    align-self: normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
 @media (min-width: 760px) {
     .menu{
         justify-content: space-around;
@@ -534,6 +546,7 @@ footer{
         flex-direction: row;
         align-self: normal;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 

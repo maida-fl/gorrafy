@@ -163,4 +163,30 @@ p.log-in a{
     height: 100px;
 } */
 
+.admin-btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60vh;
+}
+
+.btn-admin {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #ffffff;
+    fill: #ffffff;
+    border: none;
+    background-color: #212A2F;
+    border-radius: 30px;
+    max-width: 350px;
+    transition: 500ms ease all;
+    cursor: pointer;
+}
+.btn-admin:hover {
+    background-color:#3e4749;
+    scale: (0.98);
+}
   

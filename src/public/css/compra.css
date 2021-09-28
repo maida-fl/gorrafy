@@ -80,7 +80,7 @@ main{
     text-align: center;
 }
 
-button {
+#btn-comprar {
     font-family: 'Poppins', sans-serif;
     height: 43px;
     width: 202px;
@@ -94,7 +94,7 @@ button {
     margin-top: 1.5rem;
 }
 
-button:hover{
+#btn-comprar:hover{
     background-color: #a6772a;
     color: white;
   }

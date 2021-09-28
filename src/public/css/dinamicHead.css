@@ -16,6 +16,10 @@ header{
 }
 
 #logo{
+    order: -1;
+}
+
+#logo h2{
     color: #212A2F;
 }
 
@@ -30,7 +34,7 @@ header{
     z-index: 1500;
 }
 .fa-bars{
-    color: #fff;
+    color: #212A2F;
 }
 .fa-times{
     display: none;
@@ -108,21 +112,28 @@ header{
 
 @media screen and (min-width: 900px) {
 
+    #logo{
+        order: 0;
+    }
+
     .menu-toggle{
         display: none;
     }
     
     .nav-list{
-        position: initial;
+        position: fixed;
         width: 100%;
         height: 3rem;
-        background-color: transparent;
+        background-color: #fff;
         padding: 0;
         justify-content: space-around;
         flex-direction: row;
         transform: initial;
         transition: initial;
         align-items: center;
+        box-shadow: 2px 10px 23px -14px rgba(0,0,0,0.71);
+        -webkit-box-shadow: 2px 10px 23px -14px rgba(0,0,0,0.71);
+        -moz-box-shadow: 2px 10px 23px -14px rgba(0,0,0,0.71);
     }
     .nav-item{
         margin: 0 2.4rem;

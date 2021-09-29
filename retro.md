@@ -6,7 +6,11 @@ Cómo punto a mejorar remarcado en el sprint anterior se encuentra simplificar c
 SPRINT 2
 
 START DOING: Organizarse aplicando MVP (Minimum Viable Product)
+
 STOP DOING: 
+
 LESS OF: 
+
 KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
+
 MORE OF: Comentar el código 

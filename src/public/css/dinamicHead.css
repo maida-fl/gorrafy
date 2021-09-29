@@ -126,7 +126,7 @@ header{
         height: 3rem;
         background-color: #fff;
         padding: 0;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row;
         transform: initial;
         transition: initial;

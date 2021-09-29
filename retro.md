@@ -7,7 +7,7 @@ SPRINT 2
 
 START DOING: Organizarse aplicando MVP (Minimum Viable Product)
 
-STOP DOING: Dejar de posponer la retrospectiva para el final 
+STOP DOING: Posponer la retrospectiva para el final 
 
 LESS OF: Utilizar inglés y español mezclados en código
 

@@ -7,10 +7,10 @@ SPRINT 2
 
 START DOING: Organizarse aplicando MVP (Minimum Viable Product)
 
-STOP DOING: 
+STOP DOING: Dejar de posponer la retrospectiva para el final 
 
 LESS OF: 
 
 KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
 
-MORE OF: Comentar el código 
+MORE OF: Incrementar uso de comentarios en el código 

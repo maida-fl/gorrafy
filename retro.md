@@ -9,7 +9,7 @@ START DOING: Organizarse aplicando MVP (Minimum Viable Product)
 
 STOP DOING: Dejar de posponer la retrospectiva para el final 
 
-LESS OF: No hacer los entregables opcionales
+LESS OF: Utilizar inglés y español mezclados en código
 
 KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
 

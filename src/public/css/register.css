@@ -116,4 +116,9 @@ p.log-in a{
     /* color:#5F7C6D; */
     color: #a6772a;
     font-weight: bold;
+    transition: 300ms ease all;
+}
+
+p.log-in a:hover {
+    color: #C6974B;
 }

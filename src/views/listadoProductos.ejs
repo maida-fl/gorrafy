@@ -8,62 +8,17 @@
         </ul>
 
         <div class="setOfCards" id="setOfCards">
-            <div class="card">
-                <img src="/img/gorra-1.jpg" alt="">
-                <p class="card--title">Gorra | Dad Hat Lyon</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra sin estructura de visera semi curva, color lavado con bordado en el frente</p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
-            <div class="card">
-                <img src="/img/gorra-blanca.jpg" alt="">
-                <p class="card--title">Gorra | All-White Custom</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra plana, 100% blanco. Personalizable.
-                </p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
-            <div class="card">
-                <img src="/img/gorra-culture.jpg" alt="">
-                <p class="card--title">Gorra | Just Culture</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra plana color mostaza, edición limitada "Just Culture".</p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
-            <div class="card">
-                <img src="/img/gorra-1.jpg" alt="">
-                <p class="card--title">Gorra | Dad Hat Lyon</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra sin estructura de visera semi curva, color lavado con bordado en el frente</p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
-            <div class="card">
-                <img src="/img/gorra-blanca.jpg" alt="">
-                <p class="card--title">Gorra | All-White Custom</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra plana, 100% blanco. Personalizable.
-                </p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
-            <div class="card">
-                <img src="/img/gorra-culture.jpg" alt="">
-                <p class="card--title">Gorra | Just Culture</p>
-                <hr class="card--line">
-                <p class="card--description">Gorra plana color mostaza, edición limitada "Just Culture".</p>
-                <a href="/producto/producto">
-                    <div class="card--btn">VER MÁS</div>
-                </a>
-            </div>
+            <% products.forEach(hat => { %>
+                <div class="card">
+                    <img src="/img/<%= hat.image  %>" alt="">
+                    <p class="card--title"><%= hat.name %></p>
+                    <hr class="card--line">
+                    <p class="card--description"> <%= hat.description %> </p>
+                    <a href="/producto/detail/<%= hat.id %>">
+                        <div class="card--btn">VER MÁS</div>
+                    </a>
+                </div>     
+             <% }); %> 
         </div>
     </section>
 

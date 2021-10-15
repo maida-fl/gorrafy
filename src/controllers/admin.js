@@ -1,4 +1,4 @@
-const agregarEditarController = {
+const adminController = {
     admin: (req, res) => {
         res.render('admin');
     },
@@ -10,4 +10,4 @@ const agregarEditarController = {
     }
 };
 
-module.exports = agregarEditarController;
+module.exports = adminController;

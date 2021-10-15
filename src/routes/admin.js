@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // ************ Controller Require ************
-const agregarEditarController = require('../controllers/agregarEditarController');
+const agregarEditarController = require('../controllers/admin');
 
 // ************ Routes ************
 

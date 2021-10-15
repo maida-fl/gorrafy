@@ -160,9 +160,11 @@ ul.breadcrumb li a:hover {
   border: none;
 }
 
+
+
 @media (min-width: 760px){
   /* *{
-    border: 1px solid red;
+    border: 1px solid red
   } */
 
   .img--col{
@@ -175,6 +177,8 @@ ul.breadcrumb li a:hover {
 
   .full--size{
     display: flex;
+    max-height: 80vh;
+    margin: 60px 0px
   }
 
   .product--img{
@@ -212,6 +216,7 @@ ul.breadcrumb li a:hover {
   .product--small--img img{
     width: 100%;
     margin: 10px 0px;
+    max-height: 20vh;
 }
 
 
@@ -229,6 +234,8 @@ ul.breadcrumb li a:hover {
 
 }
 
+
+
 @media (min-width: 1000px){
   .full--size--left{
     display: flex;
@@ -236,5 +243,11 @@ ul.breadcrumb li a:hover {
     align-content: center;
     width: 50vw;
     margin-left: 20%;
+  }
+}
+
+@media (min-width: 1200px){
+  .full--size{
+    margin: 60px 10%;
   }
 }

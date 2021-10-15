@@ -19,7 +19,7 @@ const productoController = {
 		const product = products.find(product => {
 			return product.id == id
 		})
-		res.render('detail', {product: product})
+		res.render('producto', {product: product})
 	},
     // (get) Create - Formulario para crear
 	create: (req, res) => {

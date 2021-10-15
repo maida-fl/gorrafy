@@ -6,7 +6,7 @@
         <ul class="breadcrumb">
             <li><a href="/">Inicio</a></li>
             <li><a href="#">Productos</a></li>
-            <li>Dad Hat Lyon</li>
+            <li><%= product.name %></li>
         </ul>
     <div class="full--size">
 
@@ -14,17 +14,17 @@
         <!-- 1/3 de Izquierda -->
             <div class="full--size--left">
                 <div class="product--small--img">
-                    <img src="/img/gorra-1.jpg" alt="">
-                    <img src="/img/gorra-1.jpg" alt="">
-                    <img src="/img/gorra-1.jpg" alt="">
-                    <img src="/img/gorra-1.jpg" alt="">
+                    <img src="/img/<%= product.image %>" alt="">
+                    <img src="/img/<%= product.image %>" alt="">
+                    <img src="/img/<%= product.image %>" alt="">
+                    <img src="/img/<%= product.image %>" alt="">
                 </div>
             </div>
 
             <!-- 1/3 del Medio  -->
             
                 <div class="product--img">
-                    <img src="/img/gorra-1.jpg" alt="">
+                    <img src="/img/<%= product.image %>" alt="">
                 </div>
 
         </div>
@@ -33,8 +33,8 @@
         <div class="full--size--right">
             
             <div class="product--tp">
-                <h2 class="product--title">Gorra | Dad Hat Lyon</h2>
-                <h2 class="product--price">$2890</h2>
+                <h2 class="product--title"><%= product.name %></h2>
+                <h2 class="product--price"><%= product.price %></h2>
             </div>
 
 
@@ -45,7 +45,7 @@
 
         <div class="product--description">
             <ul>
-                <li>•  Gorra sin estructura de visera semi curva, color lavado con bordado en el frente</li>
+                <li>•  <%= product.description %></li>
                 <li>•  Hecha con <b>algodón orgánico</b></li>
                 <form class="product--selection" action="">
                 <label for="sizes">Selecciona tu talle:</label>

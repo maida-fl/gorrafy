@@ -13,8 +13,10 @@ const adminRouter = require('./routes/admin'); // Rutas edicion productos
 
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
-app.use(express.urlencoded({ extended: false })); // Para que se usa??
 app.use(express.static(publicPath));
+app.use(express.urlencoded({ extended: false })); // Para que se usa??
+app.use(express.json());
+
 
 // ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));

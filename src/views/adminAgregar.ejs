@@ -13,10 +13,14 @@
         </section>
         <section class="account-page">
             <div class="container-form">
-                <form action="/register" method="POST">
+                <form action="/admin" method="POST" enctype="multipart/form-data">
                     <div class="input-wrap">
                         <label for="productName" class="form-label">Nombre del producto</label>
                         <input type="text" name="productName" id="productName"  class="form-control" placeholder="Ej: Dad Hat Lyon">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="price" class="form-label">Precio ($ARS)</label>
+                        <input type="number" name="price" id="price"  class="form-control" placeholder="Pesos Argentinos">
                     </div>
                     <div class="input-wrap">
                         <div class="productDescription">

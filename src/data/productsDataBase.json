@@ -22,5 +22,31 @@
   "category": "gorra",
   "description": "Gorra de 5 paneles y visera plana, ajustable, color mostaza y gris. Medidas: máx. 61cm   min. 51cm",
   "image": "gorra-culture.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Bien Piola",
+  "price": "1223",
+  "category": "gorras",
+  "description": "Para los pibes que tienen aguante",
+  "colour": [
+   "blanco",
+   "negro",
+   "Verde",
+   "Bordo"
+  ],
+  "image": "1634359761423_img_.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Indiana Jones",
+  "price": "3212",
+  "category": "indumentaria",
+  "description": "Para sentirse aventurero",
+  "colour": [
+   "blanco",
+   "Verde"
+  ],
+  "image": "1634359890301_img_.jpg"
  }
 ]

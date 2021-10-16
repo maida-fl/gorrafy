@@ -198,13 +198,14 @@ ul.breadcrumb li a:hover {
     margin-right: 5%;
   }
 
+ /*  SE SACO EL 16-OCTUBRE
   .product--small--img{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     margin: 10px;
-  }
+  } */         
 
   /* .main{
     text-align:start;

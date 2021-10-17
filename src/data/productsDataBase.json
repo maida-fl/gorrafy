@@ -48,5 +48,14 @@
    "Verde"
   ],
   "image": "1634359890301_img_.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Mom Hat Tiger",
+  "price": "4499",
+  "category": "gorras",
+  "description": "Gorra texturada simple con detalles animal print.",
+  "colour": "negro",
+  "image": "1634502855525_img_.jpeg"
  }
 ]

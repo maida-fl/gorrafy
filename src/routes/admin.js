@@ -26,7 +26,6 @@ const upload = multer({storage: storage});
 
 
 router.get('/', adminController.admin)
-router.get('/editar', adminController.editar)
 router.get('/agregar', adminController.agregar)
 router.post('/', upload.single("productImage"), adminController.store)
 

@@ -14,3 +14,17 @@ LESS OF: Utilizar inglés y español mezclados en código
 KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
 
 MORE OF: Incrementar uso de comentarios en el código 
+
+
+
+SPRINT 3
+
+START DOING: Escribir las Daily Meetings
+
+STOP DOING: Posponer la retrospectiva para el final 
+
+LESS OF: 
+
+KEEP DOING: Continuar ayudándonos mutuamente
+
+MORE OF: Utilizar Trello de una manera más contínua

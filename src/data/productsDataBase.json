@@ -47,18 +47,12 @@
   "image": "1634567643341_img_.jpeg"
  },
  {
-  "id": 7,
+  "id": 6,
   "name": "Dad Hat Tiger",
-  "price": "",
+  "price": "2999",
   "category": "gorras",
-  "description": "Gorra negra material reciclado ",
-  "colour": [
-   "blanco",
-   "negro",
-   "Verde",
-   "Bordo",
-   "Camel"
-  ],
-  "image": "1634502855525_img_.jpeg"
+  "description": "Gorra texturada simple con detalles animal print.",
+  "colour": "negro",
+  "image": "1634571729984_img_.jpeg"
  }
 ]

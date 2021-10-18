@@ -22,8 +22,11 @@ const upload = multer({storage: storage});
 
 // ************ Routes ************
 router.get('/', productoController.listadoProducto)
+
 router.get('/detalle/:id', productoController.detail)
+
 router.get('/edit/:id', productoController.edit)
+
 router.put('/edit/:id', upload.single("productImage"), productoController.update)
 
 

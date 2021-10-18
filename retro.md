@@ -16,7 +16,6 @@ KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
 MORE OF: Incrementar uso de comentarios en el código 
 
 
-
 SPRINT 3
 
 START DOING: Escribir las Daily Meetings

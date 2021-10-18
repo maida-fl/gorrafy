@@ -52,7 +52,7 @@ const productoController = {
 			return product.id == id;
 		});
 
-		res.render('product-edit-form', {product: product})
+		res.render('adminEditar', {product: product})
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {

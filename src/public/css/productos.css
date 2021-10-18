@@ -73,7 +73,8 @@ ul.breadcrumb li a:hover {
     color: #669BBC;
 }
 
-.product--buttons{
+.product--buttons,
+.admin--buttons {
   display: flex;
   justify-content: space-evenly;
   margin-top: 1rem;

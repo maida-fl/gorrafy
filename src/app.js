@@ -17,7 +17,7 @@ const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false })); // Para que se usa??
 app.use(express.json());
-app.use(methodOverride_('_method'));
+app.use(methodOverride('_method'));
 
 
 // ************ Template Engine - (don't touch) ************

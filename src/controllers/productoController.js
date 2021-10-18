@@ -42,7 +42,7 @@ const productoController = {
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
-		res.redirect('/')
+		res.redirect('/producto')
 	},
 
 	// (get) Update - Formulario para editar
@@ -57,21 +57,21 @@ const productoController = {
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
 		const id = req.params.id;
-		let productToEdit = products.find(product => {
-			return product.id == id;
-		});
+		let productToEdit = products[id - 1];
 
 		productToEdit = {
 			id: productToEdit.id,
-			...req.body,
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
 			image: req.file ? req.file.filename : productToEdit.image
 		}
 
-		let newProducts = products;
-		newProducts[id - 1] = productToEdit;
+		products[id - 1] = productToEdit;
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
-		res.redirect("/");
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/producto");
 	},
 
 	// (delete) Delete - Eliminar un producto de la DB

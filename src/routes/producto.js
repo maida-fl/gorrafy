@@ -9,7 +9,7 @@ const productoController = require('../controllers/productoController');
 router.get('/', productoController.listadoProducto)
 router.get('/detalle/:id', productoController.detail)
 router.get('/edit/:id', productoController.edit)
-router.put('/:id', productoController.update)
+router.put('/edit/:id', productoController.update)
 
 
 module.exports = router;

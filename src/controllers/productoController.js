@@ -63,11 +63,7 @@ const productoController = {
 
 		productToEdit = {
 			id: productToEdit.id,
-			name: req.body.productName,
-		    price: req.body.price,
-			category: req.body.productCategory,
-			description: req.body.productDescription,
-            colour: req.body.productColour,
+			...req.body,
 			image: req.file ? req.file.filename : productToEdit.image
 		}
 

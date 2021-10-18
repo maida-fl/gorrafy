@@ -5,6 +5,7 @@
   "price": 3290,
   "category": "gorra",
   "description": "Gorra soft ajustable de visera semi curva, color coral. Tiene tira de ajuste removible. Hecha con algodón orgánico. Medidas: máx: 66cm  min: 52cm",
+  "colour": "Bordo",
   "image": "gorra-1.jpg"
  },
  {
@@ -13,6 +14,7 @@
   "price": 2990,
   "category": "piluso",
   "description": "Sombrero tipo piluso de gabardina color turquesa oscuro. Hecho con descarte textil",
+  "colour": "blanco",
   "image": "gorra-blanca.jpg"
  },
  {
@@ -21,6 +23,10 @@
   "price": 2990,
   "category": "gorra",
   "description": "Gorra de 5 paneles y visera plana, ajustable, color mostaza y gris. Medidas: máx. 61cm   min. 51cm",
+  "colour": [
+    "blanco",
+    "negro"
+   ],
   "image": "gorra-culture.jpg"
  },
  {

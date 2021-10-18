@@ -39,14 +39,11 @@
  },
  {
   "id": 5,
-  "name": "Indiana Jones",
-  "price": "3212",
-  "category": "indumentaria",
-  "description": "Para sentirse aventurero",
-  "colour": [
-   "blanco",
-   "Verde"
-  ],
+  "name": "Indiana Jones Hat",
+  "price": "",
+  "category": "gorras",
+  "description": "Sombrero 1970, cuero original. Para sentirse aventurero.",
+  "colour": "Bordo",
   "image": "1634359890301_img_.jpg"
  },
  {

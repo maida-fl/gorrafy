@@ -48,13 +48,13 @@
                 <li>•  <%= product.description %></li>
                 <li>•  Hecha con <b>algodón orgánico</b></li>
                 <form class="product--selection" action="">
-                <label for="sizes">Selecciona tu talle:</label>
+                <label for="sizes">Talle:</label>
                     <select id="sizes" name="sizes">
                       <option value="0">S</option>
                       <option value="1">M</option>
                       <option value="2">L</option>
                     </select> <br>
-                    <label for="cap-color">Selecciona tu color:</label>
+                    <label for="cap-color">Color:</label>
                     <select id="cap-color" name="cap-color">
                       <option value="Negro">Negro</option>
                       <option value="Rojo">Rojo</option>
@@ -65,8 +65,11 @@
             </ul>
         </div>
 
+        <div class="product--edit--btn">
+            <a href="/producto/edit/<%= product.id %>" class="button--3"> EDITAR PRODUCTO </a>
+            <a href="/producto/delete/<%= product.id %>" class="button--3"> ELIMINAR PRODUCTO </a>
+        </div>
 
-        <a href="/producto/edit/<%= product.id %>"   class="button--2"> EDITAR PRODUCTO </a>
 
 
 

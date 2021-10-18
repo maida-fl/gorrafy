@@ -111,9 +111,34 @@ ul.breadcrumb li a:hover {
   cursor: pointer;
 }
 
+.button--3{
+  font-family: 'Poppins', sans-serif;
+  height: 36px;
+  width: 150px;
+  border: none;
+  padding: 8px, 20px, 8px, 20px;
+  background-color: #212A2F;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
 .button--2:hover{
   background-color: white;
   color: #212A2F;
+}
+.button--3:hover{
+  background-color: white;
+  color: #212A2F;
+}
+
+.product--edit--btn{
+  display: flex;
+  justify-content: space-around;
 }
 
 .product--description{

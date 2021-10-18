@@ -11,9 +11,6 @@ const adminController = {
     agregar: (req, res) => {
         res.render('adminAgregar');
     },
-    editar: (req, res) => {
-        res.render('adminEditar');
-    },
     // POST para agregar producto y almacenarlo
     store: (req, res) => {
         const newProduct = {

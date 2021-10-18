@@ -30,13 +30,13 @@ const productoController = {
 	store: (req, res) => {
 		console.log(req.file);
 		let newProducts = {
-			id: products[products.length -1].id + 1,
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file.filename
+			id: products[products.length - 1].id +1,
+			name: req.body.productName,
+		    price: req.body.price,
+			category: req.body.productCategory,
+			description: req.body.productDescription,
+            colour: req.body.productColour,
+			image: req.file.filename 
 		}
         products.push(newProducts);
 		
@@ -52,7 +52,7 @@ const productoController = {
 			return product.id == id;
 		});
 
-		res.render('adminEditar', {product: product})
+		res.render('adminEditar', {product: product});
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
@@ -60,11 +60,12 @@ const productoController = {
 		let productToEdit = products[id - 1];
 
 		productToEdit = {
-			id: productToEdit.id,
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description,
+			id: products[products.length - 1].id +1,
+			name: req.body.productName,
+		    price: req.body.price,
+			category: req.body.productCategory,
+			description: req.body.productDescription,
+            colour: req.body.productColour,
 			image: req.file ? req.file.filename : productToEdit.image
 		}
 

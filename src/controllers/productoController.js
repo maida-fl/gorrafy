@@ -52,15 +52,17 @@ const productoController = {
 			return product.id == id;
 		});
 
-		res.render('adminEditar', {product: product});
+		res.render('adminEditar', {product: product})
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
 		const id = req.params.id;
-		let productToEdit = products[id - 1];
+		let productToEdit = products.find(product => {
+			return product.id == id;
+		});
 
 		productToEdit = {
-			id: products[products.length - 1].id +1,
+			id: productToEdit.id,
 			name: req.body.productName,
 		    price: req.body.price,
 			category: req.body.productCategory,
@@ -69,9 +71,10 @@ const productoController = {
 			image: req.file ? req.file.filename : productToEdit.image
 		}
 
-		products[id - 1] = productToEdit;
+		let newProducts = products;
+		newProducts[id - 1] = productToEdit;
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
 		res.redirect("/producto");
 	},
 

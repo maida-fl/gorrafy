@@ -5,7 +5,9 @@
   "price": 3290,
   "category": "gorra",
   "description": "Gorra soft ajustable de visera semi curva, color coral. Tiene tira de ajuste removible. Hecha con algodón orgánico. Medidas: máx: 66cm  min: 52cm",
-  "colour": "Bordo",
+  "colour": [
+   "Bordo"
+  ],
   "image": "gorra-1.jpg"
  },
  {
@@ -14,7 +16,9 @@
   "price": 2990,
   "category": "piluso",
   "description": "Sombrero tipo piluso de gabardina color turquesa oscuro. Hecho con descarte textil",
-  "colour": "blanco",
+  "colour": [
+   "blanco"
+  ],
   "image": "gorra-blanca.jpg"
  },
  {
@@ -24,9 +28,9 @@
   "category": "gorra",
   "description": "Gorra de 5 paneles y visera plana, ajustable, color mostaza y gris. Medidas: máx. 61cm   min. 51cm",
   "colour": [
-    "blanco",
-    "negro"
-   ],
+   "blanco",
+   "negro"
+  ],
   "image": "gorra-culture.jpg"
  },
  {
@@ -49,16 +53,20 @@
   "price": "3949",
   "description": "Sombrero de cuero original. Forjado a mano en 1970.",
   "category": "accesorios",
-  "colour": "Verde",
+  "colour": [
+   "Verde"
+  ],
   "image": "1634567643341_img_.jpeg"
  },
  {
   "id": 6,
-  "name": "Dad Hat Tiger",
-  "price": "2999",
+  "name": "Grey Cotton Trucker Cap",
+  "price": "3999",
   "category": "gorras",
-  "description": "Gorra texturada simple con detalles animal print.",
-  "colour": "negro",
-  "image": "1634571729984_img_.jpeg"
+  "description": "This grey cotton trucker cap ensures a cooling and breathable fit. It is adjustable that is guaranteed to fit all head sizes.",
+  "colour": [
+   "Gris"
+  ],
+  "image": "1634649949039_img_.png"
  }
 ]

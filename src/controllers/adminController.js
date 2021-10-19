@@ -19,7 +19,7 @@ const adminController = {
 		    price: req.body.price,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-            colour: req.body.productColour,
+            colour: [req.body.productColour],
 			image: req.file.filename 
 		}
 		products.push(newProduct);

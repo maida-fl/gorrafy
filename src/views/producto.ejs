@@ -56,9 +56,13 @@
                     </select> <br>
                     <label for="cap-color">Color:</label>
                     <select id="cap-color" name="cap-color">
-                      <option value="Negro">Negro</option>
-                      <option value="Rojo">Rojo</option>
-                      <option value="Azul">Azul</option>
+                        
+                      
+                        <% for( let i = 0; i < product.colour.length; i++ ) { %>
+                            <option value=""><%= product.colour[i] %></option>      
+                        <% } %>
+    
+  
                     </select>
                     
                 </form>

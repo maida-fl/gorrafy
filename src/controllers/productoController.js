@@ -38,7 +38,7 @@ const productoController = {
             colour: req.body.productColour,
 			image: req.file.filename 
 		}
-        products.push(newProducts);
+        products.push(newProduct);
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
@@ -64,10 +64,10 @@ const productoController = {
 		productToEdit = {
 			id: productToEdit.id,
 			name: req.body.productName,
-		    price: req.body.productPrice,
+			price: req.body.productPrice,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-            colour: req.body.productColour,
+			colour: req.body.productColour,
 			image: req.file ? req.file.filename : productToEdit.image
 		}
 

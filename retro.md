@@ -22,7 +22,7 @@ START DOING: Escribir las Daily Meetings
 
 STOP DOING: Posponer la retrospectiva para el final 
 
-LESS OF: 
+LESS OF: Comenzar los puntos del sprint antes
 
 KEEP DOING: Continuar ayudándonos mutuamente
 

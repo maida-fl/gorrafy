@@ -11,6 +11,7 @@ const mainRouter = require('./routes/main'); // Rutas main
 const compraRouter = require('./routes/compra'); // Rutas compra
 const productoRouter = require('./routes/producto'); // Rutas producto
 const adminRouter = require('./routes/admin'); // Rutas edicion productos
+const usersRouter = require('./routes/users'); // Rutas users
 
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
@@ -29,7 +30,7 @@ app.use('/', mainRouter);
 app.use('/producto', productoRouter);
 app.use('/compra', compraRouter);
 app.use('/admin', adminRouter);
-
+app.use('/', usersRouter);
 
 
 

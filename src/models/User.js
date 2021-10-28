@@ -1,9 +1,7 @@
-// 4. Editar la información de un usuario
-
 const fs = require('fs');
 
 const User = {
-	fileName: '../data/usersDataJson.json',
+	fileName: '/Users/matiasmaldonado/Desktop/DH/gorrafy/grupo_9_GorrasYAccesorios/src/data/usersDataBase.json',
 
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
@@ -51,9 +49,10 @@ const User = {
 		fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ' '));
 		return true;
 	}
-    
 }
 
+//console.log(User.create({firstName: "Xavi", lastName: "Hernandez", email: "xavidh@gmail.com", password: "123451238", category: 1982, image: null }));
+// console.log(User.delete(101));
+//console.log(User.findAll());
+
 module.exports = User;
-
-

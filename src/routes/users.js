@@ -14,6 +14,8 @@ router.post('/register', uploadFile.single('avatar'), validations, userControlle
 
 router.get('/login', userController.login)
 
+router.get('/profile', userController.profile)
+
 
 
 

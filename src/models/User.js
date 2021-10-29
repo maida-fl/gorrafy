@@ -53,6 +53,6 @@ const User = {
 
 //console.log(User.create({firstName: "Xavi", lastName: "Hernandez", email: "xavidh@gmail.com", password: "123451238", category: 1982, image: null }));
 // console.log(User.delete(101));
-console.log(User.findByPk(2));
+//console.log(User.findByPk(2));
 
 module.exports = User;

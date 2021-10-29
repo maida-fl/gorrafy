@@ -6,6 +6,11 @@ const {
 const User = require('../models/User');
 
 const controller = {
+	profile: (req,res) => {
+		let users = User.findAll()
+		return res.render('profile', {users: users})
+	},
+
 	register: (req, res) => {
 		return res.render('register');
 	},

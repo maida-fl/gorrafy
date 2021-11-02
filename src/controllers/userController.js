@@ -62,7 +62,7 @@ const controller = {
 			if(passwordCheck) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
-				return res.redirect('/');
+				return res.redirect('/user/profile');
 			}
 			return res.render('login', {
 				errors: {
@@ -82,7 +82,7 @@ const controller = {
 		});	
 	},
 	profile: (req, res) => {
-		return res.render('userProfile', {
+		return res.render('profile', {
 			user: req.session.userLogged
 		});
 	}

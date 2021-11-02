@@ -3,22 +3,17 @@
 
     <!-- Main -->
     <section class="main">
-        <ul class="breadcrumb">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><%= users.firstName %></li>
-        </ul>
 
-        <div class="setOfCards" id="setOfCards">
-            <% users.forEach(hat => { %>
-                <div class="card">
-                    <img src="/img/<%= hat.avatar  %>" alt="">
-                    <p class="card--title"><%= hat.lastName %>, <%= hat.firstName %></p>
-                    <p class="card--title"><%= hat.email %></p>
-                    <hr class="card--line">
-                    <p class="card--description"> <%= hat.description %> </p>
-                </div>     
-             <% }); %> 
+        <div class="container-profile">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Hi <%= user.firstName %></h2>
+                    <img src="/images/avatars/<%= user.avatar %>" width="100%">
+                    <br>
+                    <br>
+                    <div class="alert alert-success"><%= user.email %></div>
+                </div>
+            </div>
         </div>
 
 

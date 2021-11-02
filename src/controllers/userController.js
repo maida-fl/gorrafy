@@ -56,9 +56,18 @@ const controller = {
     },
 	processLogin: (req,res) => {
 		let userToLogin = User.findByField('email', req.body.email);
-		return res.send(userToLogin);
-	}
+				if(userToLogin) {
+				return res.send(userToLogin);
+			} 
+			return res.render('login', {
+				errors: {
+					email: {
+						msg: 'No se encuentra un usuario registrado con este email'
+					}
+				}
+			});
 		
+	}
 	// 	if(userToLogin) {
 	// 		let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 	// 		if (isOkThePassword) {

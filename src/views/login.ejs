@@ -9,6 +9,13 @@
         
             <form method="POST" action="/user/login">
               <input type="text" name="email" placeholder="Email">
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                <% for( let oneError in errors ) { %>
+                  <%= errors.email.msg  %> 
+                <% } %>   
+                </div>   
+            <% } %>
               <input type="password" name="password" id="password" placeholder="contraseña">
               <div class="remember">
                 <label for="rememberMe">Recuerdame</label>

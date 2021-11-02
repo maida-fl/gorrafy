@@ -60,6 +60,8 @@ const controller = {
 		if(userToLogin) {
 			let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if(passwordCheck) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
 				return res.redirect('/');
 			}
 			return res.render('login', {
@@ -70,56 +72,20 @@ const controller = {
 				}
 			});
 		} 
-		
+
 		return res.render('login', {
 			errors: {
 				email: {
-					msg: 'Las credenciales son inválidas'
+					msg: 'No se encuentra un usuario registrado con este email'
 				}
 			}
+		});	
+	},
+	profile: (req, res) => {
+		return res.render('userProfile', {
+			user: req.session.userLogged
 		});
-		
 	}
-	// 	if(userToLogin) {
-	// 		let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-	// 		if (isOkThePassword) {
-	// 			delete userToLogin.password;
-	// 			req.session.userLogged = userToLogin;
-
-	// 			if(req.body.remember_user) {
-	// 				res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-	// 			}
-
-	// 			return res.redirect('/user/profile');
-	// 		} 
-	// 		return res.render('userLoginForm', {
-	// 			errors: {
-	// 				email: {
-	// 					msg: 'Las credenciales son inválidas'
-	// 				}
-	// 			}
-	// 		});
-	// 	}
-
-	// 	return res.render('userLoginForm', {
-	// 		errors: {
-	// 			email: {
-	// 				msg: 'No se encuentra este email en nuestra base de datos'
-	// 			}
-	// 		}
-	// 	});
-	// },
-	// profile: (req, res) => {
-	// 	return res.render('userProfile', {
-	// 		user: req.session.userLogged
-	// 	});
-	// },
-
-	// logout: (req, res) => {
-	// 	res.clearCookie('userEmail');
-	// 	req.session.destroy();
-	// 	return res.redirect('/');
-	// }
 }
 
 module.exports = controller;

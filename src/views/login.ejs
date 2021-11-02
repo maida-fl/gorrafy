@@ -7,7 +7,7 @@
         <div class="form">
             <h2>INICIAR SESIÓN</h2>
         
-            <form>
+            <form action="/user/login" method="POST">
               <input type="text" placeholder="usuario"/>
               <input type="password" id="password" placeholder="contraseña"/>
               <div class="remember">
@@ -17,7 +17,7 @@
               <i class="fas fa-eye" onclick="show()"></i> 
               <br>
               <br>
-              <button>INGRESÁ</button>
+              <button type="submit">INGRESÁ</button>
               <p class="message"></p>
             </form>
         

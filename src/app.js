@@ -16,7 +16,7 @@ const userRouter = require('./routes/users'); // Rutas usuaarios
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
-app.use(express.urlencoded({ extended: false })); // Para que se usa??
+app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
 app.use(methodOverride('_method'));
 
@@ -35,6 +35,6 @@ app.use('/user', userRouter)
 
 
 
-app.listen(3001, () => {
-    console.log("Serving on port 3001!   http://localhost:3001/");
+app.listen(3000, () => {
+    console.log("Serving on port 3000!   http://localhost:3000/");
 });

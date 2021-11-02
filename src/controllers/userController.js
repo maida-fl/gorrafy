@@ -45,7 +45,7 @@ const controller = {
 
 		// let userCreated = User.create(userToCreate);
 
-        User.create(userToCreate)
+        User.create(userToCreate);
 
 
 
@@ -53,7 +53,11 @@ const controller = {
 	},
     login: (req,res) => {
         return res.render('login')
-    }
+    },
+	processLogin: (req,res) => {
+		res.send(req.body);
+	}
+
 	// loginProcess: (req, res) => {
 	// 	let userToLogin = User.findByField('email', req.body.email);
 		

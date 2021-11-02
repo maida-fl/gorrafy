@@ -2,10 +2,10 @@ const fs = require('fs');
 
 const User = {
 	fileName: '../grupo_9_GorrasYAccesorios/src/data/usersDataBase.json',
-
+// Para traer todo el db de users:
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
-	},
+	},  
 
 	generateId: function () {
 		let allUsers = this.findAll();
@@ -31,7 +31,7 @@ const User = {
 		let userFound = allUsers.find(oneUser => oneUser[field] === text);
 		return userFound;
 	},
-
+// Recordar que findByField solo devuelve el primer resultado, no todos
 	create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {

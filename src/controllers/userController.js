@@ -55,11 +55,9 @@ const controller = {
         return res.render('login')
     },
 	processLogin: (req,res) => {
-		res.send(req.body);
+		let userToLogin = User.findByField('email', req.body.email);
+		return res.send(userToLogin);
 	}
-
-	// loginProcess: (req, res) => {
-	// 	let userToLogin = User.findByField('email', req.body.email);
 		
 	// 	if(userToLogin) {
 	// 		let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);

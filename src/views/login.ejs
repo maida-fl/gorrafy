@@ -7,9 +7,9 @@
         <div class="form">
             <h2>INICIAR SESIÓN</h2>
         
-            <form action="/user/login" method="POST">
-              <input type="text" placeholder="usuario"/>
-              <input type="password" id="password" placeholder="contraseña"/>
+            <form method="POST" action="/user/login">
+              <input type="text" name="email" placeholder="Email">
+              <input type="password" name="password" id="password" placeholder="contraseña">
               <div class="remember">
                 <label for="rememberMe">Recuerdame</label>
                 <input type="checkbox" value="lsRememberMe" id="rememberMe"> 

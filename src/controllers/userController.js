@@ -56,16 +56,28 @@ const controller = {
     },
 	processLogin: (req,res) => {
 		let userToLogin = User.findByField('email', req.body.email);
-				if(userToLogin) {
-				return res.send(userToLogin);
-			} 
+		
+		if(userToLogin) {
+			let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if(passwordCheck) {
+				return res.redirect('/');
+			}
 			return res.render('login', {
 				errors: {
 					email: {
-						msg: 'No se encuentra un usuario registrado con este email'
+						msg: 'Las credenciales son inválidas'
 					}
 				}
 			});
+		} 
+		
+		return res.render('login', {
+			errors: {
+				email: {
+					msg: 'Las credenciales son inválidas'
+				}
+			}
+		});
 		
 	}
 	// 	if(userToLogin) {

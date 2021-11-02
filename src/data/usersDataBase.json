@@ -945,5 +945,14 @@
   "category": "2002",
   "password": "$2a$10$IPjKALCiK8WwnMwYIkMF7.xm6CB1JYpx1hQm64nQvWRxiGitEMPHG",
   "avatar": "1635451072274_img_.png"
+ },
+ {
+  "id": 106,
+  "firstName": "Juana",
+  "lastName": "J",
+  "email": "juanadh@gmail.com",
+  "category": "2000",
+  "password": "$2a$10$Jsx4EqNHOqUVCAX5lrAe.egsZ/LGDmZLv2mn33qKWFaP2Os2Q64HG",
+  "avatar": "1635886467080_img_.png"
  }
 ]

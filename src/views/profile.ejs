@@ -4,11 +4,11 @@
     <!-- Main -->
     <section class="main">
 
-        <div class="container-profile">
+        <div class="container-profile" style="margin-top: 100px;">
             <div class="row">
                 <div class="col-md-3">
-                    <h2>Hi <%= user.firstName %></h2>
-                    <img src="/images/avatars/<%= user.avatar %>" width="100%">
+                    <h2 style="margin-bottom: 20px;">Hola, <%= user.firstName %>!</h2>
+                    <img src="/img/<%= user.avatar %>" width="20%">
                     <br>
                     <br>
                     <div class="alert alert-success"><%= user.email %></div>

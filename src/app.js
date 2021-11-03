@@ -16,6 +16,7 @@ const userRouter = require('./routes/users'); // Rutas usuaarios
 
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
@@ -25,6 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+app.use(userLoggedMiddleware);
 
 
 // ************ Template Engine - (don't touch) ************

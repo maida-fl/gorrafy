@@ -954,5 +954,14 @@
   "category": "2000",
   "password": "$2a$10$Jsx4EqNHOqUVCAX5lrAe.egsZ/LGDmZLv2mn33qKWFaP2Os2Q64HG",
   "avatar": "1635886467080_img_.png"
+ },
+ {
+  "id": 107,
+  "firstName": "Emir",
+  "lastName": "Federico",
+  "email": "emirfederico@gmail.com",
+  "category": "1994",
+  "password": "$2a$10$X6QKbZHBLieUC5UFnaupseearbG7OzqxbgFvDqDb.PKr3UaCxhQ1G",
+  "avatar": "1635894885307_img_.png"
  }
 ]

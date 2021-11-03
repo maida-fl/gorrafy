@@ -25,6 +25,9 @@ router.post('/login', userController.processLogin)
 
 router.get('/profile',authMiddleware, userController.profile)
 
+// Logout
+router.get('/logout', userController.logout);
+
 
 
 

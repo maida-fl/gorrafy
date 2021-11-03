@@ -26,4 +26,17 @@ LESS OF: Posponer el comienzo del sprint
 
 KEEP DOING: Continuar ayudándonos mutuamente
 
-MORE OF: Utilizar Trello de una manera más contínua
+MORE OF: Actualizar avances en Trello de una manera más contínua
+
+
+SPRINT 4
+
+START DOING: Estructurar las Daily Meetings 
+
+STOP DOING: No registrar por escrito las Daily Meetings
+
+LESS OF: No estar informados de manera más o menos contínua de los avances del resto de los integrantes
+
+KEEP DOING: Organizarnos con Trello de manera detallada
+
+MORE OF: Registrar de una manera más constante los avances en Trello

@@ -4,6 +4,7 @@ const router = express.Router();
 const uploadFile = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegister');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 
@@ -22,7 +23,7 @@ router.get('/login', guestMiddleware, userController.login)
 // Procesar el Login
 router.post('/login', userController.processLogin)
 
-router.get('/profile', userController.profile)
+router.get('/profile',authMiddleware, userController.profile)
 
 
 

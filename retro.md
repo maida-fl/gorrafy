@@ -1,9 +1,9 @@
-SPRINT 1
+#### SPRINT 1
 
 Nuestro equipo tiene como cualidad un buen dialogo, distribución y coordinación de actividades. Se utilizan plataformas de contacto y seguimiento tales como Discord, Trello y whatsapp. A su vez, se llevan a cabo reuniones periódicas luego de las clases en vivo en donde se analizan avances, se efectúan feedback mutuos sobre qué mejorar y cómo encarar diversas cuestiones del proyecto. Compromiso por parte de todo el equipo.
 Cómo punto a mejorar remarcado en el sprint anterior se encuentra simplificar ciertos aspectos y atenerse a lo solicitado; en nuestro caso, si bien fue elogiado, efectuamos una representación fiel a lo deseado a maquetar mediante Figma yendo más allá de la simpleza que requería el ejercicio de un wireframe de líneas.   
 
-SPRINT 2
+#### SPRINT 2
 
 START DOING: Organizarse aplicando MVP (Minimum Viable Product)
 
@@ -15,8 +15,7 @@ KEEP DOING: Continuar ayudándonos mutuamente y utilizando Trello
 
 MORE OF: Incrementar uso de comentarios en el código 
 
-
-SPRINT 3
+#### SPRINT 3
 
 START DOING: Escribir las Daily Meetings
 
@@ -29,7 +28,7 @@ KEEP DOING: Continuar ayudándonos mutuamente
 MORE OF: Actualizar avances en Trello de una manera más contínua
 
 
-SPRINT 4
+#### SPRINT 4
 
 START DOING: Estructurar las Daily Meetings 
 

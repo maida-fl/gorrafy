@@ -29,7 +29,7 @@ const productoController = {
 	// (post) Create - Método para guardar la info
 	store: (req, res) => {
 		console.log(req.file);
-		let newProducts = {
+		let newProduct = {
 			id: products[products.length - 1].id +1,
 			name: req.body.productName,
 		    price: req.body.price,
@@ -72,7 +72,11 @@ const productoController = {
 		}
 
 		let newProducts = products;
-		newProducts[id - 1] = productToEdit;
+		newProducts.forEach((producto, index) => {
+			if (producto.id == id){
+			newProducts[index] = productToEdit
+			}
+		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
 		res.redirect("/producto");

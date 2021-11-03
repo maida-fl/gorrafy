@@ -963,5 +963,14 @@
   "category": "1994",
   "password": "$2a$10$X6QKbZHBLieUC5UFnaupseearbG7OzqxbgFvDqDb.PKr3UaCxhQ1G",
   "avatar": "1635894885307_img_.png"
+ },
+ {
+  "id": 108,
+  "firstName": "Matias",
+  "lastName": "Maldonado",
+  "email": "molporron@gmail.com",
+  "category": "1999",
+  "password": "$2a$10$0oR9OQNKXmGDSEZ.MznhoujM.f1yiW.RAYD0CZCKtTbpvzwFDbCZy",
+  "avatar": "1635967500410_img_.png"
  }
 ]

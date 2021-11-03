@@ -68,5 +68,19 @@
    "Gris"
   ],
   "image": "1634649949039_img_.png"
+ },
+ {
+  "id": 7,
+  "name": "Old Navy Hat",
+  "price": "1999",
+  "category": "gorras",
+  "description": "Gorra desgastada simple. Oyis 21.",
+  "colour": [
+   [
+    "Blanco",
+    "Verde"
+   ]
+  ],
+  "image": "1635967780042_img_.jpeg"
  }
 ]

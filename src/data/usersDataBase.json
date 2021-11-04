@@ -972,5 +972,14 @@
   "category": "1999",
   "password": "$2a$10$0oR9OQNKXmGDSEZ.MznhoujM.f1yiW.RAYD0CZCKtTbpvzwFDbCZy",
   "avatar": "1635967500410_img_.png"
+ },
+ {
+  "id": 109,
+  "firstName": "Matias",
+  "lastName": "Maldonado",
+  "email": "mmmmm@gmail.com",
+  "category": "2000",
+  "password": "$2a$10$DPamik0Hb.FwEVW/k1LU4.ynp6nlLTPb2lR1GCu8Wp0o3NOX5Jh3q",
+  "avatar": "1635990372132_img_.jpeg"
  }
 ]

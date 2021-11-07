@@ -1,4 +1,4 @@
-# ProyectoIntegradorG9(GORRAS)
+# Proyecto Integrador - Gorrafy - Grupo 9
 
 Reseña Sitio Web:
 El sitio web tendrá como fin poner en vidriera y oferta nuestra cartera de productos siendo nuestro principal exponente las Gorras con Visera con opción de personalización. A su vez ofreceremos accesorios secundarios para cuello y cabeza tales como vinchas, anteojos y viseras simples entre otros. 

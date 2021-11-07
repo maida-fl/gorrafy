@@ -86,3 +86,5 @@ Info adicional:
 -Trello Sprint 4: https://trello.com/b/hjhaoL76/sprint-4
 
 -Trello Sprint 5: https://trello.com/b/jVtSnycU/sprint-5
+
+-Trello Sprint 6: https://trello.com/b/Cv3f3M94/sprint-6-bases-de-datos

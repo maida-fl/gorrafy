@@ -8,15 +8,12 @@ guardados en la carpeta Data como Json (un array de objetos literales) */
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const Product = db.Product;
 
 const productoController = {
     // producto: (req, res) => {
-
     // },
     listadoProducto: (req, res) => {
-        Product.findAll()
+        db.Products.findAll()
 		.then(function(products) {
 			res.render('listadoProductos', {products:products})
 		})

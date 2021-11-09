@@ -3,32 +3,32 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true,
+            primaryKey: true
         },
         name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         price: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         description: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         image: {
-            type: dataTypes.STRING.BINARY,
+            type: dataTypes.STRING.BINARY
         },
         id_category: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         id_colour: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
     }, {
         tableName: 'products',
         paranoid: true,
         deletedAt: "softDelete",
         createdAt: "created_at",
-        updatedAt: "updated_at",
+        updatedAt: "updated_at"
     })
     
     return Product;

@@ -25,6 +25,7 @@ module.exports = (sequelize, dataTypes) => {
         },
     }, {
         tableName: 'products',
+        timestamps: true, //Se agrego esta linea 13-nov
         paranoid: true,
         deletedAt: "softDelete",
         createdAt: "created_at",

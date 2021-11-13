@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const Product = sequelize.define('Products', {
+    const Product = sequelize.define('Product', {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
@@ -27,9 +27,9 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'products',
         timestamps: true, //Se agrego esta linea 13-nov
         paranoid: true,
-        deletedAt: "softDelete",
-        createdAt: "created_at",
-        updatedAt: "updated_at"
+        deletedAt: "softDelete", 
+        createdAt: "created_at", //estan bien? en el diagrama no incluimos marcas temporales
+        updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales
     })
     
     return Product;

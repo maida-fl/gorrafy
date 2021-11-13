@@ -19,6 +19,7 @@ module.exports = (sequelize, dataTypes) => {
     */
     })
 
+    //Este no se si es 1:N o M:N, si vinculamos unico ID con 1 solo color 1:N sino M:N, en este caso esta hecho 1:N
     Colour.associate = function(models) {
         Colour.hasMany(models.Product, { // models.Product -> Product es el alias
             as: "products", // El nombre del modelo pero en plural

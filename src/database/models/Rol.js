@@ -18,6 +18,13 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales 
     */
     })
+
+    Rol.associate = function(models) {
+        Rol.hasMany(models.User, { // models.User -> User es el alias
+            as: "users", // El nombre del modelo pero en plural
+            foreignKey: "id_rol"
+        })
+    }
     
     return Rol;
 }

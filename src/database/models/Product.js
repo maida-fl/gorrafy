@@ -17,12 +17,12 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING.BINARY
         },
-        id_category: {
+ /*       id_category: {
             type: dataTypes.INTEGER
         },
         id_colour: {
             type: dataTypes.INTEGER
-        },
+        },*/   
     }, {
         tableName: 'products',
         timestamps: true, //Se agrego esta linea 13-nov

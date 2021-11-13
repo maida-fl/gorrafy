@@ -32,6 +32,15 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales
     })
     
+    User.associate = function (models){
+ 
+        User.belongsTo (models.Rol, {
+            as: "roles",
+            foreingKey: "id_rol"
+        })
+    }  
+
+
     return User;
 }
 

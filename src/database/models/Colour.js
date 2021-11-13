@@ -18,6 +18,13 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales 
     */
     })
+
+    Colour.associate = function(models) {
+        Colour.hasMany(models.Product, { // models.Product -> Product es el alias
+            as: "products", // El nombre del modelo pero en plural
+            foreignKey: "id_colour"
+        })
+    }
     
     return Colour;
 }

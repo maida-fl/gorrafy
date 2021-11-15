@@ -33,7 +33,7 @@
         <div class="full--size--right">
             
             <div class="product--tp">
-                <h2 class="product--title"><%= product.name %></h2>
+                <h2 class="product--title"><%= product.name %> | <%= product.categories.category  %> </h2>
                 <h2 class="product--price">$<%= product.price %></h2>
             </div>
 
@@ -54,16 +54,16 @@
                       <option value="1">M</option>
                       <option value="2">L</option>
                     </select> <br>
-                    <label for="cap-color">Color:</label>
-                    <select id="cap-color" name="cap-color">
-                        
-                      
-                        <% for( let i = 0; i < product.colour.length; i++ ) { %>
-                            <option value=""><%= product.colour[i] %></option>      
-                        <% } %>
-    
-  
-                    </select>
+                <label for="cap-color">Color:</label>
+                <select id="cap-color" name="cap-color">
+                    
+                  
+                    <% for( let i = 0; i < product.colours.colour.length; i++ ) { %>
+                        <option value=""><%= product.colours.colour[i] %></option>      
+                    <% } %>
+
+
+                </select>
                     
                 </form>
             </ul>

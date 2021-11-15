@@ -23,7 +23,9 @@ const productoController = {
 		})
     },
     detail: (req, res) => {
-		Product.findByPk(req.params.id)
+		Product.findByPk(req.params.id, {
+			include:[{association:'categories'}, {association:'colours'}]
+		})
 			.then(function(product) {
 				res.render('producto', {product:product})
 			})

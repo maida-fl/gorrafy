@@ -15,40 +15,34 @@ const productoController = {
     // producto: (req, res) => {
     // },
     listadoProducto: (req, res) => {
-        db.Product.findAll()//({include:[{association:'colours'}, {association:'categories'}]})
+        Product.findAll()//({include:[{association:'colours'}, {association:'categories'}]})
 		.then(function(products) {
 			res.render('listadoProductos', {products:products})
 		})
     },
     detail: (req, res) => {
-		const id = req.params.id;
-		const product = products.find(product => {
-			return product.id == id
-		})
-		res.render('producto', {product: product})
+		Product.findByPk(req.params.id)
+			.then(function(product) {
+				res.render('producto', {product})
+			})
 	},
     // (get) Create - Formulario para crear
 	create: (req, res) => {
 		res.render('product-create-form')
-
 	},
 	// (post) Create - Método para guardar la info
 	store: (req, res) => {
-		console.log(req.file);
-		let newProduct = {
-			id: products[products.length - 1].id +1,
+		Product.create({
 			name: req.body.productName,
 		    price: req.body.price,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
             colour: req.body.productColour,
 			image: req.file.filename 
-		}
-        products.push(newProduct);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		res.redirect('/producto')
+		})
+		.then(function(){
+			res.redirect('/producto')
+		})
 	},
 
 	// (get) Update - Formulario para editar

@@ -13,20 +13,17 @@ const adminController = {
     },
     // POST para agregar producto y almacenarlo
     store: (req, res) => {
-        const newProduct = {
-			id: products[products.length - 1].id +1,
-			name: req.body.productName,
-		    price: req.body.price,
-			category: req.body.productCategory,
-			description: req.body.productDescription,
-            colour: [req.body.productColour],
-			image: req.file.filename 
-		}
-		products.push(newProduct);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/producto");
-
+        Product.create({
+            name: req.body.productName,
+            price: req.body.price,
+            category: req.body.productCategory,
+            description: req.body.productDescription,
+            colour: req.body.productColour,
+            image: req.file.filename 
+        })
+        .then(function(){
+            res.redirect('/producto')
+        })   
     }
 
 };

@@ -15,7 +15,9 @@ const productoController = {
     // producto: (req, res) => {
     // },
     listadoProducto: (req, res) => {
-        Product.findAll()//({include:[{association:'colours'}, {association:'categories'}]})
+        Product.findAll({
+			include:[{association:'categories'}, {association:'colours'}]
+		})
 		.then(function(products) {
 			res.render('listadoProductos', {products:products})
 		})

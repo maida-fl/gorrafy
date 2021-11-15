@@ -25,7 +25,7 @@ const productoController = {
     detail: (req, res) => {
 		Product.findByPk(req.params.id)
 			.then(function(product) {
-				res.render('producto', {product})
+				res.render('producto', {product:product})
 			})
 	},
     // (get) Create - Formulario para crear

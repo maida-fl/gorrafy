@@ -3,6 +3,8 @@ USE `gorras`;
 
 CREATE TABLE `users` (
    `id` INT AUTO_INCREMENT,
+   `created_at` timestamp NULL DEFAULT NULL,
+   `updated_at` timestamp NULL DEFAULT NULL,
    `firstName` VARCHAR(50) NOT NULL,
    `lastName` VARCHAR(50) NOT NULL,
    `email` VARCHAR(255) NOT NULL,
@@ -10,35 +12,47 @@ CREATE TABLE `users` (
    `category` INT NOT NULL,
    `avatar` VARBINARY(800) NOT NULL,
    `id_rol` INT NOT NULL,
+   `softDelete` datetime DEFAULT NULL
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `products` (
    `id` INT AUTO_INCREMENT,
+   `created_at` timestamp NULL DEFAULT NULL,
+   `updated_at` timestamp NULL DEFAULT NULL,
    `name` VARCHAR(255) NOT NULL,
    `price` INT NOT NULL,
    `description` TEXT NOT NULL,
    `image` VARBINARY(800) NOT NULL,
    `id_category` INT NOT NULL,
    `id_colour` INT NOT NULL,
+   `softDelete` datetime DEFAULT NULL
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `categories` (
    `id` INT AUTO_INCREMENT,
+   `created_at` timestamp NULL DEFAULT NULL,
+   `updated_at` timestamp NULL DEFAULT NULL,
    `category` VARCHAR(50) NOT NULL,
+   `softDelete` datetime DEFAULT NULL
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `colours` (
    `id` INT AUTO_INCREMENT,
-   `colour` VARCHAR(50) NOT NULL,
+   `created_at` timestamp NULL DEFAULT NULL,
+   `updated_at` timestamp NULL DEFAULT NULL,
+   `softDelete` datetime DEFAULT NULL
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `roles` (
    `id` INT AUTO_INCREMENT,
+   `created_at` timestamp NULL DEFAULT NULL,
+   `updated_at` timestamp NULL DEFAULT NULL,
    `rol` VARCHAR(50) NOT NULL,
+   `softDelete` datetime DEFAULT NULL
    PRIMARY KEY (`id`)
 );
 

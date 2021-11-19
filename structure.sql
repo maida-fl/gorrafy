@@ -2,9 +2,9 @@ CREATE DATABASE IF NOT EXISTS `gorras`;
 USE `gorras`;
 
 CREATE TABLE `users` (
-   `id` INT AUTO_INCREMENT,
-   `created_at` timestamp NULL DEFAULT NULL,
-   `updated_at` timestamp NULL DEFAULT NULL,
+   `id` INT AUTO_INCREMENT NOT NULL,
+   `created_at` TIMESTAMP NULL DEFAULT NULL,
+   `updated_at` TIMESTAMP NULL DEFAULT NULL,
    `firstName` VARCHAR(50) NOT NULL,
    `lastName` VARCHAR(50) NOT NULL,
    `email` VARCHAR(255) NOT NULL,
@@ -13,13 +13,13 @@ CREATE TABLE `users` (
    `avatar` VARBINARY(800) NOT NULL,
    `id_rol` INT NOT NULL,
    `softDelete` datetime DEFAULT NULL,
-   PRIMARY KEY (`id`)
-);
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `products` (
    `id` INT AUTO_INCREMENT,
-   `created_at` timestamp NULL DEFAULT NULL,
-   `updated_at` timestamp NULL DEFAULT NULL,
+   `created_at` TIMESTAMP NULL DEFAULT NULL,
+   `updated_at` TIMESTAMP NULL DEFAULT NULL,
    `name` VARCHAR(255) NOT NULL,
    `price` INT NOT NULL,
    `description` TEXT NOT NULL,
@@ -43,22 +43,22 @@ CREATE TABLE `colours` (
    `id` INT AUTO_INCREMENT,
    `created_at` timestamp NULL DEFAULT NULL,
    `updated_at` timestamp NULL DEFAULT NULL,
+   `colour` VARCHAR(50) NOT NULL,
    `softDelete` datetime DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `roles` (
    `id` INT AUTO_INCREMENT,
-   `created_at` timestamp NULL DEFAULT NU
+   `created_at` timestamp NULL DEFAULT NULL,
    `updated_at` timestamp NULL DEFAULT NULL,
    `rol` VARCHAR(50) NOT NULL,
    `softDelete` datetime DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
-
 ALTER TABLE `users` ADD CONSTRAINT `FK_8ee5a6d9-0098-4918-b7ff-699b1c6461d9` FOREIGN KEY (`id_rol`) REFERENCES `roles`(`id`)  ;
 
 ALTER TABLE `products` ADD CONSTRAINT `FK_e6027977-3204-4a7b-bf6d-f9846ca00c05` FOREIGN KEY (`id_category`) REFERENCES `categories`(`id`)  ;
 
-ALTER TABLE `products` ADD CONSTRAINT `FK_208cf461-6c21-455f-a62f-d203c4a19109` FOREIGN KEY (`id_co
+ALTER TABLE `products` ADD CONSTRAINT `FK_208cf461-6c21-455f-a62f-d203c4a19109` FOREIGN KEY (`id_colour`) REFERENCES `colours`(`id`)  ;

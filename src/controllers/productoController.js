@@ -12,8 +12,6 @@ const sequelize = db.sequelize;
 const Product = db.Product;
 
 const productoController = {
-    // producto: (req, res) => {
-    // },
     listadoProducto: (req, res) => {
         Product.findAll({
 			include:[{association:'categories'}, {association:'colours'}]
@@ -27,7 +25,7 @@ const productoController = {
 			include:[{association:'categories'}, {association:'colours'}]
 		})
 			.then(function(product) {
-				res.render('producto', {product:product})
+				res.render('producto', {product: product})
 			})
 	},
     // (get) Create - Formulario para crear

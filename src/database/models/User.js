@@ -25,12 +25,10 @@ module.exports = (sequelize, dataTypes) => {
         },  
     }, {
         tableName: 'users',
-        timestamps: true,
         paranoid: true,
-        deletedAt: "softDelete", 
-        createdAt: "created_at", //estan bien? en el diagrama no incluimos marcas temporales
-        updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales
-    })
+        deletedAt: "softDelete",
+        createdAt: "created_at",
+        updatedAt: "updated_at",   })
     
     User.associate = function (models){
  

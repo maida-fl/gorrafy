@@ -11,12 +11,10 @@ module.exports = (sequelize, dataTypes) => {
         
     }, {
         tableName: 'colours',
-        timestamps: false
-        // paranoid: true,
-        // deletedAt: "softDelete", 
-    /*  createdAt: "created_at", //estan bien? en el diagrama no incluimos marcas temporales
-        updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales 
-    */
+        paranoid: true,
+        deletedAt: "softDelete",
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     })
 
     //Este no se si es 1:N o M:N, si vinculamos unico ID con 1 solo color 1:N sino M:N, en este caso esta hecho 1:N

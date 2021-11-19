@@ -25,12 +25,11 @@ module.exports = (sequelize, dataTypes) => {
         },  
     }, {
         tableName: 'products',
-        timestamps: false //Se agrego esta linea 13-nov
-        // paranoid: true,
-        // deletedAt: "softDelete", 
-        // createdAt: "created_at", //estan bien? en el diagrama no incluimos marcas temporales
-        // updatedAt: "updated_at"  //estan bien? en el diagrama no incluimos marcas temporales
-    })
+        paranoid: true,
+        deletedAt: "softDelete",
+        createdAt: "created_at",
+        updatedAt: "updated_at"
+      })
 
     Product.associate = function(models){
  

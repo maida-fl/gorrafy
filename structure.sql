@@ -62,3 +62,17 @@ ALTER TABLE `users` ADD CONSTRAINT `FK_8ee5a6d9-0098-4918-b7ff-699b1c6461d9` FOR
 ALTER TABLE `products` ADD CONSTRAINT `FK_e6027977-3204-4a7b-bf6d-f9846ca00c05` FOREIGN KEY (`id_category`) REFERENCES `categories`(`id`)  ;
 
 ALTER TABLE `products` ADD CONSTRAINT `FK_208cf461-6c21-455f-a62f-d203c4a19109` FOREIGN KEY (`id_colour`) REFERENCES `colours`(`id`)  ;
+
+
+
+-- VALUES
+
+INSERT INTO gorras.roles VALUES(DEFAULT, DEFAULT, DEFAULT, "admin", DEFAULT);
+
+INSERT INTO gorras.users VALUES (DEFAULT, DEFAULT, DEFAULT, 'Matias', 'Maldonado', 'molporron@gmail.com', '12345678', 1999, '1634567211553_img_.jpg', 1, DEFAULT);
+
+INSERT INTO gorras.categories VALUES(DEFAULT, DEFAULT, DEFAULT, 'Gorras', DEFAULT);
+
+INSERT INTO gorras.colours VALUES(DEFAULT, DEFAULT, DEFAULT, 'Azul', DEFAULT),(DEFAULT, DEFAULT, DEFAULT, 'Gris', DEFAULT);
+
+INSERT INTO gorras.products VALUES(DEFAULT, DEFAULT, DEFAULT, "Grey Cotton Trucker Cap", 3999, 'This grey cotton trucker cap ensures a cooling and breathable fit. It is adjustable that is guaranteed to fit all head sizes.', '1634649949039_img_.png', 1, 1, DEFAULT), (DEFAULT, DEFAULT, DEFAULT, "Coral | Dad Hat", 3290, 'Gorra soft ajustable de visera semi curva, color coral. Tiene tira de ajuste removible. Hecha con algodón orgánico. Medidas: máx: 66cm  min: 52cm', 'gorra-1.jpeg', 1, 3, DEFAULT);

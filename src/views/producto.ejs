@@ -57,9 +57,9 @@
                 <label for="cap-color">Color:</label>
                 <select id="cap-color" name="cap-color">
                     
-                  
-                    <% for( let i = 0; i < product.colours.colour.length; i++ ) { %>
-                        <option value=""><%= product.colours.colour %></option>      
+   
+                    <% for( let i = 0; i < product.colours.length; i++ ) { %>
+                        <option value=""><%= product.colours[i].colour %></option>      
                     <% } %>
 
 

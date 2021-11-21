@@ -19,10 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_category: {
             type: dataTypes.INTEGER
-        },
-        id_colour: {
-            type: dataTypes.INTEGER
-        },  
+        }
     }, {
         tableName: 'products',
         paranoid: true,
@@ -33,9 +30,12 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function(models){
  
-        Product.belongsTo(models.Colour, {
+        Product.belongsToMany(models.Colour, {
             as: "colours",
-            foreignKey: "id_colour"
+            through: "product_colour",
+            foreignKey: "id_colour",
+            otherKey: "id_product",
+            timestamps: false
         })
 
         Product.belongsTo(models.Category, {

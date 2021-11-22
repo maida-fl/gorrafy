@@ -9,23 +9,23 @@
             <li>Crear Cuenta</li>
         </ul>
         <section class="page-title">
-            <h2>Estás editando: <i><%= product.name %></i> </h2>
+            <h2>Estás editando: <i><%= Product.name %></i> </h2>
         </section>
         <section class="account-page">
             <div class="container-form">
-                <form action="/producto/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/producto/edit/<%= Product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="input-wrap">
                         <label for="productName" class="form-label">Nombre del producto</label>
-                        <input type="text" name="productName" id="productName"  class="form-control" placeholder="<%= product.name %>">
+                        <input type="text" name="productName" id="productName"  class="form-control" value="<%= Product.name %>">
                     </div>
                     <div class="input-wrap">
                         <label for="price" class="form-label">Precio ($ARS)</label>
-                        <input type="number" name="productPrice" id="price"  class="form-control" placeholder="<%= product.price %>">
+                        <input type="number" name="productPrice" id="price"  class="form-control" value="<%= Product.price %>">
                     </div>
                     <div class="input-wrap">
                         <div class="productDescription">
                             <label for="productDescription" class="form-label">Descripción</label>
-                            <input type="textarea" name="productDescription" id="productDescription"  class="form-control" placeholder="<%= product.description %>">
+                            <input type="textarea" name="productDescription" id="productDescription"  class="form-control" value="<%= Product.description %>">
                         </div>
                     </div>
                     <div class="input-wrap">

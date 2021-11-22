@@ -19,18 +19,20 @@ const productoController = {
 		.then(function(products) {
 			res.render('listadoProductos', {products:products})
 		})
+		.catch(error => res.send(error));
     },
     detail: (req, res) => {
 		Product.findByPk(req.params.id, {
 			include:[{association:'categories'}, {association:'colours'}]
 		})
 			.then(function(product) {
-				res.render('producto', {product: product})
+				res.render('producto', {product: product, colours: product.colours})
 			})
+			.catch(error => res.send(error));
 	},
     // (get) Create - Formulario para crear
 	create: (req, res) => {
-		res.render('product-create-form')
+		res.render('product-create-form');
 	},
 	// (post) Create - Método para guardar la info
 	store: (req, res) => {
@@ -45,55 +47,41 @@ const productoController = {
 		.then(function(){
 			res.redirect('/producto')
 		})
+		.catch(error => res.send(error));
 	},
 
 	// (get) Update - Formulario para editar
 	edit: (req, res) => {
-		const id = req.params.id;
-		const product = products.find(product => {
-			return product.id == id;
-		});
-
-		res.render('adminEditar', {product: product})
+		Product.findByPk(req.params.id)
+			.then(Product => {
+				res.render('adminEditar', {Product})
+			})
+			.catch(error => res.send(error));
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-		const id = req.params.id;
-		let productToEdit = products.find(product => {
-			return product.id == id;
-		});
 
-		productToEdit = {
-			id: productToEdit.id,
+		Product.update({
 			name: req.body.productName,
-			price: req.body.productPrice,
+		    price: req.body.price,
 			category: req.body.productCategory,
 			description: req.body.productDescription,
-			colour: req.body.productColour,
-			image: req.file ? req.file.filename : productToEdit.image
-		}
-
-		let newProducts = products;
-		newProducts.forEach((producto, index) => {
-			if (producto.id == id){
-			newProducts[index] = productToEdit
-			}
+            colour: req.body.productColour,
+			image: req.file.filename 
+		},
+		{where: {id: req.params.id}})
+		.then(function(){
+			res.redirect('/producto/detalle/' + req.params.id)
 		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
-		res.redirect("/producto");
+		.catch(error => res.send(error));
 	},
-
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {
-		const id = req.params.id;
-		let finalProducts = products.filter(product => {
-			return product.id != id
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-
-		res.redirect("/")
+		Product.destroy({where: {id: req.params.id}})
+			.then(() => {
+				return res.redirect('/producto')
+			})
+			.catch(error => res.send(error));
 	}
 };
 

@@ -58,7 +58,7 @@
                                 <% for (let i=0; i < colours.length; i++) { %> 
                                 <div class="checkbox">
                                     <input type="checkbox" name="productColour" id="<%= colours[i].colour %>" value="<%= colours[i].id %>">   
-                                    <label for="blanco"><%= colours[i].colour %></label>
+                                    <label for="<%= colours[i].colour %>"><%= colours[i].colour %></label>
                                 </div>   
                                 <% } %> 
                                 <!-- <div class="checkbox">

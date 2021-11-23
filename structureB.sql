@@ -97,6 +97,8 @@ INSERT INTO gorras.product_colour VALUES (DEFAULT, DEFAULT, DEFAULT, 4, 2, DEFAU
 
 INSERT INTO gorras.product_colour VALUES (DEFAULT, DEFAULT, DEFAULT, 6, 1, DEFAULT);
 
+INSERT INTO gorras.categories VALUES(DEFAULT, DEFAULT, DEFAULT, 'Accesorios', DEFAULT),(DEFAULT, DEFAULT, DEFAULT, 'Indumentaria', DEFAULT);
+
 
 -- SELECT * FROM gorras.products
 -- INNER JOIN product_colour ON product_colour.id_product = products.id

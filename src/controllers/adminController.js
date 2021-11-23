@@ -8,17 +8,28 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const Product = db.Product;
 const Colour = db.Colour;
+const Category = db.Category;
 
 const adminController = {
     admin: (req, res) => {
         res.render('admin');
     },
+	// agregar: (req, res) => {
+    //     Colour.findAll()
+	// 	.then(function(colours) {
+	// 		res.render('adminAgregar', {colours:colours})
+	// 	})
+	// 	.catch(error => res.send(error));
+    // },
     agregar: (req, res) => {
-        Colour.findAll()
-		.then(function(colours) {
-			res.render('adminAgregar', {colours:colours})
-		})
-		.catch(error => res.send(error));
+        let promiseColours = Colour.findAll();
+		let promiseCategories = Category.findAll();
+
+		Promise.all([promiseColours, promiseCategories])
+			.then(function([colours, categories]) {
+			res.render('adminAgregar', {colours:colours, categories:categories});
+			})
+			.catch(error => res.send(error));
     },
 
     // POST para agregar producto y almacenarlo

@@ -38,14 +38,18 @@
                         <p>Categoría</p>
     
                         <section class="productCategory">
-                            <input type="radio" name="productCategory" id="1" value="1">
+                            <% for (let i=0; i < categories.length; i++) { %> 
+                                    <input type="radio" name="productCategory" id="<%= categories[i].category %>" value= "<%= categories[i].id %>">   
+                                    <label for="<%= categories[i].category %>" class="form-label"><%= categories[i].category %></label> 
+                             <% } %> 
+                            <!-- <input type="radio" name="productCategory" id="1" value="1">
                             <label for="gorras" class="form-label">Gorras</label>
     
                             <input type="radio" name="productCategory" id="2" value="2">
                             <label for="accesorios" class="form-label">Accesorios</label>
                         
                             <input type="radio" name="productCategory" id="3" value="3">
-                            <label for="indumentaria" class="form-label">Indumentaria</label>    
+                            <label for="indumentaria" class="form-label">Indumentaria</label>     -->
                         </section>
                     </div>
                     <div class="input-wrap">
@@ -53,7 +57,7 @@
                             <p>Color</p>
                                 <% for (let i=0; i < colours.length; i++) { %> 
                                 <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="<%= colours[i].colour %>" value= "">   
+                                    <input type="checkbox" name="productColour" id="<%= colours[i].colour %>" value="<%= colours[i].id %>">   
                                     <label for="blanco"><%= colours[i].colour %></label>
                                 </div>   
                                 <% } %> 

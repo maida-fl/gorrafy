@@ -22,7 +22,13 @@ module.exports = (sequelize, dataTypes) => {
         },
         avatar: {
             type: dataTypes.STRING.BINARY
-        },  
+        }, 
+        created_at: {
+            type: dataTypes.DATE
+        },
+        updated_at: {
+            type: dataTypes.DATE
+        }, 
     }, {
         tableName: 'users',
         paranoid: true,

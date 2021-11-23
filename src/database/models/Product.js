@@ -19,7 +19,13 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_category: {
             type: dataTypes.INTEGER
-        }
+        },
+        created_at: {
+            type: dataTypes.DATE
+        },
+        updated_at: {
+            type: dataTypes.DATE
+        },
     }, {
         tableName: 'products',
         paranoid: true,

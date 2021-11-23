@@ -8,7 +8,12 @@ module.exports = (sequelize, dataTypes) => {
         category: {
             type: dataTypes.STRING
         },
-        
+        created_at: {
+            type: dataTypes.DATE
+        },
+        updated_at: {
+            type: dataTypes.DATE
+        },
     }, {
         tableName: 'categories',
         paranoid: true,

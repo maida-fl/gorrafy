@@ -7,14 +7,20 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const Product = db.Product;
+const Colour = db.Colour;
 
 const adminController = {
     admin: (req, res) => {
         res.render('admin');
     },
     agregar: (req, res) => {
-        res.render('adminAgregar');
+        Colour.findAll()
+		.then(function(colours) {
+			res.render('adminAgregar', {colours:colours})
+		})
+		.catch(error => res.send(error));
     },
+
     // POST para agregar producto y almacenarlo
     store: (req, res) => {
 		Product.create({

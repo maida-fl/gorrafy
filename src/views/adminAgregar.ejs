@@ -51,7 +51,13 @@
                     <div class="input-wrap">
                         <section class="productColour">
                             <p>Color</p>
+                                <% for (let i=0; i < colours.length; i++) { %> 
                                 <div class="checkbox">
+                                    <input type="checkbox" name="productColour" id="<%= colours[i].colour %>" value= "">   
+                                    <label for="blanco"><%= colours[i].colour %></label>
+                                </div>   
+                                <% } %> 
+                                <!-- <div class="checkbox">
                                     <input type="checkbox" name="productColour" id="blanco" value="Blanco">   
                                     <label for="blanco">Blanco</label>
                                 </div>
@@ -83,7 +89,7 @@
                                 <div class="checkbox">
                                     <input type="checkbox" name="productColour" id="Otro" value="Otro">
                                     <label for="Otro">Otro</label>
-                                </div>        
+                                </div>         -->
                         </section>                                                         
                     </div>
                     <button class="btn-signup" type="submit">CREAR PRODUCTO</button>

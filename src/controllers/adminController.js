@@ -40,7 +40,8 @@ const adminController = {
 			description: req.body.productDescription,
             colour: req.body.productColour,
 			image: req.file.filename,
-			id_category: req.body.productCategory
+			id_category: req.body.productCategory,
+			id_product: req.params.id
 		})
 		.then(function(){
 			res.redirect('/producto')

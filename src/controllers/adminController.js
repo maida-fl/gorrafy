@@ -37,10 +37,10 @@ const adminController = {
 		Product.create({
 			name: req.body.productName,
 		    price: req.body.price,
-			category: req.body.productCategory,
 			description: req.body.productDescription,
             colour: req.body.productColour,
-			image: req.file.filename 
+			image: req.file.filename,
+			id_category: req.body.productCategory
 		})
 		.then(function(){
 			res.redirect('/producto')

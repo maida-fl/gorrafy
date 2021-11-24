@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
     })
 
     Rol.associate = function(models) {
-        Rol.hasMany(models.User, { // models.User -> User es el alias
+        Rol.belongsTo(models.User, { // models.User -> User es el alias
             as: "users", // El nombre del modelo pero en plural
             foreignKey: "id_rol"
         })

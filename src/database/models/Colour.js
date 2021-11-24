@@ -7,13 +7,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         colour: {
             type: dataTypes.STRING
-        },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
+        }
     }, {
         tableName: 'colours',
         paranoid: true,

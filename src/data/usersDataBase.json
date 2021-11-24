@@ -981,5 +981,23 @@
   "category": "2000",
   "password": "$2a$10$DPamik0Hb.FwEVW/k1LU4.ynp6nlLTPb2lR1GCu8Wp0o3NOX5Jh3q",
   "avatar": "1635990372132_img_.jpeg"
+ },
+ {
+  "id": 110,
+  "firstName": "Lionel",
+  "lastName": "Messi",
+  "email": "leomessi@gmail.com",
+  "category": "1987",
+  "password": "$2a$10$9lpQWij9Aju.VDRNkpB51.nbnQyTr3f7W3ZS27atQxp35yJXDBwfe",
+  "avatar": "1637689309319_img_.jpeg"
+ },
+ {
+  "id": 111,
+  "firstName": "Jorge",
+  "lastName": "Gutierrez",
+  "email": "jgutierrez@gmail.com",
+  "category": "1998",
+  "password": "$2a$10$BmRXFAzArR.8/CTmRCPgkuY5ZXBtUqFecCgn3QSsw3Rn2Vk8m/mO2",
+  "avatar": "1637756703772_img_.png"
  }
 ]

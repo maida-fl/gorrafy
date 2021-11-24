@@ -7,13 +7,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         rol: {
             type: dataTypes.STRING
-        },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
+        }
     }, {
         tableName: 'roles',
         paranoid: true,

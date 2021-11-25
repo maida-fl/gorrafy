@@ -39,7 +39,7 @@
     
                         <section class="productCategory">
                             <% for (let i=0; i < categories.length; i++) { %> 
-                                    <input type="radio" name="productCategory" id="<%= categories[i].category %>" value= "<%= categories[i].id %>">   
+                                    <input type="radio" name="productCategory" id="<%= categories[i].category %>" value="<%= categories[i].id %>">   
                                     <label for="<%= categories[i].category %>" class="form-label"><%= categories[i].category %></label> 
                              <% } %> 
                             <!-- <input type="radio" name="productCategory" id="1" value="1">

@@ -10,6 +10,9 @@ guardados en la carpeta Data como Json (un array de objetos literales) */
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const Product = db.Product;
+const Colour = db.Colour;
+const Category = db.Category;
+const ProductColour = db.ProductColour;
 
 const productoController = {
     listadoProducto: (req, res) => {
@@ -31,18 +34,30 @@ const productoController = {
 			.catch(error => res.send(error));
 	},
     // (get) Create - Formulario para crear
-	create: (req, res) => {
-		res.render('product-create-form');
-	},
+    agregar: (req, res) => {
+        let promiseColours = Colour.findAll();
+		let promiseCategories = Category.findAll();
+
+		Promise.all([promiseColours, promiseCategories])
+			.then(function([colours, categories]) {
+			res.render('adminAgregar', {colours:colours, categories:categories});
+			})
+			.catch(error => res.send(error));
+    },
 	// (post) Create - Método para guardar la info
-	store: (req, res) => {
+
+	// Ruta post de store manda a controller de admin pero luego hay que emprolijarlo cambiando ruta para acá
+    store: (req, res) => {
 		Product.create({
 			name: req.body.productName,
 		    price: req.body.price,
-			category: req.body.productCategory,
 			description: req.body.productDescription,
-            colour: req.body.productColour,
-			image: req.file.filename 
+			image: req.file.filename,
+			id_category: req.body.productCategory
+		})
+		ProductColour.create({
+			id_colour: req.body.productColour,	
+			id_product: req.params.id
 		})
 		.then(function(){
 			res.redirect('/producto')

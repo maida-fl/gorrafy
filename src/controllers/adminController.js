@@ -9,6 +9,7 @@ const sequelize = db.sequelize;
 const Product = db.Product;
 const Colour = db.Colour;
 const Category = db.Category;
+const ProductColour = db.ProductColour;
 
 const adminController = {
     admin: (req, res) => {
@@ -38,14 +39,17 @@ const adminController = {
 			name: req.body.productName,
 		    price: req.body.price,
 			description: req.body.productDescription,
-            colour: req.body.productColour,
 			image: req.file.filename,
-			id_category: req.body.productCategory,
+			id_category: req.body.productCategory
+		})
+		ProductColour.create({
+			id_colour: req.body.productColour,	
 			id_product: req.params.id
 		})
 		.then(function(){
 			res.redirect('/producto')
 		})
+		.catch(error => res.send(error));
 	}
 
 };

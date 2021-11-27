@@ -55,14 +55,19 @@ const productoController = {
 			image: req.file.filename,
 			id_category: req.body.productCategory
 		})
-		ProductColour.create({
-			id_colour: req.body.productColour,	
-			id_product: req.params.id
-		})
-		.then(function(){
+		.then(function(newProduct){
+			req.body.productColour.forEach(idColour => {
+				ProductColour.create({
+					id_colour: idColour,	
+					id_product: newProduct.id,
+				})
+			});
 			res.redirect('/producto')
+
 		})
+
 		.catch(error => res.send(error));
+		
 	},
 
 	// (get) Update - Formulario para editar

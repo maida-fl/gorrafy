@@ -67,7 +67,7 @@ const controller = {
 						res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
 					}
 	
-					return res.redirect('/user/profile');
+					return res.redirect('/user/profile/' + userToLogin.id);
 				}
 				return res.render('login', {
 					errors: {
@@ -88,15 +88,37 @@ const controller = {
 
 	},
 	profile: (req, res) => {
-		return res.render('profile', {
-			user: req.session.userLogged
-		});
+		db.User.findByPk(req.params.id)
+			.then((user) => {
+				return res.render('profile', {user})
+				// return res.render('profile', {
+				// 	user: req.session.userLogged
+				// });
+			})
+			.catch(error => res.send(error))
 	},
 
 	logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
+	},
+	update: (req, res) => {
+		db.User.findByPk(req.params.id)
+		.then((user) => {
+			return res.render('updateUser', {user})
+		})
+		.catch(error => res.send(error))
+	},
+	processUpdate: (req,res) => {
+		db.User.update({
+			avatar: req.file.filename 
+		},
+		{where: {id: req.params.id}})
+		.then(function(){
+			res.redirect('/user/profile/' + req.params.id)
+		})
+		.catch(error => res.send(error));
 	}
 }
 

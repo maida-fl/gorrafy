@@ -23,10 +23,15 @@ router.get('/login', guestMiddleware, userController.login)
 // Procesar el Login
 router.post('/login', userController.processLogin)
 
-router.get('/profile',authMiddleware, userController.profile)
+router.get('/profile/:id',authMiddleware, userController.profile)
 
 // Logout
 router.get('/logout', userController.logout);
+
+// Update
+
+router.get('/update/:id', userController.update)
+router.put('/update/:id', uploadFile.single('avatar'), userController.processUpdate)
 
 
 

@@ -72,29 +72,61 @@ const productoController = {
 
 	// (get) Update - Formulario para editar
 	edit: (req, res) => {
-		Product.findByPk(req.params.id)
-			.then(Product => {
-				res.render('adminEditar', {Product})
-			})
-			.catch(error => res.send(error));
+		// Product.findByPk(req.params.id)
+		// 	.then(Product => {
+		// 		res.render('adminEditar', {Product})
+		// 	})
+		// 	.catch(error => res.send(error));
+
+			let promiseColours = Colour.findAll();
+			let promiseCategories = Category.findAll();
+			let promiseProduct = Product.findByPk(req.params.id);
+
+			Promise.all([promiseColours, promiseCategories, promiseProduct])
+				.then(function([colours, categories, Product]) {
+				res.render('adminEditar', {colours:colours, categories:categories, Product:Product});
+				})
+				.catch(error => res.send(error));
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-
 		Product.update({
 			name: req.body.productName,
 		    price: req.body.price,
-			category: req.body.productCategory,
 			description: req.body.productDescription,
-            colour: req.body.productColour,
-			image: req.file.filename 
-		},
-		{where: {id: req.params.id}})
-		.then(function(){
+			image: req.file.filename,
+			id_category: req.body.productCategory
+		},{where: {id: req.params.id}})
+		.then(function(newProduct){
+			req.body.productColour.forEach(idColour => {
+				ProductColour.update({
+					id_colour: idColour,	
+					id_product: newProduct.id,
+				})
+			});
 			res.redirect('/producto/detalle/' + req.params.id)
+
 		})
+
 		.catch(error => res.send(error));
+		
 	},
+	// update: (req, res) => {
+
+	// 	Product.update({
+	// 		name: req.body.productName,
+	// 	    price: req.body.price,
+	// 		category: req.body.productCategory,
+	// 		description: req.body.productDescription,
+    //         colour: req.body.productColour,
+	// 		image: req.file.filename 
+	// 	},
+	// 	{where: {id: req.params.id}})
+	// 	.then(function(){
+	// 		res.redirect('/producto/detalle/' + req.params.id)
+	// 	})
+	// 	.catch(error => res.send(error));
+	// },
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {
 		Product.destroy({where: {id: req.params.id}})

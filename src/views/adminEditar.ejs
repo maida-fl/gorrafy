@@ -38,49 +38,24 @@
                         <p>Categoría</p>
     
                         <section class="productCategory">
-                            <input type="radio" name="productCategory" id="gorras" value="gorras">
-                            <label for="gorras" class="form-label">Gorras</label>
-    
-                            <input type="radio" name="productCategory" id="accesorios" value="accesorios">
-                            <label for="accesorios" class="form-label">Accesorios</label>
-                        
-                            <input type="radio" name="productCategory" id="indumentaria" value="indumentaria">
-                            <label for="indumentaria" class="form-label">Indumentaria</label>    
+                            <% for (let i=0; i < categories.length; i++) { %> 
+                                    <input type="radio" name="productCategory" id="<%= categories[i].category %>" value="<%= categories[i].id %>">   
+                                    <label for="<%= categories[i].category %>" class="form-label"><%= categories[i].category %></label> 
+                             <% } %> 
+
                         </section>
                     </div>
                     <div class="input-wrap">
                         <section class="productColour">
                             <p>Color</p>
+                                <% for (let i=0; i < colours.length; i++) { %> 
                                 <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="blanco" value="blanco">   
-                                    <label for="blanco">Blanco</label>
-                                </div>
+                                    <input type="checkbox" name="productColour" id="<%= colours[i].colour %>" value="<%= colours[i].id %>">   
+                                    <label for="<%= colours[i].colour %>"><%= colours[i].colour %></label>
+                                </div>   
+                                <% } %> 
                                 
-                                <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="negro" value="negro">
-                                    <label for="negro">Negro</label>
-                            
-                                    
-                                <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="Verde" value="Verde">
-                                    <label for="Verde">Verde</label>
-                                </div>                            
-                                
-                                <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="Bordo" value="Bordo">
-                                    <label for="Bordo">Bordó</label>
-                                </div>                            
-                                
-                                <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="Camel" value="Camel">
-                                    <label for="Camel">Camel</label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <input type="checkbox" name="productColour" id="Gris" value="Gris">
-                                    <label for="Gris">Gris</label>
-                                </div>        
-                        </section>                                                         
+                        </section>                                                                        
                     </div>
                     <button class="btn-signup" type="submit">GUARDAR PRODUCTO</button>
                 </form>

@@ -19,6 +19,14 @@
                 <a href="#" class="nav-link">¿Quienes Somos?</a>
             </li>
             <div class="iconos">
+
+                <li class="nav-item">
+					<form action="/producto/result" method="GET" class="search">
+						<div class="searchBox">
+							<input name="search" type="text" id="icon--search" class="inputSearch" placeholder=" &#61442;">
+						</div>
+					</form>
+				</li>
                 
                 <% if (locals.isLogged) { %>
                 <li><a href="/user/login"><i class="icon--navbar far fa-user"></i></a></li>
@@ -30,8 +38,7 @@
                 
                 <li><a href="/user/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <li><a href="/compra"><i class="icon--navbar fas fa-shopping-cart"></i></a></li>
-                <li><a href="/admin"><i class="fas fa-users-cog"></i></a></li>    
-                <li><a href="#"><i class="icon--navbar far fa-question-circle"></i></a></li>
+                <li><a href="/admin"><i class="fas fa-users-cog"></i></a></li>   
                 
                 <% } %>
             </div>

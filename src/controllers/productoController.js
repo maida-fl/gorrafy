@@ -9,6 +9,7 @@ guardados en la carpeta Data como Json (un array de objetos literales) */
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const Product = db.Product;
 const Colour = db.Colour;
 const Category = db.Category;
@@ -134,7 +135,21 @@ const productoController = {
 				return res.redirect('/producto')
 			})
 			.catch(error => res.send(error));
-	}
+	},
+	search: (req, res) => {
+        let search = req.query.search
+        db.Product.findAll({
+            where: {name: {[Op.like]: `%${req.query.search}%`}},
+            include: [{association: "categories"}, {association: "colours"}
+            ], order: [
+                ['id', 'DESC']
+        ]
+        })
+            .then((products) => {
+                return res.render('productResult.ejs', {products, search})
+            })
+
+    }
 };
 
 module.exports = productoController;

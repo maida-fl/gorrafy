@@ -1,0 +1,34 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+
+    <br> <br>
+    <section class="main">
+        <ul class="breadcrumb">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+        </ul>
+
+        <div class="setOfCards" id="setOfCards">
+            <% if (products.length >= 1) { %>
+            <% products.forEach(hat => { %>
+                <div class="card">
+                    <img src="/img/<%= hat.image  %>" alt="">
+                    <p class="card--title"><%= hat.name %></p>
+                    <hr class="card--line">
+                    <p class="card--description"> <%= hat.description %> </p>
+                    <a href="/producto/detalle/<%= hat.id %>">
+                        <div class="card--btn">VER MÁS</div>
+                    </a>
+                </div>     
+             <% }); %> 
+             <% } else if (products.length < 1) { %>
+                 <h1 class="d-flex justify-content-center mt-3 main-header">
+                     No results found for your search ("<%= search %>") </h1>
+             <% } %>
+        </div>
+    
+    </section>
+
+    <br><br>
+
+<%- include('./partials/footer.ejs') %>

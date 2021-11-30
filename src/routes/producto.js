@@ -11,6 +11,8 @@ const productoController = require('../controllers/productoController');
 // ************ Routes ************
 router.get('/', productoController.listadoProducto)
 
+router.get('/result', productoController.search)
+
 router.get('/detalle/:id', productoController.detail)
 
 router.get('/edit/:id', productoController.edit)

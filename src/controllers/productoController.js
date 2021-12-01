@@ -27,10 +27,11 @@ const productoController = {
     },
     detail: (req, res) => {
 		Product.findByPk(req.params.id, {
-			include:[{association:'categories'}, {association:'colours'}]
+			include:[{association:'categories'}, {association:'colours'}],
 		})
 			.then(function(product) {
 				res.render('producto', {product: product, colours: product.colours})
+				// res.send(product.colours);
 			})
 			.catch(error => res.send(error));
 	},
@@ -106,12 +107,21 @@ const productoController = {
 
 		// creamos nuevos registros en ProductColour
 		.then(function(){
-			req.body.productColour.forEach(idColour => {
+			// res.send(typeof req.body.productColour);
+			if(typeof req.body.productColour === 'string') {
 				ProductColour.create({
-					id_colour: idColour,	
+					id_colour: req.body.productColour,	
 					id_product: req.params.id,
 				})
-			});
+				.catch(error => res.send(error));	
+			} else {
+				req.body.productColour.forEach(idColour => {
+					ProductColour.create({
+						id_colour: idColour,	
+						id_product: req.params.id,
+					})
+				});		
+			}
 			res.redirect('/producto');
 			// res.redirect('/producto/detalle/' + req.params.id)
 

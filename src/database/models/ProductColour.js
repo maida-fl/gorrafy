@@ -19,10 +19,11 @@ module.exports = (sequelize, dataTypes) => {
         }
     }, {
         tableName: 'product_colour',
-        paranoid: true,
-        deletedAt: "softDelete",
-        createdAt: "created_at",
-        updatedAt: "updated_at"
+        timestamps: false
+        // paranoid: true,
+        // deletedAt: "softDelete",
+        // createdAt: "created_at",
+        // updatedAt: "updated_at"
     })  
 
 

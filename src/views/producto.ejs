@@ -58,7 +58,7 @@
                 <select id="cap-color" name="cap-color">
 
                     <% for( let i = 0; i < product.colours.length; i++ ) { %>
-                        <option value=""><%= colours[i].colour %></option>     
+                        <option value="<%= colours[i].colour.id %>"><%= colours[i].colour %></option>     
                     <% } %>
 
                     

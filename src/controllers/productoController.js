@@ -98,19 +98,25 @@ const productoController = {
 			image: req.file.filename,
 			id_category: req.body.productCategory
 		},{where: {id: req.params.id}})
-		.then(function(newProduct){
-			req.body.productColour.forEach(idColour => {
-				ProductColour.update({
-					id_colour: idColour,	
-					id_product: newProduct.id,
-				})
-			});
-			res.redirect('/producto/detalle/' + req.params.id)
 
+		// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
+		.then(function(){
+			ProductColour.destroy({where: {id_product: req.params.id}})
 		})
 
-		.catch(error => res.send(error));
-		
+		// creamos nuevos registros en ProductColour
+		.then(function(){
+			req.body.productColour.forEach(idColour => {
+				ProductColour.create({
+					id_colour: idColour,	
+					id_product: req.params.id,
+				})
+			});
+			res.redirect('/producto');
+			// res.redirect('/producto/detalle/' + req.params.id)
+
+		})
+		.catch(error => res.send(error));		
 	},
 	// update: (req, res) => {
 

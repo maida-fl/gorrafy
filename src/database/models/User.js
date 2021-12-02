@@ -5,6 +5,12 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
+        created_at: {
+            type: dataTypes.DATE
+        },
+        updated_at: {
+            type: dataTypes.DATE
+        },
         firstName: {
             type: dataTypes.STRING
         },
@@ -37,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
  
         User.hasMany(models.Rol, {
             as: "roles",
-            foreingKey: "id_rol"
+            foreignKey: "id_rol"
         })
     }  
 

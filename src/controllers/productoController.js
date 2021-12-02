@@ -31,7 +31,6 @@ const productoController = {
 		})
 			.then(function(product) {
 				res.render('producto', {product: product, colours: product.colours})
-				// res.send(product.colours);
 			})
 			.catch(error => res.send(error));
 	},
@@ -48,7 +47,7 @@ const productoController = {
     },
 	// (post) Create - Método para guardar la info
 
-	// Ruta post de store manda a controller de admin pero luego hay que emprolijarlo cambiando ruta para acá
+			// Ruta post de store manda a controller de admin pero luego hay que emprolijarlo cambiando ruta para acá
     store: (req, res) => {
 		Product.create({
 			name: req.body.productName,
@@ -74,31 +73,28 @@ const productoController = {
 
 	// (get) Update - Formulario para editar
 	edit: (req, res) => {
-		// Product.findByPk(req.params.id)
-		// 	.then(Product => {
-		// 		res.render('adminEditar', {Product})
-		// 	})
-		// 	.catch(error => res.send(error));
+		let promiseColours = Colour.findAll();
+		let promiseCategories = Category.findAll();
+		let promiseProduct = Product.findByPk(req.params.id);
 
-			let promiseColours = Colour.findAll();
-			let promiseCategories = Category.findAll();
-			let promiseProduct = Product.findByPk(req.params.id);
-
-			Promise.all([promiseColours, promiseCategories, promiseProduct])
-				.then(function([colours, categories, Product]) {
-				res.render('adminEditar', {colours:colours, categories:categories, Product:Product});
-				})
-				.catch(error => res.send(error));
+		Promise.all([promiseColours, promiseCategories, promiseProduct])
+			.then(function([colours, categories, Product]) {
+			res.render('adminEditar', {colours:colours, categories:categories, Product:Product});
+			})
+			.catch(error => res.send(error));
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-		Product.update({
-			name: req.body.productName,
-		    price: req.body.price,
-			description: req.body.productDescription,
-			image: req.file.filename,
-			id_category: req.body.productCategory
-		},{where: {id: req.params.id}})
+		Product.findByPk(req.params.id)
+			.then(function(product){
+				Product.update({
+					name: req.body.productName,
+					price: req.body.price,
+					description: req.body.productDescription,
+					image: req.file ? req.file.filename : product.image, // si no se agrega imagen, se mantiene la imagen ya existente en la db
+					id_category: req.body.productCategory
+				},{where: {id: req.params.id}})	
+			})
 
 		// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
 		.then(function(){
@@ -123,27 +119,9 @@ const productoController = {
 				});		
 			}
 			res.redirect('/producto');
-			// res.redirect('/producto/detalle/' + req.params.id)
-
 		})
 		.catch(error => res.send(error));		
 	},
-	// update: (req, res) => {
-
-	// 	Product.update({
-	// 		name: req.body.productName,
-	// 	    price: req.body.price,
-	// 		category: req.body.productCategory,
-	// 		description: req.body.productDescription,
-    //         colour: req.body.productColour,
-	// 		image: req.file.filename 
-	// 	},
-	// 	{where: {id: req.params.id}})
-	// 	.then(function(){
-	// 		res.redirect('/producto/detalle/' + req.params.id)
-	// 	})
-	// 	.catch(error => res.send(error));
-	// },
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {
 		Product.destroy({where: {id: req.params.id}})

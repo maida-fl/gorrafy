@@ -15,13 +15,6 @@ const adminController = {
     admin: (req, res) => {
         res.render('admin');
     },
-	// agregar: (req, res) => {
-    //     Colour.findAll()
-	// 	.then(function(colours) {
-	// 		res.render('adminAgregar', {colours:colours})
-	// 	})
-	// 	.catch(error => res.send(error));
-    // },
     agregar: (req, res) => {
         let promiseColours = Colour.findAll();
 		let promiseCategories = Category.findAll();

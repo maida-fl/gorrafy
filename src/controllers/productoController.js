@@ -96,31 +96,31 @@ const productoController = {
 				},{where: {id: req.params.id}})	
 			})
 
-		// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
-		.then(function(){
-			ProductColour.destroy({where: {id_product: req.params.id}})
-		})
+			// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
+			.then(function(){
+				ProductColour.destroy({where: {id_product: req.params.id}})
+			})
 
-		// creamos nuevos registros en ProductColour
-		.then(function(){
-			// res.send(typeof req.body.productColour);
-			if(typeof req.body.productColour === 'string') {
-				ProductColour.create({
-					id_colour: req.body.productColour,	
-					id_product: req.params.id,
-				})
-				.catch(error => res.send(error));	
-			} else {
-				req.body.productColour.forEach(idColour => {
+			// creamos nuevos registros en ProductColour
+			.then(function(){
+				// res.send(typeof req.body.productColour);
+				if(typeof req.body.productColour === 'string') {
 					ProductColour.create({
-						id_colour: idColour,	
+						id_colour: req.body.productColour,	
 						id_product: req.params.id,
 					})
-				});		
-			}
-			res.redirect('/producto');
-		})
-		.catch(error => res.send(error));		
+					.catch(error => res.send(error));	
+				} else {
+					req.body.productColour.forEach(idColour => {
+						ProductColour.create({
+							id_colour: idColour,	
+							id_product: req.params.id,
+						})
+					});		
+				}
+				res.redirect('/producto');
+			})
+			.catch(error => res.send(error));		
 	},
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {

@@ -163,9 +163,22 @@ header{
         bottom: -3px;
     }
 
+    .searchBtn:focus ~ .inputSearch{
+        width: 350px;
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 1.5);
+        background-color: #ffffff;
+    }
+    
+    .inputSearch:focus{
+        width: 350px;
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 1.5);
+        box-shadow: 0px 0px 30px #00000020;
+    }
+
 }
 
 
+/* SEARCH */
 
 
 
@@ -202,15 +215,11 @@ header{
     }
 
 .searchBtn:focus ~ .inputSearch{
-    width: 350px;
-    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 1.5);
-    background-color: #ffffff;
+    width: 150px
 }
 
 .inputSearch:focus{
-    width: 350px;
-    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 1.5);
-    box-shadow: 0px 0px 30px #00000020;
+    width: 150px;
 }
 
 #icon--search{

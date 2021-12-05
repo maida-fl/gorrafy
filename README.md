@@ -88,3 +88,5 @@ Info adicional:
 -Trello Sprint 5: https://trello.com/b/jVtSnycU/sprint-5
 
 -Trello Sprint 6: https://trello.com/b/Cv3f3M94/sprint-6-bases-de-datos
+
+-Trello Sprint 7: https://trello.com/b/hMEp7VBy/sprint-7-validaciones-back-front

@@ -10,15 +10,19 @@
         </ul>
         <section class="page-title">
             <h2>Crear cuenta</h2>
-            <% if (locals.errors) { %>
-                <% for( let oneError in errors ) { %>
-                    <p>- <%= errors[oneError].msg  %> </p>
-                <% } %>      
-            <% } %>
+
         </section>
         <section class="account-page">
             <div class="container-form">
-                <form action="/user/register" method="POST" enctype="multipart/form-data">
+                <form action="/user/register" method="POST" enctype="multipart/form-data" id="register">
+                    <div>
+                        <small style="color: #9e2828;" id="erName"></small>
+                    </div>
+                    <% if (locals.errors) { %>
+                        <% for( let oneError in errors ) { %>
+                            <p>- <%= errors[oneError].msg  %> </p>
+                        <% } %>      
+                    <% } %>
                     <div class="input-wrap">
                         <label for="firstName" class="form-label">Nombre</label>
                         <input type="text" name="firstName" id="firstName"  class="form-control" placeholder="Ej: Sofía Gutierrez">
@@ -37,13 +41,13 @@
                     </div>
                     <div class="input-wrap">
                         <label for="avatar" class="form-label" >Imagen de perfil</label>
-						<input type="file" name="avatar" class="form-control">
+						<input type="file" name="avatar" id="avatar" class="form-control">
                     </div>
                     <div class="input-wrap">
                         <label for="password" class="form-label">Contraseña</label>
                         <input type="password" name="password" id="password" class="form-control" minlength="5">
                     </div>
-                    <button class="btn-signup" type="submit">CREAR CUENTA</button>
+                    <button class="btn-signup" id="btn-submit" type="submit">CREAR CUENTA</button>
                 </form>
                 <p class="log-in">
                     ¿Ya tenés una cuenta?

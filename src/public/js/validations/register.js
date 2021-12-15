@@ -8,27 +8,50 @@ window.addEventListener('load', function(){
     let password = document.querySelector('#password');
     let avatar = document.querySelector('#avatar');
     let input = document.querySelector('input');
+
+    let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png', 'JPEG', 'JPG', 'GIF', 'PNG'];
+
+    let parts = avatar.value.split('.');
+    let extension = parts[parts.length-1];
     
     
     
     form.addEventListener('submit', (e) => {
         let errores = [];
 
-        if(name.value.length < 2){
-        name.style.color = "#9e2828;";
+        
+        if(name.value == ""){
+        errores.push('El campo "Nombre" no puede estar vacio');
+        }
+        else if(name.value.length < 2){
         errores.push("El nombre que ingresaste es corto");
         }
-        else{
-            name.style.color = "";
-        }
     
-        if(lastName.value.length < 2){
-        lastName.style.color = "#9e2828;";
+        if(lastName.value == ""){
+            errores.push('El campo "Apellido" no puede estar vacio');
+        }
+        else if(lastName.value.length < 2){
         errores.push("El apellido que ingresaste es corto");
-        }else{
-            lastName.style.color = "";
         }
-    
+
+        if(email.value == ""){
+            errores.push('El campo "Email" no puede estar vacio');
+        }
+
+        //No sabemos como comprobar desde el front end que no se este registrando un email que ya aparezca en la base de datos. Tampoco usar una validacion que compruebe si es un mail de tipo valido.
+
+        if(password.value == ""){
+            errores.push('El campo "Password" no puede estar vacio');
+        }else if(password.value.length < 8 ){
+            errores.push("Tu contraseña deberá tener al menos 8 caracteres");
+        }
+
+        if(avatar.value.length == 0){
+            errores.push("Debe subir imagen");
+        }else if (!acceptedExtensions.includes(extension)){
+        errores.push ('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+        }
+
         //Aquí controlo que es lo que debo hacer si hay o no errores en el formulario
 
         if (errores.length > 0) {

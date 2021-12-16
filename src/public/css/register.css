@@ -122,3 +122,9 @@ p.log-in a{
 p.log-in a:hover {
     color: #C6974B;
 }
+
+.text-danger {
+    color: #9e2828;
+    font-size: 12px;
+    text-align: left;
+}

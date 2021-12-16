@@ -18,34 +18,59 @@
                     <div>
                         <small style="color: #9e2828;" id="erName"></small>
                     </div>
-                    <% if (locals.errors) { %>
-                        <% for( let oneError in errors ) { %>
-                            <p>- <%= errors[oneError].msg  %> </p>
-                        <% } %>      
-                    <% } %>
                     <div class="input-wrap">
                         <label for="firstName" class="form-label">Nombre</label>
-                        <input type="text" name="firstName" id="firstName"  class="form-control" placeholder="Ej: Sofía Gutierrez">
+                        <input type="text" name="firstName" id="firstName"  class="form-control" placeholder="Ej: Sofía">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div class="text-danger"> 
+                                <%= errors.firstName.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="lastName" class="form-label">Apellido</label>
-                        <input type="text" name="lastName" id="lastName"  class="form-control" placeholder="Ej: Sofía Gutierrez">
+                        <input type="text" name="lastName" id="lastName"  class="form-control" placeholder="Ej: Gutierrez">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div class="text-danger"> 
+                                <%= errors.lastName.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" name="email" id="email"  class="form-control" placeholder="Ej: tunombre@email.com">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger"> 
+                                <%= errors.email.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="category" class="form-label">Año Nacimiento</label>
                         <input type="number" name="category" id="category"  class="form-control" placeholder="Ej: 1987">
+                        <% if (locals.errors && errors.category) { %>
+                            <div class="text-danger"> 
+                                <%= errors.category.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="avatar" class="form-label" >Imagen de perfil</label>
 						<input type="file" name="avatar" id="avatar" class="form-control">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div class="text-danger"> 
+                                <%= errors.avatar.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" name="password" id="password" class="form-control" minlength="5">
+                        <input type="password" name="password" id="password" class="form-control">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger"> 
+                                <%= errors.password.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <button class="btn-signup" id="btn-submit" type="submit">CREAR CUENTA</button>
                 </form>

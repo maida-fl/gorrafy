@@ -51,7 +51,13 @@ const controller = {
         return res.render('login')
     },
 	processLogin: (req,res) => {
+		const resultValidation = validationResult(req);
 
+		if (resultValidation.errors.length > 0) {
+			return res.render('login', {
+				errors: resultValidation.mapped()
+			});
+		} else {
 		db.User.findOne({
 			where: {email: req.body.email}
 		}).then((userToLogin) => {
@@ -85,7 +91,7 @@ const controller = {
 				}
 			});	
 		})
-
+	}
 	},
 	profile: (req, res) => {
 		db.User.findByPk(req.params.id)

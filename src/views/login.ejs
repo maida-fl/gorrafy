@@ -15,6 +15,11 @@
                 </div>   
               <% } %>
               <input type="password" name="password" id="password" placeholder="contraseña">
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                  <%= errors.password.msg  %> 
+                </div>   
+              <% } %>
               <div class="remember">
                 <label for="rememberMe">Recuerdame</label>
                 <input type="checkbox" value="lsRememberMe" name="remember_user" id="rememberMe"> 

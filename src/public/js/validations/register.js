@@ -62,7 +62,7 @@ window.addEventListener('load', function(){
                 erName.innerHTML += `<li >  ${errores[i]} </li>`;
             };
         } else {
-            alert('La validación fué exitosa')
+            alert('La validación fue exitosa')
             form.submit();
         }
 

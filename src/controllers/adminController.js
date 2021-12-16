@@ -31,13 +31,18 @@ const adminController = {
 
     // POST para agregar producto y almacenarlo
     store: (req, res) => {
-		// const resultValidation = validationResult(req);
+		const resultValidation = validationResult(req);
 
-		// if (resultValidation.errors.length > 0) {
-		// 	return res.render('adminAgregar', {
-		// 		errors: resultValidation.mapped()
-		// 	});
-		// } else {
+		if (resultValidation.errors.length > 0) {
+			let promiseColours = Colour.findAll();
+			let promiseCategories = Category.findAll();
+	
+			Promise.all([promiseColours, promiseCategories])
+				.then(function([colours, categories]) {
+				res.render('adminAgregar', {colours:colours, categories:categories, errors: resultValidation.mapped()});
+				})
+				.catch(error => res.send(error));
+		} else {
 			Product.create({
 				name: req.body.productName,
 				price: req.body.price,
@@ -60,7 +65,7 @@ const adminController = {
 			
 			
 
-		// }
+		}
 	}
 
 };

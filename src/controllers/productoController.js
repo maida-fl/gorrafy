@@ -88,13 +88,19 @@ const productoController = {
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-		// const resultValidation = validationResult(req);
+		const resultValidation = validationResult(req);
 
-		// if (resultValidation.errors.length > 0) {
-		// 	return res.render('adminEditar', {
-		// 		errors: resultValidation.mapped()
-		// 	});
-		// } else {
+		if (resultValidation.errors.length > 0) {
+			let promiseColours = Colour.findAll();
+			let promiseCategories = Category.findAll();
+			let promiseProduct = Product.findByPk(req.params.id);
+	
+			Promise.all([promiseColours, promiseCategories, promiseProduct])
+				.then(function([colours, categories, Product]) {
+				res.render('adminEditar', {colours:colours, categories:categories, Product:Product, errors: resultValidation.mapped()});
+				})
+				.catch(error => res.send(error));
+		} else {
 			Product.findByPk(req.params.id)
 				.then(function(product){
 					Product.update({
@@ -131,7 +137,7 @@ const productoController = {
 					res.redirect('/producto');
 				})
 				.catch(error => res.send(error));
-		// }		
+		}		
 	},
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {

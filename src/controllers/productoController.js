@@ -10,6 +10,9 @@ guardados en la carpeta Data como Json (un array de objetos literales) */
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const {
+	validationResult
+} = require('express-validator');
 const Product = db.Product;
 const Colour = db.Colour;
 const Category = db.Category;
@@ -85,42 +88,50 @@ const productoController = {
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-		Product.findByPk(req.params.id)
-			.then(function(product){
-				Product.update({
-					name: req.body.productName,
-					price: req.body.price,
-					description: req.body.productDescription,
-					image: req.file ? req.file.filename : product.image, // si no se agrega imagen, se mantiene la imagen ya existente en la db
-					id_category: req.body.productCategory
-				},{where: {id: req.params.id}})	
-			})
+		// const resultValidation = validationResult(req);
 
-			// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
-			.then(function(){
-				ProductColour.destroy({where: {id_product: req.params.id}})
-			})
+		// if (resultValidation.errors.length > 0) {
+		// 	return res.render('adminEditar', {
+		// 		errors: resultValidation.mapped()
+		// 	});
+		// } else {
+			Product.findByPk(req.params.id)
+				.then(function(product){
+					Product.update({
+						name: req.body.productName,
+						price: req.body.price,
+						description: req.body.productDescription,
+						image: req.file ? req.file.filename : product.image, // si no se agrega imagen, se mantiene la imagen ya existente en la db
+						id_category: req.body.productCategory
+					},{where: {id: req.params.id}})	
+				})
 
-			// creamos nuevos registros en ProductColour
-			.then(function(){
-				// res.send(typeof req.body.productColour);
-				if(typeof req.body.productColour === 'string') {
-					ProductColour.create({
-						id_colour: req.body.productColour,	
-						id_product: req.params.id,
-					})
-					.catch(error => res.send(error));	
-				} else {
-					req.body.productColour.forEach(idColour => {
+				// borramos los registros de asociación entre producto y color de la tabla intermedia ProductColour
+				.then(function(){
+					ProductColour.destroy({where: {id_product: req.params.id}})
+				})
+
+				// creamos nuevos registros en ProductColour
+				.then(function(){
+					// res.send(typeof req.body.productColour);
+					if(typeof req.body.productColour === 'string') {
 						ProductColour.create({
-							id_colour: idColour,	
+							id_colour: req.body.productColour,	
 							id_product: req.params.id,
 						})
-					});		
-				}
-				res.redirect('/producto');
-			})
-			.catch(error => res.send(error));		
+						.catch(error => res.send(error));	
+					} else {
+						req.body.productColour.forEach(idColour => {
+							ProductColour.create({
+								id_colour: idColour,	
+								id_product: req.params.id,
+							})
+						});		
+					}
+					res.redirect('/producto');
+				})
+				.catch(error => res.send(error));
+		// }		
 	},
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {

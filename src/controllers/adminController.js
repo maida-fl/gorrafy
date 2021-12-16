@@ -5,6 +5,9 @@
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const db = require('../database/models');
+const {
+	validationResult
+} = require('express-validator');
 const sequelize = db.sequelize;
 const Product = db.Product;
 const Colour = db.Colour;
@@ -28,28 +31,36 @@ const adminController = {
 
     // POST para agregar producto y almacenarlo
     store: (req, res) => {
-		Product.create({
-			name: req.body.productName,
-		    price: req.body.price,
-			description: req.body.productDescription,
-			image: req.file.filename,
-			id_category: req.body.productCategory
-		})
-		.then(function(newProduct){
-			req.body.productColour.forEach(idColour => {
-				ProductColour.create({
-					id_colour: idColour,	
-					id_product: newProduct.id,
-				})
-			});
-			res.redirect('/producto')
+		// const resultValidation = validationResult(req);
 
-		})
+		// if (resultValidation.errors.length > 0) {
+		// 	return res.render('adminAgregar', {
+		// 		errors: resultValidation.mapped()
+		// 	});
+		// } else {
+			Product.create({
+				name: req.body.productName,
+				price: req.body.price,
+				description: req.body.productDescription,
+				image: req.file.filename,
+				id_category: req.body.productCategory
+			})
+			.then(function(newProduct){
+				req.body.productColour.forEach(idColour => {
+					ProductColour.create({
+						id_colour: idColour,	
+						id_product: newProduct.id,
+					})
+				});
+				res.redirect('/producto')
 
-		.catch(error => res.send(error));
-		
-		
+			})
 
+			.catch(error => res.send(error));
+			
+			
+
+		// }
 	}
 
 };

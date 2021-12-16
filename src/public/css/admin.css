@@ -189,4 +189,10 @@ p.log-in a{
     background-color:#3e4749;
     scale: (0.98);
 }
+
+.text-danger {
+    color: #9e2828;
+    font-size: 12px;
+    text-align: left;
+}
   

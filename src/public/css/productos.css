@@ -182,6 +182,12 @@ ul.breadcrumb li a:hover {
   border: none;
 }
 
+.text-danger {
+  color: #9e2828;
+  font-size: 12px;
+  text-align: left;
+}
+
 
 
 @media (min-width: 1200px){

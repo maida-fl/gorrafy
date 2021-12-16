@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const validationsAddProduct = require('../middlewares/validateAddProduct');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // ************ Controller Require ************
@@ -28,7 +29,7 @@ const upload = multer({storage: storage});
 
 router.get('/', adminController.admin)
 router.get('/agregar', authMiddleware, adminController.agregar);
-router.post('/', upload.single("productImage"), adminController.store)
+router.post('/', upload.single("productImage"), validationsAddProduct, adminController.store)
 
 
 

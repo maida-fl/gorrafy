@@ -17,22 +17,42 @@
                     <div class="input-wrap">
                         <label for="productName" class="form-label">Nombre del producto</label>
                         <input type="text" name="productName" id="productName"  class="form-control" placeholder="Ej: Dad Hat Lyon">
+                        <% if (locals.errors && errors.productName) { %>
+                            <div class="text-danger"> 
+                                <%= errors.productName.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <label for="price" class="form-label">Precio ($ARS)</label>
                         <input type="number" name="price" id="price"  class="form-control" placeholder="Pesos Argentinos">
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="text-danger"> 
+                                <%= errors.price.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <div class="productDescription">
                             <label for="productDescription" class="form-label">Descripción</label>
                             <input type="textarea" name="productDescription" id="productDescription"  class="form-control" placeholder="Agregar aquí la descripción del producto">
                         </div>
+                        <% if (locals.errors && errors.productDescription) { %>
+                            <div class="text-danger"> 
+                                <%= errors.productDescription.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <div class="foto-usuario">
                             <label for="productImage" class="form-label">Imagen del producto</label>
                             <input type="file" name="productImage" id="productImage">
                         </div>
+                        <% if (locals.errors && errors.productImage) { %>
+                            <div class="text-danger"> 
+                                <%= errors.productImage.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <p>Categoría</p>
@@ -44,6 +64,11 @@
                              <% } %> 
 
                         </section>
+                        <% if (locals.errors && errors.productCategory) { %>
+                            <div class="text-danger"> 
+                                <%= errors.productCategory.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <div class="input-wrap">
                         <section class="productColour">
@@ -56,6 +81,11 @@
                                 <% } %> 
                                 
                         </section>                                                         
+                        <% if (locals.errors && errors.productColour) { %>
+                            <div class="text-danger"> 
+                                <%= errors.productColour.msg %> 
+                            </div>    
+                        <% } %>
                     </div>
                     <button class="btn-signup" type="submit">CREAR PRODUCTO</button>
                 </form>

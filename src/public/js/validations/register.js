@@ -42,7 +42,7 @@ window.addEventListener('load', function(){
                 }}
     })
 
-    name.addEventListener('blur', function(e){
+    name.addEventListener('change', function(e){
         if(name.value == ""){
             erroresName.push('El campo "Nombre" no puede estar vacio');
         }
@@ -66,7 +66,7 @@ window.addEventListener('load', function(){
         }
     })
 
-    lastName.addEventListener('blur', function(e){
+    lastName.addEventListener('change', function(e){
         if(lastName.value == ""){
             erroresLastName.push('El campo "Apellido" no puede estar vacio');
         }
@@ -91,7 +91,7 @@ window.addEventListener('load', function(){
         }
     })
 
-    email.addEventListener('blur', function(e){
+    email.addEventListener('change', function(e){
       if(email.value == ""){
             erroresMail.push('El campo "Email" no puede estar vacio');
         }
@@ -119,7 +119,7 @@ window.addEventListener('load', function(){
 
     })
 
-    password.addEventListener('blur', function(e){
+    password.addEventListener('change', function(e){
         if(password.value == ""){
             erroresPassword.push('El campo "Password" no puede estar vacio');
         }else if(password.value.length < 8 ){
@@ -144,47 +144,91 @@ window.addEventListener('load', function(){
       })
     
 
-    //Descomentar para que funcione haciendo el submit!
+    // Descomentar para que funcione haciendo el submit!
 
 
     
-    // form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', (e) => {
 
-    //     if(name.value == ""){
-    //         errores.push('El campo "Nombre" no puede estar vacio');
-    //     }
+        if(name.value == ""){
+            erroresName.push('El campo "Nombre" no puede estar vacio');
+        }
+        if (erroresName.length > 0) {
+            console.log("hubo prevent");
+            e.preventDefault();
+            erFirstName.innerHTML = '';
+            for (let i = 0; i < erroresName.length; i++) {
+                erFirstName.innerHTML += `<li >  ${erroresName[i]} </li>`;
+            };
+        } else {
+            form.submit();
+        }
 
-    //     if(lastName.value == ""){
-    //         errores.push('El campo "Apellido" no puede estar vacio');
-    //     }
-
-    //     if(password.value == ""){
-    //         errores.push('El campo "Password" no puede estar vacio');
-    //     }
         
-    //     if(avatar.value.length == 0){
-    //         errores.push("Debe subir imagen");
-    //     }
 
-    //     //Aquí controlo que es lo que debo hacer si hay o no errores en el formulario
-
-    //     if (errores.length > 0) {
-    //         console.log("hubo prevent");
-    //         e.preventDefault();
-    //         erName.innerHTML = '';
-    //         for (let i = 0; i < errores.length; i++) {
-    //             erName.innerHTML += `<li >  ${errores[i]} </li>`;
-    //         };
-    //     } else {
-    //         form.submit();
-    //     }
-
-    //     input.addEventListener('blur', function(e){
-    //         erName.style.display = "none"
-    //     })
+        if(lastName.value == ""){
+            erroresLastName.push('El campo "Apellido" no puede estar vacio');
+        }
+        if (erroresLastName.length > 0) {
+            console.log("hubo prevent");
+            e.preventDefault();
+            erLastName.innerHTML = '';
+            for (let i = 0; i < erroresLastName.length; i++) {
+                erLastName.innerHTML += `<li >  ${erroresLastName[i]} </li>`;
+            };
+        } else {
+            form.submit();
+        }
 
 
-    // })
+        
+        if(email.value == ""){
+            erroresMail.push('El campo "Email" no puede estar vacio');
+        }
+        if (erroresMail.length > 0) {
+            console.log("hubo prevent");
+            e.preventDefault();
+            erMail.innerHTML = '';
+            for (let i = 0; i < erroresMail.length; i++) {
+                erMail.innerHTML += `<li >  ${erroresMail[i]} </li>`;
+        }}
+            
+
+
+
+        if(password.value == ""){
+            erroresPassword.push('El campo "Password" no puede estar vacio');
+        }
+        if (erroresPassword.length > 0) {
+            console.log("hubo prevent");
+            e.preventDefault();
+            erPassword.innerHTML = '';
+            for (let i = 0; i < erroresPassword.length; i++) {
+                erPassword.innerHTML += `<li >  ${erroresPassword[i]} </li>`;
+            };
+        } else {
+            form.submit();
+        }
+        
+        if(avatar.value.length == 0){
+            erroresImagen.push("Debe subir imagen");
+        }
+        if (erroresImagen.length > 0) {
+            console.log("hubo prevent");
+            e.preventDefault();
+            erImagen.innerHTML = '';
+            for (let i = 0; i < erroresImagen.length; i++) {
+                erImagen.innerHTML += `<li >  ${erroresImagen[i]} </li>`;
+            };
+        } else {
+            form.submit();
+        }
+
+        //Aquí controlo que es lo que debo hacer si hay o no errores en el formulario
+
+
+
+    })
 
 
 

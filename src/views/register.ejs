@@ -26,6 +26,8 @@
                                 <%= errors.firstName.msg %> 
                             </div>    
                         <% } %>
+                        <div class="text-danger" id="erFirstName">
+                        </div>
                     </div>
                     <div class="input-wrap">
                         <label for="lastName" class="form-label">Apellido</label>
@@ -35,6 +37,8 @@
                                 <%= errors.lastName.msg %> 
                             </div>    
                         <% } %>
+                        <div class="text-danger" id="erLastName">
+                        </div>
                     </div>
                     <div class="input-wrap">
                         <label for="email" class="form-label">Email</label>
@@ -44,6 +48,8 @@
                                 <%= errors.email.msg %> 
                             </div>    
                         <% } %>
+                        <div class="text-danger" id="erMail">
+                        </div>
                     </div>
                     <div class="input-wrap">
                         <label for="password" class="form-label">Contraseña</label>
@@ -53,6 +59,8 @@
                                 <%= errors.password.msg %> 
                             </div>    
                         <% } %>
+                        <div class="text-danger" id="erPassword">
+                        </div>
                     </div>
                     <div class="input-wrap">
                         <label for="category" class="form-label">Año Nacimiento</label>
@@ -71,6 +79,8 @@
                                 <%= errors.avatar.msg %> 
                             </div>    
                         <% } %>
+                        <div class="text-danger" id="erImagen">
+                        </div>
                     </div>
                     <button class="btn-signup" id="btn-submit" type="submit">CREAR CUENTA</button>
                 </form>

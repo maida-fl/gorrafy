@@ -1,237 +1,94 @@
 window.addEventListener('load', function(){
-    let form = document.querySelector('#register');
-    let erName = document.querySelector('#erName');
-    let erFirstName = document.querySelector('#erFirstName');
-    let erLastName = document.querySelector('#erLastName');
-    let erMail = document.querySelector('#erMail');
-    let erPassword = document.querySelector('#erPassword');
-    let erImagen = document.querySelector('#erImagen');
-    let name = document.querySelector('#firstName');
-    let lastName = document.querySelector('#lastName');
-    let email = document.querySelector('#email');
-    let password = document.querySelector('#password');
-    let avatar = document.querySelector('#avatar');
-
-    let errores = [];
-    let erroresName = [];
-    let erroresPassword = [];
-    let erroresLastName = [];
-    let erroresMail = [];
-    let erroresImagen = [];
+    const form = document.querySelector('#register');
+    const name = document.querySelector('#firstName');
+    const lastName = document.querySelector('#lastName');
+    const email = document.querySelector('#email');
+    const password = document.querySelector('#password');
+    const avatar = document.querySelector('#avatar');
     
-
-    avatar.addEventListener('change', function(e){
-        let filePath = avatar.value;
-              
-        // Allowing file type
-        let allowedExtensions = 
-                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
                 
-            if (!allowedExtensions.exec(filePath)) {
-                console.log("aca");
-                avatar.value = '';
-                erroresImagen.push("Ingresa un archivo valido")
-            } 
-
-            if (erroresImagen.length > 0) {
-                console.log("hubo prevent");
-                e.preventDefault();
-                erImagen.innerHTML = '';
-                for (let i = 0; i < erroresImagen.length; i++) {
-                    erImagen.innerHTML += `<li >  ${erroresImagen[i]} </li>`;
-                }}
-    })
-
-    name.addEventListener('change', function(e){
-        if(name.value == ""){
-            erroresName.push('El campo "Nombre" no puede estar vacio');
-        }
-        else if(name.value.length < 2){
-            erroresName.push("El nombre que ingresaste es corto");
-        }
-
-        if (erroresName.length > 0) {
-            e.preventDefault();
-            erFirstName.innerHTML = '';
-            for (let i = 0; i < erroresName.length; i++) {
-                erFirstName.innerHTML += `<li >  ${erroresName[i]} </li>`;
-        }}
-
-        if(name.value.length > 2){
-            for (let i = 0; i < erroresName.length; i++) {
-                erFirstName.style.display = "none"
-        }
-        }else{
-            erFirstName.style.display = "initial"
-        }
-    })
-
-    lastName.addEventListener('change', function(e){
-        if(lastName.value == ""){
-            erroresLastName.push('El campo "Apellido" no puede estar vacio');
-        }
-        else if(lastName.value.length < 2){
-        erroresLastName.push("El apellido que ingresaste es corto");
-        }
-
-
-        if (erroresLastName.length > 0) {
-            console.log("hubo prevent");
-            e.preventDefault();
-            erLastName.innerHTML = '';
-            for (let i = 0; i < erroresLastName.length; i++) {
-                erLastName.innerHTML += `<li >  ${erroresLastName[i]} </li>`;
-            }}
-
-        if(lastName.value.length > 2){
-            for (let i = 0; i < erroresLastName.length; i++) {
-                erLastName.style.display = "none"
-        }}else{
-            erLastName.style.display = "initial"
-        }
-    })
-
-    email.addEventListener('change', function(e){
-      if(email.value == ""){
-            erroresMail.push('El campo "Email" no puede estar vacio');
-        }
-
-        // if(!email.value.includes('@')){
-        //     erroresMail.push("Debe ingresar un formato de mail correcto");
-        // }
-
-      if (erroresMail.length > 0) {
-        console.log("hubo prevent");
-        e.preventDefault();
-        erMail.innerHTML = '';
-        for (let i = 0; i < erroresMail.length; i++) {
-            erMail.innerHTML += `<li >  ${erroresMail[i]} </li>`;
-        }}
-        
-        if(email.value.length > 2){
-            for (let i = 0; i < erroresMail.length; i++) {
-                erMail.style.display = "none"
-        }}else{
-            erMail.style.display = "initial"
-        }
-
-        //No sabemos como comprobar desde el front end que no se este registrando un email que ya aparezca en la base de datos. Tampoco usar una validacion que compruebe si es un mail de tipo valido.
-
-    })
-
-    password.addEventListener('change', function(e){
-        if(password.value == ""){
-            erroresPassword.push('El campo "Password" no puede estar vacio');
-        }else if(password.value.length < 8 ){
-            erroresPassword.push("Tu contraseña deberá tener al menos 8 caracteres");
-        }
-
-        if (erroresPassword.length > 0) {
-            e.preventDefault();
-            erPassword.innerHTML = '';
-            for (let i = 0; i < erroresPassword.length; i++) {
-                erPassword.innerHTML += `<li >  ${erroresPassword[i]} </li>`;
-        }}
-
-        if(password.value.length > 8){
-            for (let i = 0; i < erroresPassword.length; i++) {
-                erPassword.style.display = "none"
-        }
-        }else{
-            erPassword.style.display = "initial"
-        }
-
-      })
     
-
-    // Descomentar para que funcione haciendo el submit!
-
-
     
-    form.addEventListener('submit', (e) => {
-
-        if(name.value == ""){
-            erroresName.push('El campo "Nombre" no puede estar vacio');
-        }
-        if (erroresName.length > 0) {
-            console.log("hubo prevent");
+        form.addEventListener('submit', e => {
             e.preventDefault();
-            erFirstName.innerHTML = '';
-            for (let i = 0; i < erroresName.length; i++) {
-                erFirstName.innerHTML += `<li >  ${erroresName[i]} </li>`;
-            };
-        } else {
-            form.submit();
-        }
-
         
-
-        if(lastName.value == ""){
-            erroresLastName.push('El campo "Apellido" no puede estar vacio');
-        }
-        if (erroresLastName.length > 0) {
-            console.log("hubo prevent");
-            e.preventDefault();
-            erLastName.innerHTML = '';
-            for (let i = 0; i < erroresLastName.length; i++) {
-                erLastName.innerHTML += `<li >  ${erroresLastName[i]} </li>`;
-            };
-        } else {
-            form.submit();
-        }
-
-
-        
-        if(email.value == ""){
-            erroresMail.push('El campo "Email" no puede estar vacio');
-        }
-        if (erroresMail.length > 0) {
-            console.log("hubo prevent");
-            e.preventDefault();
-            erMail.innerHTML = '';
-            for (let i = 0; i < erroresMail.length; i++) {
-                erMail.innerHTML += `<li >  ${erroresMail[i]} </li>`;
-        }}
+            const setError = (element, message) => {
+                const inputControl = element.parentElement;
+                const errorDisplay = inputControl.querySelector('.error');
             
-
-
-
-        if(password.value == ""){
-            erroresPassword.push('El campo "Password" no puede estar vacio');
-        }
-        if (erroresPassword.length > 0) {
-            console.log("hubo prevent");
-            e.preventDefault();
-            erPassword.innerHTML = '';
-            for (let i = 0; i < erroresPassword.length; i++) {
-                erPassword.innerHTML += `<li >  ${erroresPassword[i]} </li>`;
-            };
-        } else {
-            form.submit();
-        }
-        
-        if(avatar.value.length == 0){
-            erroresImagen.push("Debe subir imagen");
-        }
-        if (erroresImagen.length > 0) {
-            console.log("hubo prevent");
-            e.preventDefault();
-            erImagen.innerHTML = '';
-            for (let i = 0; i < erroresImagen.length; i++) {
-                erImagen.innerHTML += `<li >  ${erroresImagen[i]} </li>`;
-            };
-        } else {
-            form.submit();
-        }
-
-        //Aquí controlo que es lo que debo hacer si hay o no errores en el formulario
-
-
-
-    })
-
-
-
-
+                errorDisplay.innerText = message;
+                inputControl.classList.add('error');
+                inputControl.classList.remove('success')
+            }
     
-    });
+            const setSuccess = element => {
+                const inputControl = element.parentElement;
+                const errorDisplay = inputControl.querySelector('.error');
+            
+                errorDisplay.innerText = '';
+                inputControl.classList.add('success');
+                inputControl.classList.remove('error');
+            };
+    
+    
+            const validateInputs = () => {
+                const nameValue = name.value.trim();
+                const lastNameValue = lastName.value.trim();
+                const emailValue = email.value.trim();
+                const passwordValue = password.value.trim();
+
+            
+                if(nameValue === '') {
+                    setError(name, 'Name is required');
+                }else if(nameValue.length < 2){
+                    setError(name, "Name must be 2 characters minimun")
+                }else {
+                    setSuccess(name);
+                }
+    
+    
+                if(lastNameValue === '') {
+                    setError(lastName, 'Last name is required');
+                } else {
+                    setSuccess(lastName);
+                }
+    
+                if(emailValue === '') {
+                    setError(email, 'Email is required');
+                } else {
+                    setSuccess(email);
+                }
+
+                if(passwordValue === '') {
+                    setError(password, 'Password is required');
+                }else if(passwordValue.length < 8){
+                    setError(password, "Password must be 8 characters minimun")
+                }else {
+                    setSuccess(password);
+                }
+    
+    
+                let filePath = avatar.value;
+                  
+                // Allowing file type
+                let allowedExtensions = 
+                        /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    
+                if(avatar.value.length == 0){
+                    setError(avatar, 'Debe subir una imagen');
+                }
+                else if (!allowedExtensions.exec(filePath)) {
+                    console.log("aca");
+                    avatar.value = '';
+                    setError(avatar, 'Ingresa un archivo valido');
+                } else {
+                    setSuccess(avatar)
+                }
+            };
+    
+    
+    
+            validateInputs();
+        });
+        
+        });

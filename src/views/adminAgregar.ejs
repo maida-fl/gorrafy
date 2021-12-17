@@ -13,8 +13,8 @@
         </section>
         <section class="account-page">
             <div class="container-form">
-                <form action="/admin" method="POST" enctype="multipart/form-data">
-                    <div class="input-wrap">
+                <form action="/admin" method="POST" enctype="multipart/form-data" id="productsValidation">
+                    <div class="input-wrap input-control">
                         <label for="productName" class="form-label">Nombre del producto</label>
                         <input type="text" name="productName" id="productName"  class="form-control" placeholder="Ej: Dad Hat Lyon">
                         <% if (locals.errors && errors.productName) { %>
@@ -22,10 +22,9 @@
                                 <%= errors.productName.msg %> 
                             </div>    
                         <% } %>
-                        <div class="text-danger" id="erName">
-                        </div>
+                        <div class="error"></div>
                     </div>
-                    <div class="input-wrap">
+                    <div class="input-wrap input-control">
                         <label for="price" class="form-label">Precio ($ARS)</label>
                         <input type="number" name="price" id="price"  class="form-control" placeholder="Pesos Argentinos">
                         <% if (locals.errors && errors.price) { %>
@@ -33,36 +32,29 @@
                                 <%= errors.price.msg %> 
                             </div>    
                         <% } %>
-                        <div class="text-danger" id="erPrice">
-                        </div>
+                        <div class="error"></div>
                     </div>
-                    <div class="input-wrap">
-                        <div class="productDescription">
+                    <div class="input-wrap input-control">
                             <label for="productDescription" class="form-label">Descripción</label>
                             <input type="textarea" name="productDescription" id="productDescription"  class="form-control" placeholder="Agregar aquí la descripción del producto">
-                        </div>
                         <% if (locals.errors && errors.productDescription) { %>
                             <div class="text-danger"> 
                                 <%= errors.productDescription.msg %> 
                             </div>    
                         <% } %>
-                        <div class="text-danger" id="erDescription">
-                        </div>
+                        <div class="error"></div>
                     </div>
-                    <div class="input-wrap">
-                        <div class="foto-usuario">
+                    <div class="input-wrap input-control">
                             <label for="productImage" class="form-label">Imagen del producto</label>
                             <input type="file" name="productImage" id="productImage">
-                        </div>
                         <% if (locals.errors && errors.productImage) { %>
                             <div class="text-danger"> 
                                 <%= errors.productImage.msg %> 
                             </div>    
                         <% } %>
-                        <div class="text-danger" id="erImage">
-                        </div>
+                        <div class="error"></div>
                     </div>
-                    <div class="input-wrap">
+                    <div class="input-wrap input-control">
                         <p>Categoría</p>
     
                         <section class="productCategory">
@@ -78,7 +70,7 @@
                             </div>    
                         <% } %>
                     </div>
-                    <div class="input-wrap">
+                    <div class="input-wrap input-control">
                         <section class="productColour">
                             <p>Color</p>
                                 <% for (let i=0; i < colours.length; i++) { %> 

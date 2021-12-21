@@ -565,6 +565,7 @@ footer{
 
 .input-control .error {
     color: #ff3860;
-    font-size: 9px;
+    font-size: 11px;
     height: 13px;
+    z-index: 20000;
 }

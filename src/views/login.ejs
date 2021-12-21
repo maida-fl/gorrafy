@@ -7,19 +7,27 @@
         <div class="form">
             <h2>INICIAR SESIÓN</h2>
         
-            <form method="POST" action="/user/login">
-              <input type="text" name="email" placeholder="Email">
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                  <%= errors.email.msg  %> 
-                </div>   
-              <% } %>
-              <input type="password" name="password" id="password" placeholder="contraseña">
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                  <%= errors.password.msg  %> 
-                </div>   
-              <% } %>
+            <form method="POST" action="/user/login" id="login">
+              <div class="input-wrap input-control">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" placeholder="Email" id="email">
+                <% if (locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg  %> 
+                  </div>   
+                <% } %>
+                <div class="error"></div>
+              </div>
+              <div class="input-wrap input-control">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="contraseña">
+                <% if (locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg  %> 
+                  </div>   
+                <% } %>
+                <div class="error"></div>
+              </div>
               <div class="remember">
                 <label for="rememberMe">Recuerdame</label>
                 <input type="checkbox" value="lsRememberMe" name="remember_user" id="rememberMe"> 

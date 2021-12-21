@@ -556,10 +556,12 @@ footer{
 }
 
 .input-control.success input {
+    border: 1px solid;
     border-color: #09c372;
 }
 
 .input-control.error input {
+    border: 1px solid;
     border-color: #ff3860;
 }
 
@@ -567,5 +569,4 @@ footer{
     color: #ff3860;
     font-size: 11px;
     height: 13px;
-    z-index: 20000;
 }

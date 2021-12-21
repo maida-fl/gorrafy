@@ -4,12 +4,12 @@ window.addEventListener('load', function(){
     const password = document.querySelector('#password');
 
     form.addEventListener('submit', e => {
-        e.preventDefault();
 
         const setError = (element, message) => {
             const inputControl = element.parentElement;
             const errorDisplay = inputControl.querySelector('.error');
         
+            e.preventDefault();
             errorDisplay.innerText = message;
             inputControl.classList.add('error');
             inputControl.classList.remove('success')
@@ -45,5 +45,6 @@ window.addEventListener('load', function(){
         validateInputs();
         
     })
+    
 
 })

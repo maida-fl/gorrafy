@@ -4,6 +4,7 @@ window.addEventListener('load', function(){
     const price = document.querySelector('#price');
     const description = document.querySelector('#productDescription');
     const avatar = document.querySelector('#productImage');
+    const categories = document.querySelector('#Gorras')
 
             
 
@@ -34,6 +35,7 @@ window.addEventListener('load', function(){
             const productNameValue = name.value.trim();
             const priceValue = price.value.trim();
             const descriptionValue = description.value.trim();
+            const categoriesValue = categories.value.trim();
 
             console.log(priceValue);
         
@@ -57,6 +59,7 @@ window.addEventListener('load', function(){
             } else {
                 setSuccess(description);
             }
+            
 
             let filePath = avatar.value;
               

@@ -31,15 +31,14 @@ window.addEventListener('load', function(){
             const passwordValue = password.value.trim();
 
             if( emailValue === '') {
-                console.log("esta vacío")
-                setError(emailValue, 'Email is required');
+                setError(email, 'Email is required');
             } else {
-                setSuccess(emailValue);
+                setSuccess(email);
             }
             if( passwordValue === '') {
-                setError(passwordValue, 'Password is required');
+                setError(password, 'Password is required');
             } else {
-                setSuccess(passwordValue);
+                setSuccess(password);
             }
         };
 

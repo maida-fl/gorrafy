@@ -10,38 +10,39 @@ const controller = {
 		return res.render('register');
 	},
 	processRegister: (req, res) => {
-		db.User.findOne({
-			where: {email: req.body.email}
-		}).then((userInDB) => {
-			if (userInDB) {
-				return res.render('register', {
-					errors: {
-						email: {
-							msg: 'Este email ya está registrado'
-						}
-					},
-					oldData: req.body
-				});
-			}	
-		})
-
 		const resultValidation = validationResult(req);
-
+	
 		if (resultValidation.errors.length > 0) {
 			return res.render('register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}else{
-			db.User.create({
-				...req.body,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				avatar: req.file.filename,
-				id_rol: 1
+		} else {
+			db.User.findOne({
+				where: {email: req.body.email}
+			}).then((userInDB) => {
+				if (userInDB) {
+					return res.render('register', {
+						errors: {
+							email: {
+								msg: 'Este email ya está registrado'
+							}
+						},
+						oldData: req.body
+					});
+				} else {
+					db.User.create({
+						...req.body,
+						password: bcryptjs.hashSync(req.body.password, 10),
+						avatar: req.file.filename,
+						id_rol: 1
+					})
+					.then(()=> res.redirect('/user/login'))            
+					.catch(error => res.send(error))
+				}
 			})
-			.then(()=> res.redirect('/user/login'))            
-			.catch(error => res.send(error))
-		}
+		} 
+
 	},
     login: (req,res) => {
         return res.render('login')

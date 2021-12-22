@@ -52,3 +52,15 @@ LESS OF:
 KEEP DOING: Actualizar seguimiento constantemente con Trello y mantener la comunicación de los avances
 
 MORE OF: Comentar más el código
+
+#### SPRINT 6
+
+START DOING: Estructurar más las reuniones y establecer fechas fijas para las weekly meetings
+
+STOP DOING: Posponer tareas
+
+LESS OF: Dejar para ultimo momento
+
+KEEP DOING: Revisar la correcta funcionalidad de todo el website y trabajar en grupo!
+
+MORE OF: Sacar el "Spanglish"

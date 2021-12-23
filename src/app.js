@@ -15,6 +15,11 @@ const productoRouter = require('./routes/producto'); // Rutas producto
 const adminRouter = require('./routes/admin'); // Rutas edicion productos
 const userRouter = require('./routes/users'); // Rutas usuaarios
 
+
+// ************ API Route System require and use() - (don't touch) ************
+
+const apiProductoRouter = require('./routes/api/productosApi.js'); // Rutas producto
+
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
@@ -40,11 +45,14 @@ app.use('/', mainRouter);
 app.use('/producto', productoRouter);
 app.use('/compra', compraRouter);
 app.use('/admin', adminRouter);
-app.use('/user', userRouter)
+app.use('/user', userRouter);
+
+
+app.use('/api/products', apiProductoRouter)
 
 
 
 
-app.listen(3000, () => {
-    console.log("Serving on port 3000!   http://localhost:3000/");
+app.listen(3001, () => {
+    console.log("Serving on port 3001!   http://localhost:3001/");
 });

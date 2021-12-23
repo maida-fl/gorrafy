@@ -21,35 +21,28 @@ const productAPIController = {
             let categoriesToSend = categories.map((category) => {
                 return category.dataValues;
             })
-
+            
+            /* categoriesNames = [Gorras, Indumentaria, Accesorios, ...] */
             let categoriesNames = []
+            /* categoriesCount = [1, 4, 6, ...] */
             let categoriesCount = []
             categoriesToSend.forEach((category) => {
                 categoriesNames.push(category.category);
                 categoriesCount.push(0)
             })
-            /* categoriesNames = [Camperas, Tops, Accesorios, ...] */
         
             productsToSend.forEach((product) => {
                 categoriesCount[product.categories.id - 1] = categoriesCount[product.categories.id - 1] + 1
             })
-            /* categoriesCount = [4, 5, 8, ...] */
 
             let countByCategoryToSend = {};
             for (let i = 0; i < categoriesNames.length; i++) {
                 countByCategoryToSend[categoriesNames[i]] = categoriesCount[i];
             }
-            /* countByCategoryToSend = {
-                Camperas: 4,
-                Tops: 5,
-                Accesorios: 8,
-                ...
-            }*/
-            
+
+
             productsToSend.forEach((product) => {
-                // // Agregamos los campos por los que se relaciona con otras tablas
-                // product.dbRelations = ["sizeId", "categoryId"];
-                // Agregamos la URL para ir al endpoint de cada producto en particular
+                // Para acceder al product/:id
                 product.detailURL = `api/productos/${product.id}`
             })
 

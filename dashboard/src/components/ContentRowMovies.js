@@ -26,13 +26,29 @@ let cardProps = [productInDataBase,amount,user];
 
 
 class ContentRowTop extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            productList: []
+        }
+    }
+
+    componentDidMount(){
+        fetch("/api/products")
+        .then(respuesta => {
+            return respuesta.json()
+        })
+        .then(products => {
+            this.setState({productList: products.meta})
+        })
+    }
     render(){
     return (
         <React.Fragment>
         {/*<!-- Content Row -->*/}
         <div className="row">
             {
-                cardProps.map((producto,index)=>{
+                this.state.productList.map((producto,index)=>{
                     return <SmallCard  {...producto}  key= {index}/>
                 })
             }      

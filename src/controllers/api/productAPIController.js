@@ -47,12 +47,12 @@ const productAPIController = {
             })
 
             return res.status(200).json({
-                meta: {
-                    count: products.length,
+                meta: [
+                    {count: products.length,
                     countByCategory: countByCategoryToSend,
                     categoriesCount: categoriesToSend.length,
-                    status: 200
-                },
+                    status: 200}
+                ],
                 data: products
             })
         })

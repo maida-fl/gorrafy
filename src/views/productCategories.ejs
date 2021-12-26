@@ -8,13 +8,8 @@
             <li><a href="#">Productos</a></li>
         </ul>
 
-        <ul>
-            <% products.forEach(product => { %>
-                <li><a href="/producto/<%= product.id_category %> "><%= product.id_category %></a></li>      
-            <% }) %>
-        </ul>
-
         <div class="setOfCards" id="setOfCards">
+            <% if (products.length >= 1) { %>
             <% products.forEach(hat => { %>
                 <div class="card">
                     <img src="/img/<%= hat.image  %>" alt="">
@@ -26,6 +21,10 @@
                     </a>
                 </div>     
              <% }); %> 
+             <% } else if (products.length < 1) { %>
+                 <h1 class="d-flex justify-content-center mt-3 main-header">
+                     No results found for your search ("<%= search %>") </h1>
+             <% } %>
         </div>
     
     </section>

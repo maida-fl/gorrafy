@@ -9,8 +9,8 @@
         </ul>
 
         <ul>
-            <% products.forEach(product => { %>
-                <li><a href="/producto/<%= product.categories.category %> "><%= product.categories.category %></a></li>      
+            <% categories.forEach(category => { %>
+                <li><a href="/producto/<%= category.category %> "><%= category.category %></a></li>      
             <% }) %>
         </ul>
 

@@ -20,14 +20,16 @@ const ProductColour = db.ProductColour;
 
 const productoController = {
     listadoProducto: (req, res) => {
-        Product.findAll({
+		let promiseProducts = Product.findAll({
 			include:[{association:'categories'}, {association:'colours'}]
-		})
-		.then(function(products) {
-			res.render('listadoProductos', {products:products})
+		});
+		let promiseCategories = Category.findAll();
 
-		})
-		.catch(error => res.send(error));
+		Promise.all([promiseProducts, promiseCategories])
+			.then(function([products, categories]) {
+			res.render('listadoProductos', {products:products, categories:categories});
+			})
+			.catch(error => res.send(error));
     },
     detail: (req, res) => {
 		Product.findByPk(req.params.id, {

@@ -25,6 +25,7 @@ const productoController = {
 		})
 		.then(function(products) {
 			res.render('listadoProductos', {products:products})
+
 		})
 		.catch(error => res.send(error));
     },

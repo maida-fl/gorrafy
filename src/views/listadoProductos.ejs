@@ -10,7 +10,7 @@
 
         <ul>
             <% products.forEach(product => { %>
-                <li><a href="/producto/<%= product.id_category %> "><%= product.id_category %></a></li>      
+                <li><a href="/producto/<%= product.categories.category %> "><%= product.categories.category %></a></li>      
             <% }) %>
         </ul>
 

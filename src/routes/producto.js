@@ -14,7 +14,7 @@ router.get('/', productoController.listadoProducto)
 
 router.get('/result', productoController.search)
 
-// router.get('/:id', productoController.categories)
+router.get('/:id', productoController.categories)
 
 router.get('/detalle/:id', productoController.detail)
 

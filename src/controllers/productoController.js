@@ -163,7 +163,18 @@ const productoController = {
                 return res.render('productResult.ejs', {products, search})
             })
 
-    }
+    },
+	categories: (req,res) => {
+		db.Product.findAll({
+            where: {id_category: req.params.id},
+            include: [{association: "categories"}, {association: "colours"}
+            ]
+        })
+            .then((products) => {
+                return res.render('productCategories.ejs', {products: products})
+            })
+
+	}
 };
 
 module.exports = productoController;

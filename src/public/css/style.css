@@ -570,3 +570,16 @@ footer{
     font-size: 11px;
     height: 13px;
 }
+
+/* Categories */
+
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(124, 124, 124, 0.1);
+}
+.categories li a{
+    font-size: 0.8rem;
+    color: #212A2F !important;
+}

@@ -152,27 +152,36 @@ const productoController = {
 	},
 	search: (req, res) => {
         let search = req.query.search
-        db.Product.findAll({
+
+		let promiseProducts = Product.findAll({
             where: {name: {[Op.like]: `%${req.query.search}%`}},
             include: [{association: "categories"}, {association: "colours"}
             ], order: [
                 ['id', 'DESC']
         ]
-        })
-            .then((products) => {
-                return res.render('productResult.ejs', {products, search})
-            })
+        });
 
+		let promiseCategories = Category.findAll();
+
+		Promise.all([promiseProducts, promiseCategories])
+			.then(function([products, categories]) {
+			res.render('productResult', {products:products,search, categories:categories});
+			})
+			.catch(error => res.send(error));
     },
 	categories: (req,res) => {
-		db.Product.findAll({
+		let promiseProducts = Product.findAll({
             where: {id_category: req.params.id},
             include: [{association: "categories"}, {association: "colours"}
             ]
-        })
-            .then((products) => {
-                return res.render('productCategories.ejs', {products: products})
-            })
+        });
+		let promiseCategories = Category.findAll();
+
+		Promise.all([promiseProducts, promiseCategories])
+			.then(function([products, categories]) {
+			res.render('productCategories', {products:products, categories:categories});
+			})
+			.catch(error => res.send(error));
 
 	}
 };

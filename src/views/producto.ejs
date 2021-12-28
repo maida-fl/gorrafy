@@ -40,7 +40,9 @@
 
         <div class="product--buttons">
             <button class="button--1"> - <span> 1 </span> + </button>
-            <button class="button--2"> Agregar al carrito </button>
+            <form enctype="multipart/form-data" action="/compra/<%= product.id %>" method="POST">
+                <button type="submit" class="button--2"> Agregar al carrito </button>
+            </form>
         </div>
 
         <div class="product--description">

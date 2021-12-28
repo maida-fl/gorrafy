@@ -582,4 +582,9 @@ footer{
 .categories li a{
     font-size: 0.8rem;
     color: #212A2F !important;
+    transition: 0.3s ease;
+}
+
+.categories li a:hover{
+    color: #669BBC !important;
 }

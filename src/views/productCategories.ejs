@@ -8,6 +8,12 @@
             <li><a href="#">Productos</a></li>
         </ul>
 
+        <ul class="categories">
+            <% categories.forEach(category => { %>
+                <li><a href="/producto/<%= category.id %> "><%= category.category %></a></li>      
+            <% }) %>
+        </ul>
+
         <div class="setOfCards" id="setOfCards">
             <% if (products.length >= 1) { %>
             <% products.forEach(hat => { %>

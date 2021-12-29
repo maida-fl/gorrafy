@@ -24,6 +24,7 @@ const validateAddProduct = [
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
             }
         }
+        console.log(file.originalname);
 
         return true;
     })  

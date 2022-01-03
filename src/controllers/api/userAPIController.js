@@ -9,14 +9,14 @@ const User = db.User;
 const userAPIController = {
     list : function (req,res) {
         User.findAll()
-        .then(usersInDb => {
+        .then(users => {
 
-            let newArray = usersInDb.map((user) => {
+            let newData = users.map((user) => {
                 return user.dataValues;
             });
 
-            // Eliminamos la información sensible que no queremos enviar, dejando solo el ID, firstName, lastName, email, y url
-            newArray.forEach((user) => {
+        
+            newData.forEach((user) => {
                 delete user.created_at;
                 delete user.updated_at;
                 delete user.password;
@@ -27,41 +27,42 @@ const userAPIController = {
             })
 
             return res.status(200).json({
-                total: usersInDb.length,
-                data: newArray,
+                total: users.length,
+                data: newData,
                 status: 200
             })
         })
         .catch(error => {console.log(error)});
-    }/*,
+    },
 
-    userId: function (req,res) {
+    detail: function (req,res) {
         User.findByPk(req.params.id)
         .then(user => {
             if (user != null) {
-                userToSend = user.dataValues;
-                // Eliminamos la información sensible que no queremos enviar, dejando solo el ID, firstName, lastName, email, y url de imagen
-                delete userToSend.password;
-                delete userToSend.birthdate;
-                delete userToSend.roleId;
-                delete userToSend.profileImage;
-                delete userToSend.deleted;
+                userDetail = user.dataValues;
+        
+                delete userDetail.created_at;
+                delete userDetail.updated_at;
+                delete userDetail.password;
+                delete userDetail.category;
+                /*delete userDetail.avatar; */
+                delete userDetail.id_rol;
 
                 return res.status(200).json({
                     data: {
-                        userToSend,
-                        imageURL: `/public/images/users/${userToSend.image}`
+                        userDetail,
+                        imageURL: `/public/img/${userDetail.avatar}`
                     },
                     status: 200
                 })
             }
             return res.send({
-                error: 'No se encuentra el usuario pedido, intente con otro ID',
+                error: 'No existe este usuario buscado',
             })
         })
         .catch(error => {console.log(error)});
     }
-*/
 }
+
 
 module.exports = userAPIController;

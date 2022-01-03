@@ -21,6 +21,7 @@ const userRouter = require('./routes/users'); // Rutas usuaarios
 // ************ API Route System require and use() - (don't touch) ************
 
 const apiProductoRouter = require('./routes/api/productosApi.js'); // Rutas producto
+const apiUserRouter = require('./routes/api/usersApi.js'); // Rutas usuario
 
 // ************ Middlewares - (don't touch) ************
 const publicPath = path.resolve(__dirname, "public");
@@ -52,7 +53,7 @@ app.use('/user', userRouter);
 
 
 app.use('/api/products', apiProductoRouter)
-
+app.use('/api/users', apiUserRouter)
 
 
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productAPIController = require('../../controllers/api/userAPIController.js');
+const userAPIController = require('../../controllers/api/userAPIController.js');
 
 //Rutas
 //Listado de usuarios

@@ -73,10 +73,17 @@
         </div>
 
         <div class="product--edit--btn">
-            <a href="/producto/edit/<%= product.id %>" class="button--3"> EDITAR PRODUCTO </a>
-            <form action="/producto/delete/<%= product.id %>?_method=DELETE" method="POST"> 
-               <button type="submit" class="button--3">ELIMINAR PRODUCTO</button>  
-            </form>
+ 
+            <% if (!locals.isLogged) { %>
+                <div class="product--edit--btn">
+                    <a href="/producto/edit/<%= product.id %>" class="button--3"> EDITAR PRODUCTO </a>
+                    <form action="/producto/delete/<%= product.id %>?_method=DELETE" method="POST"> 
+                       <button type="submit" class="button--3">ELIMINAR PRODUCTO</button>
+                    </form>
+                </div>
+            <% } else { %>
+                <div></div>
+                <% } %>
         </div>
 
 

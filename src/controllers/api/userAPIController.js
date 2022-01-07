@@ -45,7 +45,6 @@ const userAPIController = {
                 delete userDetail.updated_at;
                 delete userDetail.password;
                 delete userDetail.category;
-                /*userDetail.avatar;*/
                 delete userDetail.id_rol;
 
                 return res.status(200).json({

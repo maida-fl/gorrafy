@@ -7,7 +7,7 @@ const Product = db.Product;
 
 
 const productAPIController = {
-    'list': (req, res) => {
+    list: (req, res) => {
         let products = db.Product.findAll({
             include: ['categories']
         })
@@ -43,7 +43,7 @@ const productAPIController = {
 
             productsToSend.forEach((product) => {
                 // Para acceder al product/:id
-                product.detailURL = `api/productos/${product.id}`
+                product.detailURL = `/api/products/${product.id}`
             })
 
             return res.status(200).json({
@@ -57,6 +57,20 @@ const productAPIController = {
             })
         })
         .catch(error => {console.log(error)});
+    },
+    show: (req,res) => {
+        Product
+            .findByPk(req.params.id)
+            .then(product => {
+                return res.status(200).json({
+                    data: { 
+                        product: product,
+                        associations: ["id_category"],
+                        productImageURL: "/public/img/" + product.image
+                    },    
+                    status: 200
+                })
+            })
     }
 }
 

@@ -89,7 +89,7 @@ const productAPIController = {
                                 status: 200
                             },
                             data: lastProduct[0],
-                            imageURL: `/img/${lastProduct[0].image}`
+                            imageURL: `http://localhost:3001/img/${lastProduct[0].image}`
                         }
                         res.json(respuesta);
                     })

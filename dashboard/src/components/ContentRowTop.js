@@ -3,6 +3,7 @@ import imagenFondo from '../assets/images/mandalorian.jpg';
 import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
 import LastProductInDb from './LastProductInDb';
+import CantidadUsuariosContent from './CantidadUsuariosContent';
 function ContentRowTop(){
     return(
         <React.Fragment>
@@ -14,6 +15,7 @@ function ContentRowTop(){
 				
 					{/*<!-- Content Row Movies-->*/}
 					<ContentRowMovies />
+					<CantidadUsuariosContent />
 					{/*<!-- End movies in Data Base -->*/}
 					
 	

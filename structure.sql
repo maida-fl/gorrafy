@@ -97,6 +97,10 @@ ALTER TABLE `users` ADD CONSTRAINT `FK_8ee5a6d9-0098-4918-b7ff-699b1c6461d9` FOR
 
 ALTER TABLE `products` ADD CONSTRAINT `FK_e6027977-3204-4a7b-bf6d-f9846ca00c05` FOREIGN KEY (`id_category`) REFERENCES `categories`(`id`)  ;
 
+-- HUBO QUE MODIFICAR DATATYPE DE IMAGEN PARA EVITAR ERRORES 
+ALTER TABLE gorras.products MODIFY COLUMN image VARCHAR(250) NOT NULL;
+
+ALTER TABLE gorras.users MODIFY COLUMN avatar VARCHAR(255) NOT NULL;
 
 -- SELECT * FROM gorras.products
 -- INNER JOIN product_colour ON product_colour.id_product = products.id

@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         avatar: {
-            type: dataTypes.STRING.BINARY
+            type: dataTypes.STRING
         },
         id_rol: {
             type: dataTypes.INTEGER

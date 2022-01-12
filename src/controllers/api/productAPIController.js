@@ -58,20 +58,46 @@ const productAPIController = {
         })
         .catch(error => {console.log(error)});
     },
-    show: (req,res) => {
+    detail: (req,res) => {
         Product
-            .findByPk(req.params.id)
+            .findByPk(req.params.id, {
+                include:[{association:'categories'}, {association:'colours'}],
+            })
             .then(product => {
                 return res.status(200).json({
                     data: { 
                         product: product,
-                        associations: ["id_category"],
+                        associations: [product.categories, product.colours],
                         productImageURL: "/public/img/" + product.image
                     },    
                     status: 200
                 })
             })
-    }
+    },
+    lastProduct: (req, res) => {                         
+                Product
+                    .findAll({
+                        order: [
+                            ['id', 'DESC']
+                        ],
+                        limit: 1,
+                        include:[{association:'categories'}, {association:'colours'}],
+                    })
+                    .then(lastProduct => {
+                        let respuesta = {
+                            meta: {
+                                status: 200
+                            },
+                            data: lastProduct[0],
+                            imageURL: `http://localhost:3001/public/img/${lastProduct[0].image}`
+                        }
+                        res.json(respuesta);
+                    })
+                    .catch(error => {console.log(error)});
+            }
+
+
+
 }
 
 module.exports = productAPIController;

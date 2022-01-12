@@ -94,9 +94,7 @@ const productAPIController = {
                         res.json(respuesta);
                     })
                     .catch(error => {console.log(error)});
-            }
-
-
+    }
 
 }
 

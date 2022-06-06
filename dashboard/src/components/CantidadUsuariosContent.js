@@ -23,7 +23,6 @@ class CantidadUsuariosContent extends React.Component{
     render(){
     return (
         <React.Fragment>
-            {console.log(this.state.usersList)}
         {/* {console.log(this.state.userList)} */}
         {/*<!-- Content Row -->*/}
         <div className="col-md-4 mb-4">

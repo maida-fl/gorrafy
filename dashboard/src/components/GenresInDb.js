@@ -26,12 +26,12 @@ class GenresInDb extends Component{
         <React.Fragment>
             {console.log(this.state.categoriesList)}
                 {/*<!-- Categories in DB -->*/}
-                <div className="col-lg-6 mb-4">						
+                {/* <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
                             <h6 className="m-0 font-weight-bold text-gray-800">Categorías</h6>
-                        </div>
-                        <div className="card-body fondoCaja">
+                        </div> */}
+                        {/* <div className="card-body fondoCaja">
                             <div className="row">
                                 {   
                                     this.state.categoriesList.map((category,index)=>{
@@ -39,9 +39,9 @@ class GenresInDb extends Component{
                                     })
                                 }
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div> */}
+                    {/* </div>
+                </div> */}
            
         </React.Fragment>
     )

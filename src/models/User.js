@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const User = {
-	fileName: '../grupo_9_GorrasYAccesorios/src/data/usersDataBase.json',
+	fileName: '../gorrafy/src/data/usersDataBase.json',
 // Para traer todo el db de users:
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));

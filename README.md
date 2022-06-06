@@ -23,6 +23,8 @@ Built entirely with:
 
 ## 📸 Screenshots
 
+![Gorrafy - home](https://user-images.githubusercontent.com/88347050/172227795-54221e97-e3eb-4612-afd3-84126fe9c19b.png)
 <br>
 <br>
 <br>
+![Gorrafy - product](https://user-images.githubusercontent.com/88347050/172227820-c0f09a9b-1c53-470e-a081-04f7d4c9262a.png)
